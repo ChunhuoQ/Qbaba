@@ -54,7 +54,12 @@ public class MapDome {
 
         map.put(1, "Qbaba小组");
         map.put(2, "平均工资最高！");
+        
+        //修改属性
+        map.put(1,"Qbaba大家庭");
 
+        //好像无法插入？
+        
         // 遍历
         LOG.info("\n"+map.entrySet());
         System.out.println("["+map.values()+"]");
