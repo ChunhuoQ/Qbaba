@@ -1,34 +1,34 @@
 /**
  * Project Name:dt59homework
- * File Name:Student.java
+ * File Name:Teacher.java
  * Package Name:hw20180103.one
- * Date:2018年1月3日下午2:57:54
+ * Date:2018年1月3日下午3:04:25
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package hw20180103.one;
+package hw201801.hw20180103.lvruiling;
 
 /**
  * Description: <br/>
- * Date: 2018年1月3日 下午2:57:54 <br/>
+ * Date: 2018年1月3日 下午3:04:25 <br/>
  * 
  * @author l
  * @version
  * @see
  */
-public class Student implements School, Exam {
+public class Teacher implements School, Exam {
 
     @Override
     public String study() {
 
         // Auto-generated method stub
-        return "学生每天都要学习新知识";
+        return "老师每天都要学习如何教学生学习知识";
     }
 
     @Override
     public String exam() {
 
-        return "学生通过考试来检测学习情况";
+        return "老师通过考试进行教学资格审核";
     }
 
 }
