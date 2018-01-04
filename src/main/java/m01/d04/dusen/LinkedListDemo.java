@@ -21,6 +21,7 @@ import org.apache.log4j.Logger;
  * @version
  * @see
  */
+
 public class LinkedListDemo {
     private final static Logger LOG = Logger.getLogger(LinkedListDemo.class);
     public static void main(String[] args) {

@@ -29,7 +29,7 @@ public class MapDemo {
         Map<String, String> map = new HashMap<String, String>();
 
         map.put("刘朋","荆州");
-        map.put("高世庆","咸宁");
+        map.put("高世庆","孝感");
         map.put("吕锐玲","荆门");
         map.put("杜森","宜昌");
         map.put("宋杭", "襄阳");
