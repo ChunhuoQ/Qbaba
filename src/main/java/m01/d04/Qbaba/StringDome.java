@@ -9,7 +9,6 @@
 
 package m01.d04.Qbaba;
 
-import java.awt.Checkbox;
 import java.awt.event.KeyEvent;
 
 import org.apache.log4j.Logger;

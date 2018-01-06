@@ -30,9 +30,9 @@ public class TestFemaleCibotiumBaiometz {
 
         FemaleCibotiumBaiometz muJinMao = new FemaleCibotiumBaiometz();
 
-        LOG.info("\n成年雄性金毛“" + muJinMao.nameself + "”处于发情期！下面为它寻找合适年龄的雌性金毛繁衍~");
+        LOG.info("\n成年雄性金毛“" + CibotiumBaiometz.nameself + "”处于发情期！下面为它寻找合适年龄的雌性金毛繁衍~");
 
-        LOG.info("\n请输入雌性金毛“" + muJinMao.name + "”的年龄：");
+        LOG.info("\n请输入雌性金毛“" + FemaleCibotiumBaiometz.name + "”的年龄：");
 
         try {
             int age = scanner.nextInt();

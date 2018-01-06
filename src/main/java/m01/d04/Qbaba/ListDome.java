@@ -8,12 +8,9 @@
 
 package m01.d04.Qbaba;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Set;
-
 import org.apache.log4j.Logger;
 
 /**
@@ -30,7 +27,8 @@ public class ListDome {
 
     public static void main(String[] args) {
 
-        List list = new ArrayList();
+        @SuppressWarnings("rawtypes")
+        List<Comparable> list = new ArrayList<Comparable>();
 
         // 添加四个数据;
         list.add(20);
@@ -71,7 +69,8 @@ public class ListDome {
         LOG.info("返回列表长度：" + list.size());
 
         // 遍历 迭代器。
-        Iterator ite = list.iterator();
+        @SuppressWarnings("rawtypes")
+        Iterator<Comparable> ite = list.iterator();
         int i = 1;
         while (ite.hasNext()) {
             LOG.info("小屋住户信息：第" + (i++) + "条信息：" + ite.next());

@@ -69,12 +69,12 @@ public class FemaleCibotiumBaiometz implements CibotiumBaiometz {
         if (age >= 0) {
             if (age >= 2 && age < 10) {
 
-                this.age = age;
+                FemaleCibotiumBaiometz.age = age;
 
                 multiply();
 
                 LOG.info("\n" + pregnancy() + "个月之后。。。。。。。。");
-                LOG.info("\n可喜可贺：\n" + this.age + "岁的母金毛“" + name + "”一窝生了" + unbornQuantity() + "个纯种金毛崽儿！");
+                LOG.info("\n可喜可贺：\n" + FemaleCibotiumBaiometz.age + "岁的母金毛“" + name + "”一窝生了" + unbornQuantity() + "个纯种金毛崽儿！");
 
             } else if (age < 2) {
 

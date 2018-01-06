@@ -18,6 +18,7 @@ package m01.d03.Qbaba20180103;
  */
 public class TestNullPointerException {
 
+    @SuppressWarnings("null")
     public static void main(String[] args) throws NullPointerException {
 
         try {
