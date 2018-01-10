@@ -21,6 +21,7 @@ import org.apache.log4j.Logger;
 public class Four {
     private final static Logger LOG = Logger.getLogger(Four.class);
 
+    @SuppressWarnings("null")
     public static void main(String[] args) {
 
         String str = null;
