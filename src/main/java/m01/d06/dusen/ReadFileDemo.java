@@ -35,20 +35,20 @@ public class ReadFileDemo {
 
     public static void listDir(String path) {
         File file = new File(path);
-        LOG.info("目录："+file.getAbsolutePath());
+        LOG.info("目录：" + file.getAbsolutePath());
         String[] files = file.list();
 
         for (String name : files) {
             StringBuffer fullPath = new StringBuffer();// 构造一个其中不带字符的字符串缓冲区
             fullPath.append(path);// 将只当的字符串加到此字符序列
-            fullPath.append(File.separator);//与系统有关的默认名称分隔符，为了方便，它被表示为一个字符串。
+            fullPath.append(File.separator);// 与系统有关的默认名称分隔符，为了方便，它被表示为一个字符串。
             fullPath.append(name);//
             File tmpFile = new File(fullPath.toString());
             // LOG.info(string);
             if (tmpFile.isDirectory()) {
-               
+
                 listDir(tmpFile.toString());
-             
+
             } else {
                 LOG.info("文件：" + fullPath.toString());
             }
