@@ -30,6 +30,7 @@ public class TestBox {
         Buyer buyer3 = new Buyer("杜森");
         Buyer buyer4 = new Buyer("宋杭");
         Buyer buyer5 = new Buyer("吕瑞铃");
+        
         for (int i = 0; i < 10; i++) {
             Seller seller1 = new Seller(buyer1, b);
             seller1.start();

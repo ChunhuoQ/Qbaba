@@ -25,8 +25,6 @@ import org.apache.log4j.Logger;
 
 public class TestThreadDemo {
 
-    private final static Logger LOG = Logger.getLogger(TestThreadDemo.class);
-
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             ThreadDemo thDe = new ThreadDemo(i + 1);
