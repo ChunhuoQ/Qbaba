@@ -42,7 +42,7 @@ public class ServerFileTransfer {
                 baos.write(b);
             }
             byte[] byteAry = baos.toByteArray();
-            String path = "E:\\workspace\\Test\\123.JPG";
+            String path = "H:\\上课留记123.ZIP";
             File file = new File(path);
             fos = new FileOutputStream(file);
             fos.write(byteAry);
