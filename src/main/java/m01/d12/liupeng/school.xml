@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<school name="北大青鸟">
+	<class name="D59班">
+		<student>高世庆</student>
+		<student>吕锐铃</student>
+		<student>刘朋</student>
+		<student>宋杭</student>
+		<student>杜森</student>
+	</class>
+	<class name="D58班">
+		<student>刘文</student>
+		<student>郭进</student>
+		<student>徐超</student>
+		<student>田永旭</student>
+		<student>汪鹏程</student>
+	</class>
+</school>
