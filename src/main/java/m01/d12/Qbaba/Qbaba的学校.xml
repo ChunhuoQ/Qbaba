@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<emloyees company="武汉交通职业学院">
+	<employee>
+	<VALUE>
+		<name>北大青鸟光谷校区</name>
+		<ADDR>名</ADDR>
+	</VALUE>
+	
+	<VALUE>
+		<name>     朱大玲。</name>
+		<ADDR>名</ADDR>
+	</VALUE>
+	
+	<VALUE>
+		<name>  Qbaba</name>
+		<ADDR>名</ADDR>
+	</VALUE>
+	
+	<VALUE>
+		<name>性别：</name>
+		<ADDR>名</ADDR>
+	</VALUE>
+	
+	<VALUE>
+		<sex>TD59班信息</sex>
+		<ADDR>名</ADDR>
+	</VALUE>
+		
+	
+	<VALUE>
+		<sex>学生信息</sex>
+		<ADDR>名</ADDR>
+	</VALUE>
+		
+	<VALUE>
+		<sex>年龄：</sex>
+		<ADDR>名</ADDR>
+	</VALUE>
+	
+	<VALUE>
+		<sex>       男</sex>
+		<ADDR>名</ADDR>
+	</VALUE>
+		
+	<VALUE>
+		<age>班主任姓名：</age>
+		<ADDR>名</ADDR>
+	</VALUE>
+		
+	<VALUE>
+		<age>姓名：</age>
+		<ADDR>名</ADDR>
+	</VALUE>
+	
+	<VALUE>
+		<age>  20</age>
+		<ADDR>名</ADDR>
+	</VALUE>
+		
+	</employee>
+</emloyees>
+	
