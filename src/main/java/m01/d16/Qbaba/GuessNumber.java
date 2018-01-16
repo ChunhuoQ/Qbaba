@@ -26,7 +26,7 @@ public class GuessNumber {
      */
     public GuessNumber(int ScannerNum) {
         if(ScannerNum==RandomNum){
-        System.out.println("恭喜你猜对了!\n游戏结束！");
+        System.out.println("胜利~恭喜你猜对了!\n游戏结束！");
         
         }
         else if(ScannerNum<RandomNum){
