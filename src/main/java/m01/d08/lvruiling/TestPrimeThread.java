@@ -28,7 +28,7 @@ public class TestPrimeThread {
                 p.setName("高");// 高优先级
                 p.setPriority(Thread.MAX_PRIORITY);
             }
-            if (i < 10) {
+            if (i == 1) {
                 p.setName("低");// 低优先级
                 p.setPriority(Thread.MIN_PRIORITY);
             }
