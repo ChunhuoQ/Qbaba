@@ -1,0 +1,6 @@
+2018-01-03 19:52:37 [ main:0 ] - [ INFO ] 
+2018-01-03 19:52:37 [ main:1 ] - [ INFO ] 异常信息
+2018-01-03 19:52:37 [ main:2 ] - [ INFO ] java.lang.NullPointerException
+2018-01-03 19:53:02 [ main:0 ] - [ INFO ] 
+2018-01-03 19:53:02 [ main:1 ] - [ INFO ] 异常信息
+2018-01-03 19:53:02 [ main:1 ] - [ INFO ] java.lang.NullPointerException
