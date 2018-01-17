@@ -1,0 +1,63 @@
+2018-01-07 12:45:51 [ main:0 ] - [ INFO ] 14
+2018-01-07 12:45:51 [ main:2 ] - [ INFO ] 指定的路径指向一个文件D:\git\songhang724\.classpath
+2018-01-07 12:45:51 [ main:2 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git
+
+2018-01-07 12:45:51 [ main:2 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\branches
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\config
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\FETCH_HEAD
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\HEAD
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\hooks
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\index
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\logs
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\objects
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.git\refs
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个文件D:\git\songhang724\.gitignore
+2018-01-07 12:45:51 [ main:3 ] - [ INFO ] 指定的路径指向一个文件D:\git\songhang724\.project
+2018-01-07 12:45:51 [ main:4 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.settings
+
+2018-01-07 12:45:51 [ main:4 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.settings\org.eclipse.core.resources.prefs
+2018-01-07 12:45:51 [ main:4 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.settings\org.eclipse.jdt.core.prefs
+2018-01-07 12:45:51 [ main:4 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\.settings\org.eclipse.m2e.core.prefs
+2018-01-07 12:45:51 [ main:4 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\doc
+
+2018-01-07 12:45:51 [ main:4 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\doc\知识点回顾 作业.docx
+2018-01-07 12:45:51 [ main:4 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\doc\知识点回顾.docx
+2018-01-07 12:45:51 [ main:5 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\doc\第一阶段笔记.doc
+2018-01-07 12:45:51 [ main:5 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\lib
+
+2018-01-07 12:45:51 [ main:5 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\lib\log4j-1.2.14.jar
+2018-01-07 12:45:51 [ main:5 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\logs
+
+2018-01-07 12:45:51 [ main:5 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\logs\mylog.txt
+2018-01-07 12:45:51 [ main:5 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\logs\mylog.txt.2018-01-03
+2018-01-07 12:45:51 [ main:5 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\logs\mylog.txt.2018-01-06
+2018-01-07 12:45:51 [ main:6 ] - [ INFO ] 指定的路径指向一个文件D:\git\songhang724\new.txt
+2018-01-07 12:45:51 [ main:6 ] - [ INFO ] 指定的路径指向一个文件D:\git\songhang724\new1.txt
+2018-01-07 12:45:51 [ main:6 ] - [ INFO ] 指定的路径指向一个文件D:\git\songhang724\pom.xml
+2018-01-07 12:45:51 [ main:6 ] - [ INFO ] 指定的路径指向一个文件D:\git\songhang724\README.md
+2018-01-07 12:45:51 [ main:6 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\src
+
+2018-01-07 12:45:51 [ main:6 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\src\main
+2018-01-07 12:45:51 [ main:6 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\target
+
+2018-01-07 12:45:51 [ main:7 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\target\classes
+2018-01-07 12:45:51 [ main:7 ] - [ INFO ] 指定的路径指向一个目录D:\git\songhang724\target\test-classes
+2018-01-07 13:04:02 [ main:0 ] - [ INFO ] 12
+2018-01-07 13:10:57 [ main:0 ] - [ INFO ] 12
+2018-01-07 13:10:57 [ main:0 ] - [ INFO ] 复制完成
+2018-01-07 13:11:25 [ main:0 ] - [ INFO ] 12
+2018-01-07 13:11:25 [ main:0 ] - [ INFO ] 复制完成
+2018-01-07 13:13:47 [ main:0 ] - [ INFO ] 今天是：Sun Jan 07 00:00:00 CST 2018
+2018-01-07 13:13:47 [ main:1 ] - [ INFO ] 今天是：2018年01月07日 00：00:00:000+0800
+2018-01-07 13:13:47 [ main:1 ] - [ INFO ] new date：1970年01月01日 08：00:00:000+0800
+2018-01-07 13:13:47 [ main:1 ] - [ INFO ] 当前的时间：2018年01月07日 13：13:47:247+0800
+2018-01-07 13:38:32 [ main:0 ] - [ INFO ] 今天是：Sun Jan 07 00:00:00 CST 2018
+2018-01-07 13:38:32 [ main:1 ] - [ INFO ] 今天是：2018年01月07日 00：00:00:000+0800
+2018-01-07 13:38:32 [ main:1 ] - [ INFO ] new date：1970年01月01日 08：00:00:000+0800
+2018-01-07 13:38:32 [ main:1 ] - [ INFO ] new date：2018年01月07日 00：00:00:000+0800
+2018-01-07 13:38:32 [ main:1 ] - [ INFO ] 当前的时间：2018年01月07日 13：38:32:364+0800
+2018-01-07 14:28:27 [ main:0 ] - [ INFO ] 今天是：Sun Jan 07 00:00:00 CST 2018
+2018-01-07 14:28:27 [ main:0 ] - [ INFO ] 今天是：2018年01月07日 00：00:00:000+0800
+2018-01-07 14:28:27 [ main:0 ] - [ INFO ] new date：1970年01月01日 08：00:00:000+0800
+2018-01-07 14:28:27 [ main:0 ] - [ INFO ] new date：2018年01月07日 00：00:00:000+0800
+2018-01-07 14:28:27 [ main:0 ] - [ INFO ] 当前的时间：2018年01月07日 14：28:27:982+0800
