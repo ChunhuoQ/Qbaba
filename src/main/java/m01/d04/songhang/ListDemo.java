@@ -27,7 +27,8 @@ public class ListDemo {
 
     public static void main(String[] args) {
 
-        List list = new ArrayList();// 接口List 由它的实现类 new一个
+        List<Comparable> list = new ArrayList<Comparable>();// 接口List 由它的实现类
+                                                            // new一个
         // 添加
         list.add("老王 ");// 添加一个元素
         list.add(true);
@@ -53,8 +54,7 @@ public class ListDemo {
         list.add(1, "小高");
         LOG.info(list.get(1));
         // 遍历 迭代（不是很懂）
-        Iterator ite = list.iterator();// 不懂
-        int i = 1;
+        Iterator<Comparable> ite = list.iterator();// 不懂
         while (ite.hasNext()) {
             LOG.info(ite.next());
 
