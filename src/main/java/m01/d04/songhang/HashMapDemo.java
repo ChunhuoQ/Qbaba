@@ -27,7 +27,7 @@ public class HashMapDemo {
 
     public static void main(String[] args) {
 
-        Map map = new HashMap();
+        Map<Integer, String> map = new HashMap<Integer, String>();
         // 添加
         map.put(1, "小张");
         map.put(2, "在青鸟学习java");
@@ -46,9 +46,10 @@ public class HashMapDemo {
         LOG.info(map.get(1) + " " + map.get(2));
         LOG.info(map.get(3) + " " + map.get(4));
         // 遍历（不是很懂）
-        Iterator ite = map.keySet().iterator();
+        Iterator<Integer> ite = map.keySet().iterator();
         while (ite.hasNext()) {
-            LOG.info(ite.next());
+            Object key = ite.next();
+            LOG.info("new:" + key + "\t" + map.get(key));
 
         }
 
