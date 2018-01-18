@@ -6,10 +6,9 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d17;
+package m01.d17.Qbaba;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.chainsaw.Main;
 
 /**
  * Description:   <br/>
@@ -21,7 +20,7 @@ import org.apache.log4j.chainsaw.Main;
 public class Number {
     private int n1;
     private int n2;
-    int num;
+    int num=0;
     
     public Number(){
         
@@ -31,19 +30,19 @@ public class Number {
     
     
     public  void addition(){
-        int num=n1+n2;
+        this.num=n1+n2;
         
     }
     public  void subtration(){
-        int num=n1-n2;
+        this.num=n1-n2;
         
     }
     public  void addmultiplication(){
-        int num=n1*n2;
+        this.num=n1*n2;
         
     }
     public  void division(){
-        int num=n2/n1;
+        this.num=n2/n1;
         
     }
     private static final Logger LOG=Logger.getLogger(Number.class);
@@ -60,7 +59,6 @@ public class Number {
        LOG.info(num.num);
 }
 
-     ;
-        
+    
 }
 
