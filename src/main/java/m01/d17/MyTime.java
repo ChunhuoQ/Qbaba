@@ -24,7 +24,7 @@ public final class MyTime {
        MyTime time =new MyTime(20,02,44);
        time.diapaly();
        LOG.info("一个半小时过去了...");
-       time.addHour(1);
+       time.addHour(30);
        time.addMinute(30);
        time.addSecond(20);
        time.diapaly();
