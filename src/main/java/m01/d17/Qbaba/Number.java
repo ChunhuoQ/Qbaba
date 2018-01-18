@@ -9,6 +9,7 @@
 package m01.d17.Qbaba;
 
 import org.apache.log4j.Logger;
+
 import org.apache.log4j.chainsaw.Main;
 
 /**
@@ -58,9 +59,8 @@ public class Number {
        LOG.info(num.num);
        num.subtration();
        LOG.info(num.num);
-}
+}}
 
-     ;
-        
-}
+
+
 
