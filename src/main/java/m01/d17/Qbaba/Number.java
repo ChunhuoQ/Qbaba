@@ -10,6 +10,8 @@ package m01.d17.Qbaba;
 
 import org.apache.log4j.Logger;
 
+
+
 /**
  * Description:   <br/>
  * Date:     2018年1月17日 下午8:16:23 <br/>
@@ -57,9 +59,10 @@ public class Number {
        LOG.info(num.num);
        num.subtration();
        LOG.info(num.num);
-}
+}}
 
-     ;
-        
-}
+
+
+
+
 
