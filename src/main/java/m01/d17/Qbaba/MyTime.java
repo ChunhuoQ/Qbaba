@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d17;
+package m01.d17.Qbaba;
 
 import org.apache.log4j.Logger;
 
@@ -19,16 +19,16 @@ import org.apache.log4j.Logger;
  * @see
  */
 public final class MyTime {
-    public static void main(String[] args) {
-
-        MyTime time = new MyTime(20, 02, 44);
-        time.diapaly();
-        LOG.info("一个半小时过去了...");
-        time.addHour(30);
-        time.addMinute(30);
-        time.addSecond(20);
-        time.diapaly();
-    }
+     public static void main(String[] args) {
+        
+       MyTime time =new MyTime(20,02,44);
+       time.diapaly();
+       LOG.info("一个半小时过去了...");
+       time.addHour(1);
+       time.addMinute(30);
+       time.addSecond(20);
+       time.diapaly();
+}
 
     private int hour;
 
@@ -46,29 +46,31 @@ public final class MyTime {
 
     public void diapaly() {
 
-        if (minute > 10 && minute < 60) {
-            LOG.info("北京时间：" + hour + ":" + minute + ":" + second);
-        } else if (minute > 60) {
-            LOG.info("北京时间：" + (hour + 1) + ":" + (minute - 60) + ":" + second);
-        } else if (minute < 10 && minute > 0) {
-            LOG.info("北京时间：" + hour + ":" + "0" + minute + ":" + second);
+        if(minute>10&&minute<60){
+        LOG.info("北京时间：" + hour + ":" + minute + ":" + second);
+        }
+        else if(minute>60){
+            LOG.info("北京时间：" +(hour +1)+ ":" +(minute-60)+ ":" + second);
+        }
+        else if(minute<10&&minute>0){
+            LOG.info("北京时间：" +hour + ":" +"0"+minute+ ":" + second);
         }
     }
 
     public void addSecond(int sec) {
-        this.second = this.second + sec;
+        this.second=this.second+sec;
 
     }
 
     public void addMinute(int min) {
 
-        this.minute = this.minute + min;
+        this.minute=this.minute+min;
     }
 
     /**
      * hour.
      *
-     * @return the hour
+     * @return  the hour
      */
     public int getHour() {
         return hour;
@@ -77,7 +79,7 @@ public final class MyTime {
     /**
      * hour
      *
-     * @param hour the hour to set
+     * @param   hour    the hour to set
      */
     public void setHour(int hour) {
         this.hour = hour;
@@ -86,7 +88,7 @@ public final class MyTime {
     /**
      * minute.
      *
-     * @return the minute
+     * @return  the minute
      */
     public int getMinute() {
         return minute;
@@ -95,7 +97,7 @@ public final class MyTime {
     /**
      * minute
      *
-     * @param minute the minute to set
+     * @param   minute    the minute to set
      */
     public void setMinute(int minute) {
         this.minute = minute;
@@ -104,7 +106,7 @@ public final class MyTime {
     /**
      * second.
      *
-     * @return the second
+     * @return  the second
      */
     public int getSecond() {
         return second;
@@ -113,7 +115,7 @@ public final class MyTime {
     /**
      * second
      *
-     * @param second the second to set
+     * @param   second    the second to set
      */
     public void setSecond(int second) {
         this.second = second;
@@ -121,6 +123,8 @@ public final class MyTime {
 
     public void addHour(int hou) {
 
-        this.hour = this.hour + hou;
+        this.hour=this.hour+hou;
     }
+    
+   
 }
