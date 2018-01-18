@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> form表单的用法 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta charset="utf-8">
+ </head>
+
+ <body>
+ <table >
+ 
+  <form method="get" action="cus.html" enctype="multipart/form-data"><br>
+ <tr> <td>用户名:</td><td><input type="text" name="username"  placeholder="请输入用户名" required/></td></tr><br>
+<tr><td>密码:</td><td><input type="password" name="password" placeholder="请输入密码" required/></td></tr><br>
+ <tr ><td colspan="2"> <center><input type="submit" name="提交" value="提交" /></td></center></tr><br>
+  <tr> <td><input type="checkbox" name="1" checked>1</td></tr><br><!--checked 默认选中-->
+  <tr> <td><input type="checkbox" name="1">2</td></tr><br>
+ <tr> <td><input type="checkbox" name="1">3</td></tr><br>
+ <tr> <td><input type="button" name="button" value="这是一个按钮"></td></tr><br>
+请选择性别：<input type="radio" name="3" id="man"><label for="man">男</label>
+<input type="radio" name="3" id="woman"><label for="woman">女</label>
+<td><input type="reset" name="" value="重置"></td></tr><br>
+<tr> <td><input type="image" src="QQ.icon.png" width="30"></td></tr><br>
+<tr> <td><input type="hidden" name="hid" value="10"></td></tr><br>
+
+<input type="file" name="fi" value=""><br>
+
+<textarea name="" rows="5" cols="50"></textarea>
+
+<select name="sel">
+<option>请选择</option>
+<option >橘子</option>
+<option selected>青苹果</option>
+<option >香蕉</option>
+</select>
+<input type="text" name="re" value="无花果" readonly><br><!--只读-->
+<input type="text" name="dis" value="无花果" disabled><br><!--禁用-->
+<input type="text" name="username"  placeholder="请输入用户名" required/><br>
+<input type="password" name="password" placeholder="请输入密码" required/><br><!--提示输入的内容和必填的选项-->
+
+ 昵称：<input type="text" name="pw" pattern="[\dA-Za-z]{6,16}"/><br>
+密码：<input type="password" name="password" pattern="[\dA-Za-z]{6,16}"/><br>
+密码2：<input type="text" name="pw"  
+ Pattern    
+="[\dA-Za-z]{6,16}" 
+
+ ><br><!--正则表达式没有用-->
+ <input type="submit" value="提交">
+<input type="email" name="ema" value=""><br>
+<input type="range" min="0" max="100" step="2" title="滑我！"><br>
+<input type="date" ><br>
+<input type="search" ><br>
+<input type="button" name="button" value="搜索"><br>
+  </table><tr> 
+ 
+  </form>
+ </body>
+</html>
