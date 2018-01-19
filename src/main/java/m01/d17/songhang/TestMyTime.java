@@ -1,13 +1,12 @@
 /**
+ * Project Name:Qbaba
  * File Name:TestMyTime.java
  * Package Name:m01.d18.songhang
  * Date:2018年1月17日下午7:16:56
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d18.songhang;
-
-import m01.d17.songhang.MyTime;
+package m01.d17.songhang;
 
 import org.apache.log4j.Logger;
 
