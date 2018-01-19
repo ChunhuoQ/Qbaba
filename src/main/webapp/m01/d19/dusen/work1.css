@@ -1,0 +1,58 @@
+	.class1 {
+		/*定义宽度*/
+		width: 100%;
+		/*定义背景高度*/
+		height: 60px;
+		/*调用背景颜色*/
+		background-color: blue;
+	}
+	
+	.class1 h1 {
+		/*让标题居中*/
+		text-align: center;
+		/*标题颜色为白色*/
+		color: white;
+		/*属性定义元素边框于于元素内容之间的空间*/
+		padding: 10px;
+		/*填充*/
+		margin: 0px;
+	}
+	
+	body {
+		/*填充*/
+		margin: 0px;
+		/*设置整体背景颜色*/
+		background-color: #CCCCFF;
+	}
+	
+	img {
+		/*文本流向对象的右边 */
+		float: left;
+		/*图片边框*/
+		border: 1px #9999cc dashed;
+	}
+	
+	p {
+		/*字体颜色*/
+		font-size: 12px;
+		/*行间距*/
+		line-height:1.5;
+		padding: 5px;
+		/*首行缩进*/
+		text-indent: 2em;
+	}
+	
+	#p1 {
+		/*右边框 线宽3 双线  红色*/
+		border-right: 3px double red;
+	}
+	
+	#p2 {
+		/*右边框 线宽3 双线  橙色*/
+		border-right: 3px double orange;
+	}
+	/*.class2{
+		padding: 10px;
+		height: 300px;
+		background-color:#CCCCFF ;
+	}*/
