@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表格</title>
+		<style>
+			
+			tr>td{
+				border-bottom: solid blue;
+				border-right: solid blue;
+				border-width: 1px;
+				width: 60px;
+				height: 10px;				
+			}
+			
+			td:last-of-type{
+				border-right:none;
+				
+			}
+			
+			td[name="1"]{
+				border-bottom: none;
+			}
+			
+			table{
+				border: solid red;
+				border-width: 3px;
+				border-spacing: none;
+			}
+			
+			#first{
+				border-right:none;
+			}
+			
+			th{
+				border-right: 1px solid black;
+				border-bottom: 3px solid black;
+				width: 60px;
+				height: 10px;	
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<table cellspacing="0">
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th id=first></th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td name="1"></td>
+				<td name="1"></td>
+				<td name="1"></td>
+				<td name="1"></td>
+			</tr>
+		</table>
+	</body>
+</html>
