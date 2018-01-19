@@ -63,12 +63,11 @@ public class Number {
 }}
 
 
-<<<<<<< HEAD
 
 
-=======
 
 
->>>>>>> refs/remotes/origin/master
+
+
 
 
