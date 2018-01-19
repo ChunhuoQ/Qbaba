@@ -6,10 +6,12 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d17;
+package m01.d17.Qbaba;
 
 import org.apache.log4j.Logger;
+
 import org.apache.log4j.chainsaw.Main;
+
 
 /**
  * Description:   <br/>
@@ -58,9 +60,15 @@ public class Number {
        LOG.info(num.num);
        num.subtration();
        LOG.info(num.num);
-}
+}}
 
-     ;
-        
-}
+
+<<<<<<< HEAD
+
+
+=======
+
+
+>>>>>>> refs/remotes/origin/master
+
 
