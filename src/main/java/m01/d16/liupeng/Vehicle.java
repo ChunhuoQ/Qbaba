@@ -59,11 +59,11 @@ public class Vehicle {
     }
 
     public void speedUp() {
-        LOG.info("speedUp");
+        LOG.info(getSpeed() + 10);
     }
 
     public void speedDown() {
-        LOG.info("speedDown");
+        LOG.info(getSpeed() - 10);
     }
 
 }
