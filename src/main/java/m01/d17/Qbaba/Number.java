@@ -32,22 +32,22 @@ public class Number {
     }
 
     public void addition() {
-        int num = n1 + n2;
+       num = n1 + n2;
 
     }
 
     public void subtration() {
-        int num = n1 - n2;
+     num = n1 - n2;
 
     }
 
     public void addmultiplication() {
-        int num = n1 * n2;
+       num = n1 * n2;
 
     }
 
     public void division() {
-        int num = n2 / n1;
+        num = n2 / n1;
 
     }
 
