@@ -64,6 +64,7 @@ public class Number {
         LOG.info(num.num);
         num.subtration();
         LOG.info(num.num);
+<<<<<<< HEAD
    
        LOG.info(num.num);
        num.division();
@@ -71,6 +72,11 @@ public class Number {
        num.subtration();
        LOG.info(num.num); 
        }
+}
+=======
+    }
+>>>>>>> refs/remotes/origin/master
+
 }
 
 
@@ -80,6 +86,7 @@ public class Number {
 
 
 
+<<<<<<< HEAD
 
-
-
+=======
+>>>>>>> refs/remotes/origin/master
