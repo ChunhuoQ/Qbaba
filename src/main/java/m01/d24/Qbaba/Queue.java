@@ -15,10 +15,10 @@ import java.util.LinkedList;
  * @version
  * @see
  */
-public class Queue {private LinkedList list = new LinkedList();
+public class Queue {private LinkedList<Queue> list = new LinkedList<Queue>();
 
 public void add(Object obj){
-    list.addFirst(obj);
+    list.addFirst((Queue) obj);
 }
 
 public Object get(){

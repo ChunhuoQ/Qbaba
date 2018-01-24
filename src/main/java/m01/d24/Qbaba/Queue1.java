@@ -41,6 +41,9 @@ public class Queue1 {
     }
 
     public static void main(String[] args) {
+        
+        
+        
 
         LinkedList list = new LinkedList();
         list.addFirst("C");
