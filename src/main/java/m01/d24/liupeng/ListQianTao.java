@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import m01.d24.dusen.Person;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -26,7 +28,7 @@ import org.apache.log4j.Logger;
  */
 public class ListQianTao {
 
-    private final static Logger LOG = Logger.getLogger(QianTao.class);
+    private final static Logger LOG = Logger.getLogger(ListQianTao.class);
 
     public static void main(String[] args) {
 
