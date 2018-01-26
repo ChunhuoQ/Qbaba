@@ -3,10 +3,12 @@ package m01.d26.Qbaba;
 import java.awt.Color;
 
 
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+@SuppressWarnings("serial")
 public class MyInterface extends JFrame{
    
         /*JButton jdL;

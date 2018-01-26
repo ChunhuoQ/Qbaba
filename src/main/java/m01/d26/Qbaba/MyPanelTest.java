@@ -24,6 +24,7 @@ import javax.swing.JPanel;
  * @version
  * @see
  */
+@SuppressWarnings("serial")
 public class MyPanelTest extends JFrame implements ActionListener {
 
     

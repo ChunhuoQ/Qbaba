@@ -1,13 +1,13 @@
 package m01.d26.Qbaba;
 
 import java.awt.Color;
-
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class Panel extends JPanel implements KeyListener {
     // int count;
     int x = 260, y = 370, a;
