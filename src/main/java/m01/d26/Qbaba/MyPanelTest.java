@@ -10,14 +10,11 @@ package m01.d26.Qbaba;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -66,7 +63,7 @@ public class MyPanelTest extends JFrame implements ActionListener {
         
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setTitle("坦克大战");
+        this.setTitle("坦克大战0.8(未完成)");
         
         this.setResizable(false);
         this.setVisible(true);

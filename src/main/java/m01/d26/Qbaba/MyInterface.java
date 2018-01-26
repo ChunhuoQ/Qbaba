@@ -2,11 +2,10 @@ package m01.d26.Qbaba;
 
 import java.awt.Color;
 
-import javax.swing.Icon;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class MyInterface extends JFrame{
    

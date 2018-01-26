@@ -1,12 +1,11 @@
 package m01.d26.Qbaba;
 
 import java.awt.Color;
+
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import javax.swing.Icon;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Panel extends JPanel implements KeyListener {
