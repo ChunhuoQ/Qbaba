@@ -9,7 +9,7 @@ import javax.swing.Icon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class MyPanel extends JPanel implements KeyListener {
+public class Panel extends JPanel implements KeyListener {
     // int count;
     int x = 260, y = 370, a;
    

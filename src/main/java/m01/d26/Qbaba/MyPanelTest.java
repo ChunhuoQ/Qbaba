@@ -27,7 +27,7 @@ import javax.swing.JPanel;
  * @version
  * @see
  */
-public class JFreamDome extends JFrame implements ActionListener {
+public class MyPanelTest extends JFrame implements ActionListener {
 
     
     
@@ -38,25 +38,33 @@ public class JFreamDome extends JFrame implements ActionListener {
     public static void main(String[] args) {
 
         //  Auto-generated method stub
-        new JFreamDome();
+        new MyPanelTest();
 
     }
 
     
-    public JFreamDome(){
-        this.setBounds(400,100, 600,600);
+    public MyPanelTest(){
+        this.setBounds(400,200, 300,300);
        jd1=new JButton("开始游戏");
         jd2=new JButton("结束游戏");
         jp =new JPanel();
         jp.setBackground(Color.white);
         jp.getUIClassID(); 
         
-        this.add(jp,BorderLayout.CENTER);
+        this.add(jp,BorderLayout.NORTH);
 
-        Dimension preferredSize = new Dimension(100,100);
-        jd1.setPreferredSize(preferredSize );
-        this.add(jd1,BorderLayout.SOUTH);
-        this.add(jd2,BorderLayout.NORTH);
+       /* Dimension preferredSize = new Dimension(100,60);
+        jd1.setPreferredSize(preferredSize );*///没什么卵用阿
+        
+        this.add(jd1,BorderLayout.CENTER);
+        this.add(jd2,BorderLayout.SOUTH);
+        
+        jd1.addActionListener(this);
+        jd1.setActionCommand("Ac");
+        jd2.addActionListener(this);
+        jd2.setActionCommand("Ex");
+        
+        
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("坦克大战");
         
@@ -68,7 +76,13 @@ public class JFreamDome extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        String str=e.getActionCommand();
+        if(str.equals("Ac")){
+            new MyInterface();
+        }else if(str.equals("Ex")){
+           jp.setBackground(Color.BLUE);
+           this.dispose();
+        }
            
     }
 

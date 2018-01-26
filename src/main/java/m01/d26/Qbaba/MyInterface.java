@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Test extends JFrame{
+public class MyInterface extends JFrame{
    
         /*JButton jdL;
         JButton jdR;
@@ -21,12 +21,12 @@ public class Test extends JFrame{
 		// TODO Auto-generated method stub
 		
 		
-        new Test();
+        new MyInterface();
 	}
-	public Test(){
+	public MyInterface(){
 	     
 	    
-		MyPanel mp=new MyPanel();
+		Panel mp=new Panel();
 		this.addKeyListener(mp);
 		this.add(mp);
 		this.setBounds(300, 150, 800, 500);
