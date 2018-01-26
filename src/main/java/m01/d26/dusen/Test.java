@@ -33,7 +33,7 @@ public class Test extends JFrame {
         this.add(ta);
 
         ta.setBackground(Color.green);
-        this.setBounds(200, 300, 800, 500);
+        this.setBounds(250, 100, 800, 500);
         this.setTitle("干啥子");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
