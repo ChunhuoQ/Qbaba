@@ -28,7 +28,6 @@ public class FileReaderDemo1 {
     private final static Logger LOG = Logger.getLogger(FileReaderDemo1.class);
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         BufferedReader br = null;
         FileReader fr=null;
         BufferedWriter bw = null;
@@ -45,7 +44,7 @@ public class FileReaderDemo1 {
                 bw.write(str + "\r\n");
                 str = br.readLine();
             }
-            System.out.println("缓冲字符流读写完成！");
+            LOG.info("缓冲字符流读写完成！");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

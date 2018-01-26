@@ -26,7 +26,7 @@ import org.apache.log4j.Logger;
  */
 public class ListQianTao {
 
-    private final static Logger LOG = Logger.getLogger(QianTao.class);
+    private final static Logger LOG = Logger.getLogger(ListQianTao.class);
 
     public static void main(String[] args) {
 
