@@ -51,6 +51,12 @@ public class Person {
         this.id = id;
     }
 
+    public int getSalary() {
+        
+        //  Auto-generated method stub
+        return 0;
+    }
+
 
 }
 
