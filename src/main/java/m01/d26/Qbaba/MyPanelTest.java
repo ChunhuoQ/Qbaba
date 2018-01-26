@@ -81,7 +81,7 @@ public class MyPanelTest extends JFrame implements ActionListener {
            jp.setBackground(Color.BLUE);
            this.dispose();
         }
-           
+          
     }
 
 }
