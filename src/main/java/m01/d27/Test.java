@@ -1,14 +1,16 @@
 /**
  * Project Name:JFreamDome
+
  * File Name:JFreamDome.java
  * Package Name:JFreamDome
  * Date:2018年1月25日上午10:21:26
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d26.Qbaba;
+package m01.d27;
 
 import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,7 +27,7 @@ import javax.swing.JPanel;
  * @see
  */
 @SuppressWarnings("serial")
-public class MyPanelTest extends JFrame implements ActionListener {
+public class Test extends JFrame implements ActionListener {
 
     
     
@@ -36,12 +38,12 @@ public class MyPanelTest extends JFrame implements ActionListener {
     public static void main(String[] args) {
 
         //  Auto-generated method stub
-        new MyPanelTest();
+        new Test();
 
     }
 
     
-    public MyPanelTest(){
+    public Test(){
         this.setBounds(400,200, 300,300);
        jd1=new JButton("开始游戏");
         jd2=new JButton("结束游戏");
@@ -58,7 +60,7 @@ public class MyPanelTest extends JFrame implements ActionListener {
         jd2.addActionListener(this);
         jd2.setActionCommand("Ex");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setTitle("坦克大战0.8(未完成)");
+        this.setTitle("坦克大战0.9(初成)");
         
         this.setResizable(false);
         this.setVisible(true);
@@ -70,7 +72,7 @@ public class MyPanelTest extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String str=e.getActionCommand();
         if(str.equals("Ac")){
-            new MyInterface();
+            new LastJPanle();
         }else if(str.equals("Ex")){
            jp.setBackground(Color.BLUE);
            this.dispose();

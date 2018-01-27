@@ -12,6 +12,12 @@ public class Panel extends JPanel implements KeyListener {
     // int count;
     int x = 260, y = 370, a, j = 20, k = 20;
 
+    
+    
+    public void paintln(Graphics g){
+        g.setColor(Color.BLACK);
+        g.fillOval(j, k, 6, 6);
+    }
     @Override
     public void paint(Graphics g) {
 
@@ -27,7 +33,6 @@ public class Panel extends JPanel implements KeyListener {
         // 做个窝准备放鸟，
         g.setColor(Color.lightGray);
         g.fill3DRect(308, 355, 30, 120, true);
-
         g.fill3DRect(337, 355, 115, 31, true);
         g.fill3DRect(451, 355, 30, 120, true);
         // 放鸟
@@ -197,9 +202,9 @@ public class Panel extends JPanel implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_A) {
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             a = 3;
-            this.j = this.x+19;
+            this.j = this.x-13;
             this.k = this.y+16;
             this.x = this.x - 7;
 
@@ -211,9 +216,9 @@ public class Panel extends JPanel implements KeyListener {
 
             }
             System.out.println("x=" + x);
-        } else if (e.getKeyCode() == KeyEvent.VK_W) {
+        } else if (e.getKeyCode() == KeyEvent.VK_UP) {
             this.j = this.x+16;
-            this.k = this.y+18;
+            this.k = this.y-15;
             a = 0;
 
             this.y = this.y - 8;
@@ -224,8 +229,8 @@ public class Panel extends JPanel implements KeyListener {
 
             System.out.println("y=" + y);
 
-        } else if (e.getKeyCode() == KeyEvent.VK_D) {
-            this.j = this.x+19;
+        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            this.j = this.x+67;
             this.k = this.y+16;
             a = 1;
             this.x = this.x + 7;
@@ -239,9 +244,9 @@ public class Panel extends JPanel implements KeyListener {
             }
 
             System.out.println("x=" + x);
-        } else if (e.getKeyCode() == KeyEvent.VK_S) {
+        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             this.j = this.x+16;
-            this.k = this.y+18;
+            this.k = this.y+67;
             a = 2;
             this.y = this.y + 8;
 
@@ -253,24 +258,34 @@ public class Panel extends JPanel implements KeyListener {
 
             }
             System.out.println("y=" + y);
-        } else if (e.getKeyCode() == KeyEvent.VK_J) {
+        } else if (e.getKeyCode() == KeyEvent.VK_X) {
             
             
             if(a==1){
-            this.j = this.j+8;
-            
+                
+            this.j = this.j+10;
+            if(j>758){
+                this.j=x+67;
+            }
            System.out.println("j=" + j);
         }else  if(a==0){
-            this.k = this.k-8;
-            
+            this.k = this.k-10;
+            if(k<30){
+                this.k=y-15;
+            }
            System.out.println("k=" + k);
         }else  if(a==2){
-            this.k= this.k+8;
-            
+           
+            this.k= this.k+10;
+           if(k>440){
+               this.k=y+67;
+           } 
            System.out.println("j=" + j);
         }else  if(a==3){
-            this.j = this.j-8;
-            
+            this.j = this.j-10;
+            if(j<30){
+                j=x-15;
+            }
            System.out.println("j=" + j);
         }
         }
