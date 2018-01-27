@@ -74,7 +74,8 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 		for(int i=0;i<mt.vect.size();i++){
 		    Shot st=mt.vect.get(i);
 		    if(st.isLive()&&mt.vect!=null){
-		        g.fill3DRect(st.getX(), st.getY(), 6, 6, true);
+		        
+		        g.fillOval(st.getX()-4, st.getY()-4, 14, 14);
 		    }
 		    if(!st.isLive()&&mt.vect!=null){
 		        mt.vect.remove(st);
