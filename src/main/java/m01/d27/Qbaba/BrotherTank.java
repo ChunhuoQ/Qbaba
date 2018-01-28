@@ -10,13 +10,6 @@ package m01.d27.Qbaba;
 
 import java.util.Vector;
 
-
-
-
-
-
-import org.apache.log4j.Logger;
-
 /**
  * Description:   <br/>
  * Date:     2018年1月28日 下午8:12:48 <br/>
@@ -25,8 +18,6 @@ import org.apache.log4j.Logger;
  * @see
  */
 public class BrotherTank extends Taikei {
-
-    private final static Logger LOG = Logger.getLogger(BrotherTank.class);
 
     private int direct;
 

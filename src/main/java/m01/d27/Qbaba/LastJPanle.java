@@ -4,12 +4,14 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 
+@SuppressWarnings("serial")
 public class LastJPanle extends JFrame{
 
 	/**
 	 * ̹��
 	 */
-	public static void main(String[] args) {
+	@SuppressWarnings("unused")
+    public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LastJPanle tt=new LastJPanle();
 	}
