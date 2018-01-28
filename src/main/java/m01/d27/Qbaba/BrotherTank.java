@@ -88,7 +88,7 @@ public class BrotherTank extends Taikei {
                 vector.add(shot1);
             }
             // 子弹坐标：
-           
+            
             Thread th = new Thread(shot1);
             th.start();
         }

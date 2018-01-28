@@ -1,7 +1,6 @@
 package m01.d27.Qbaba;
 
 import java.awt.Color;
-
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -105,7 +104,7 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	public void drawtaikei(int x,int y,int type,int direct,Graphics g){
 		switch(type){
 			case 0:
-				g.setColor(Color.cyan);
+				g.setColor(Color.BLACK);
 				break;
 			case 1:
 				g.setColor(Color.GREEN);
@@ -249,7 +248,8 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 		
 		if (e.getKeyCode() == KeyEvent.VK_D) {
             // d被按下
-            lj.setDirect(1);
+		    
+           lj .setDirect(1);
             moveright1();
         }
 		if (e.getKeyCode() == KeyEvent.VK_S) {
@@ -319,15 +319,15 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	}
 	public void movedown(){
 		
-		int speed= lj.getSpeed();
-		int y=lj.getY()+speed;
+		int speed= mt.getSpeed();
+		int y=mt.getY()+speed;
 		
 		if (y >= 404) {
             y = 393;
         }
-        if ((lj.getX() > 265 && lj.getX() < 483) && y > 294) {
+        if ((mt.getX() > 265 && mt.getX() < 483) && y > 294) {
             y = 286;}
-        lj.setY(y);
+        mt.setY(y);
 		System.out.println("y="+y);
 	}
 	
@@ -392,7 +392,7 @@ public void moveup1(){
     public void run() {
         while (true){
             try{
-                Thread.sleep(10);
+                Thread.sleep(5);
             this.repaint();
             }catch(Exception e){
                 e.printStackTrace();

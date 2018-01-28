@@ -94,7 +94,7 @@ public class Shot implements Runnable{
                         this.x-=this.speed;
                         break;
                 }
-                Thread.sleep(10);
+                Thread.sleep(5);
             } catch (Exception e) {
                 // TODO: handle exception
                 e.printStackTrace();

@@ -45,7 +45,7 @@ public class Test extends JFrame implements ActionListener {
 
     
     public Test(){
-        this.setBounds(400,200, 300,300);
+        this.setBounds(550,200, 300,300);
        jd1=new JButton("开始游戏");
         jd2=new JButton("结束游戏");
         jp =new JPanel();
