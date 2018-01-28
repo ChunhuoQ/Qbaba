@@ -61,7 +61,6 @@ public class Test extends JFrame implements ActionListener {
         jd2.setActionCommand("Ex");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("坦克大战0.9(初成)");
-        
         this.setResizable(false);
         this.setVisible(true);
      }

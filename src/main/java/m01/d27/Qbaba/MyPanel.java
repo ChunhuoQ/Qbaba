@@ -7,10 +7,13 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	MyTaikei mt=null;
+	MyTaikei lj=null;
 	public MyPanel(){
 		mt=new MyTaikei(260,370);
+		lj=new MyTaikei(60,60);
 	}
 	@Override
 	public void paint(Graphics g) {
@@ -72,6 +75,8 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	        g.fillRect(406, 436, 4, 4);
 
 		drawtaikei(mt.getX(),mt.getY(),0,mt.getDirect(),g);
+		drawtaikei(lj.getX()-200,mt.getY()-100,1,2,g);
+		
 		for(int i=0;i<mt.vect.size();i++){
 		    Shot st=mt.vect.get(i);
 		    if(st.isLive()&&mt.vect!=null){
@@ -86,6 +91,7 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	
 	
 	}
+	
 	
 	public void drawtaikei(int x,int y,int type,int direct,Graphics g){
 		switch(type){
@@ -292,7 +298,7 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
     public void run() {
         while (true){
             try{
-                Thread.sleep(30);
+                Thread.sleep(10);
             this.repaint();
             }catch(Exception e){
                 e.printStackTrace();

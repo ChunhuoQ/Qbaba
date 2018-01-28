@@ -16,6 +16,8 @@ public class LastJPanle extends JFrame{
 	
 	public LastJPanle(){
 		MyPanel mp=new MyPanel();
+		
+		
 		Thread th= new Thread(mp);
 		this.addKeyListener(mp);
 		th.start();
