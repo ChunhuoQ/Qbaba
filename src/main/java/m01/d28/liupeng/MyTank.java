@@ -6,17 +6,16 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d28;
+package m01.d28.liupeng;
 
 import java.util.Vector;
 
 import org.apache.log4j.Logger;
 
 /**
- * Description: <br/>
- * Date: 2018年1月27日 上午10:19:00 <br/>
- * 
- * @author LiuPeng
+ * Description:   <br/>
+ * Date:     2018年1月27日 上午10:19:00 <br/>
+ * @author   LiuPeng
  * @version
  * @see
  */
@@ -24,9 +23,9 @@ import org.apache.log4j.Logger;
 /*
  * 设置我的坦克，速度、方向等
  */
-public class EnemyTank extends Tank {
+public class MyTank extends Tank {
 
-    private final static Logger LOG = Logger.getLogger(EnemyTank.class);
+    private final static Logger LOG = Logger.getLogger(MyTank.class);
 
     private int direct;
 
@@ -35,6 +34,7 @@ public class EnemyTank extends Tank {
     private Bullet bullet = null;
 
     Vector<Bullet> vector = new Vector<Bullet>();
+
 
     public Bullet getBullet() {
         return bullet;
@@ -68,11 +68,11 @@ public class EnemyTank extends Tank {
         this.speed = speed;
     }
 
-    public EnemyTank() {
+    public MyTank() {
         super();
     }
 
-    public EnemyTank(int x, int y) {
+    public MyTank(int x, int y) {
         super(x, y);
     }
 
@@ -97,7 +97,7 @@ public class EnemyTank extends Tank {
                 vector.add(bullet);
             }
             // 子弹坐标：
-            LOG.info("敌方子弹坐标" + "(" + bullet.getX() + "," + bullet.getY() + ")");
+            LOG.info("我方子弹坐标" + "(" + bullet.getX() + "," + bullet.getY() + ")");
             Thread th = new Thread(bullet);
             th.start();
         }
