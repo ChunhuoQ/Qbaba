@@ -1,4 +1,4 @@
-package m01.d27;
+package m01.d27.Qbaba;
 
 public class Taikei {
 	private int x;

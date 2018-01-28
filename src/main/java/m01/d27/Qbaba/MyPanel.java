@@ -1,4 +1,4 @@
-package m01.d27;
+package m01.d27.Qbaba;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -16,6 +16,7 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	public void paint(Graphics g) {
 		// TODO Auto-generated method stub
 		super.paint(g);
+		    
 		  g.setColor(Color.green);
 	        g.fill3DRect(0, 0, 789, 36, false);
 	        g.fill3DRect(0, 0, 36, 500, false);
@@ -75,7 +76,7 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 		    Shot st=mt.vect.get(i);
 		    if(st.isLive()&&mt.vect!=null){
 		        
-		        g.fillOval(st.getX()-4, st.getY()-4, 14, 14);
+		        g.fillOval(st.getX()-7, st.getY()-7, 20, 20);
 		    }
 		    if(!st.isLive()&&mt.vect!=null){
 		        mt.vect.remove(st);
