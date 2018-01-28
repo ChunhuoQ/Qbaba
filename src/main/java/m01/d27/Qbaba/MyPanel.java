@@ -1,14 +1,12 @@
 package m01.d27.Qbaba;
 
 import java.awt.Color;
+
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
-
-import m01.d28.liupeng.Bullet;
-import m01.d28.liupeng.EnemyTank;
 
 @SuppressWarnings("serial")
 public class MyPanel extends JPanel implements KeyListener ,Runnable{
