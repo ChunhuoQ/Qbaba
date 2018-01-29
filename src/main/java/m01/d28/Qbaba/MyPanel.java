@@ -1,4 +1,4 @@
-package m01.d27.Qbaba;
+package m01.d28.Qbaba;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,10 +7,13 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	MyTaikei mt=null;
+	BrotherTank lj=null;
 	public MyPanel(){
 		mt=new MyTaikei(260,370);
+		lj=new BrotherTank(489, 370);
 	}
 	@Override
 	public void paint(Graphics g) {
@@ -72,6 +75,16 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	        g.fillRect(406, 436, 4, 4);
 
 		drawtaikei(mt.getX(),mt.getY(),0,mt.getDirect(),g);
+		drawtaikei(lj.getX(),lj.getY(),1,lj.getDirect(),g);
+		 for (int i = 0; i < lj.vector.size(); i++) {
+	            Shot tr = lj.vector.get(i);
+	            if (tr.isLive() && lj.vector != null) {
+	                g.fillOval(tr.getX()-7, tr.getY()-7, 20, 20);
+	            }
+	            if (tr.isLive() == false) {
+	                lj.getVector().remove(tr);
+	            }
+	        }
 		for(int i=0;i<mt.vect.size();i++){
 		    Shot st=mt.vect.get(i);
 		    if(st.isLive()&&mt.vect!=null){
@@ -87,13 +100,14 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	
 	}
 	
+	
 	public void drawtaikei(int x,int y,int type,int direct,Graphics g){
 		switch(type){
 			case 0:
-				g.setColor(Color.cyan);
+				g.setColor(Color.BLACK);
 				break;
 			case 1:
-				g.setColor(Color.yellow);
+				g.setColor(Color.GREEN);
 				break;
 		}
 		switch(direct){
@@ -201,6 +215,7 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 
+	    
 		if(e.getKeyCode()==KeyEvent.VK_UP){
 		
 			mt.setDirect(0);
@@ -222,10 +237,37 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
 		if(e.getKeyCode()==KeyEvent.VK_X){
 		
 		    mt.PFire();
-		    
-		
-		
+		  
 		}
+		 if (e.getKeyCode() == KeyEvent.VK_W) {
+            // w被按下
+            lj.setDirect(0);
+            moveup1();
+        }
+		
+		
+		if (e.getKeyCode() == KeyEvent.VK_D) {
+            // d被按下
+		    
+           lj .setDirect(1);
+            moveright1();
+        }
+		if (e.getKeyCode() == KeyEvent.VK_S) {
+            // s被按下
+		    lj.setDirect(2);
+            movedown1();
+        }
+        if (e.getKeyCode() == KeyEvent.VK_A) {
+            // a被按下
+            lj.setDirect(3);
+            moveleft1();
+        }
+       
+        
+
+        if (e.getKeyCode() == KeyEvent.VK_Q) {
+            lj.tFire();
+        }
 
 		this.repaint();
 	}
@@ -285,14 +327,72 @@ public class MyPanel extends JPanel implements KeyListener ,Runnable{
         }
         if ((mt.getX() > 265 && mt.getX() < 483) && y > 294) {
             y = 286;}
-		mt.setY(y);
+        mt.setY(y);
 		System.out.println("y="+y);
 	}
+	
+	
+	
+public void moveup1(){
+        
+        int speed= lj.getSpeed();
+        int y=lj.getY()-speed;
+        if (y <= 35) {
+            y= 44;
+        }
+        lj.setY(y);
+        System.out.println("y="+y);
+    }
+
+    public void moveright1(){
+        
+        int speed=lj.getSpeed();
+        int x=lj.getX()+speed;
+        if (x>= 721) {
+            x = 713;
+        }
+        if (x > 265 && x < 483 && lj.getY() > 320) {
+            x = 257;
+
+        }
+        lj.setX(x);
+        System.out.println("x="+x);
+    }
+    
+    public void moveleft1(){
+        
+        int speed= lj.getSpeed();
+        int x=lj.getX()-speed;
+         if (x <= 36) {
+             x = 44; // 持续按有撞墙效果
+         }
+         if (x < 483 && x > 265 && lj.getY() > 320) {
+            x = 491;
+
+         }
+         lj.setX(x);
+        System.out.println("x="+x);
+    }
+    public void movedown1(){
+        
+        int speed=lj.getSpeed();
+        int y=lj.getY()+speed;
+        
+        if (y >= 404) {
+            y = 393;
+        }
+        if ((lj.getX() > 265 && lj.getX() < 483) && y > 294) {
+            y = 286;}
+        lj.setY(y);
+        System.out.println("y="+y);
+    }
+       
+    
     @Override
     public void run() {
         while (true){
             try{
-                Thread.sleep(30);
+                Thread.sleep(5);
             this.repaint();
             }catch(Exception e){
                 e.printStackTrace();

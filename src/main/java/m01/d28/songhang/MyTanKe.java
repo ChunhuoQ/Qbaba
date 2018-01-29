@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d27.songhang;
+package m01.d28.songhang;
 
 import java.util.Vector;
 
@@ -53,22 +53,23 @@ public class MyTanKe extends TanKe {
 
     public void tkFire() {// 定义一个坦克开火的方法： tkFire() 判断子弹的发射方向并装载，最后启动子弹发射的线程
 
-        if (this.direct == 0 && vect.size() < 10) {// 向上
-            shot = new Shot(this.getX() + 35, this.getY() - 20, this.direct);
-            vect.add(shot);
-        } else if (this.direct == 1 && vect.size() < 10) {// 向右
-            shot = new Shot(this.getX() + 70, this.getY() + 35, this.direct);
-            vect.add(shot);
-        } else if (this.direct == 2 && vect.size() < 10) {// 向下
-            shot = new Shot(this.getX() + 35, this.getY() + 70, this.direct);
-            vect.add(shot);
-        } else if (this.direct == 3 && vect.size() < 10) {// 向左
-            shot = new Shot(this.getX() - 20, this.getY() + 35, this.direct);
-            vect.add(shot);
+        if (vect.size() < 10) {
+            if (this.direct == 0) {// 向上
+                shot = new Shot(this.getX() + 35, this.getY() - 20, this.direct);
+                vect.add(shot);
+            } else if (this.direct == 1) {// 向右
+                shot = new Shot(this.getX() + 70, this.getY() + 35, this.direct);
+                vect.add(shot);
+            } else if (this.direct == 2) {// 向下
+                shot = new Shot(this.getX() + 35, this.getY() + 70, this.direct);
+                vect.add(shot);
+            } else if (this.direct == 3) {// 向左
+                shot = new Shot(this.getX() - 20, this.getY() + 35, this.direct);
+                vect.add(shot);
+            }
+            Thread th = new Thread(shot);// 创建一个线程的对象th 并初始化shot参数
+            th.start();// 启动线程
         }
-
-        Thread th = new Thread(shot);// 创建一个线程的对象th 并初始化shot参数
-        th.start();// 启动线程
 
     }
 }

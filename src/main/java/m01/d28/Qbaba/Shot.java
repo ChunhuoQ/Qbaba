@@ -6,9 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d27.Qbaba;
-
-import java.util.Vector;
+package m01.d28.Qbaba;
 
 /**
  * Description:   <br/>
@@ -96,7 +94,7 @@ public class Shot implements Runnable{
                         this.x-=this.speed;
                         break;
                 }
-                Thread.sleep(20);
+                Thread.sleep(5);
             } catch (Exception e) {
                 // TODO: handle exception
                 e.printStackTrace();

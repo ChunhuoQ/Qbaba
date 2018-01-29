@@ -7,9 +7,10 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m01.d27.Qbaba;
+package m01.d28.Qbaba;
 
 import java.awt.BorderLayout;
+
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -44,7 +45,7 @@ public class Test extends JFrame implements ActionListener {
 
     
     public Test(){
-        this.setBounds(400,200, 300,300);
+        this.setBounds(550,200, 300,300);
        jd1=new JButton("开始游戏");
         jd2=new JButton("结束游戏");
         jp =new JPanel();
@@ -61,7 +62,6 @@ public class Test extends JFrame implements ActionListener {
         jd2.setActionCommand("Ex");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("坦克大战0.9(初成)");
-        
         this.setResizable(false);
         this.setVisible(true);
      }

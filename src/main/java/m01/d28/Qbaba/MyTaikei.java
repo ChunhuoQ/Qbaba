@@ -1,11 +1,11 @@
-package m01.d27.Qbaba;
+package m01.d28.Qbaba;
 
 import java.util.Vector;
 
 public class MyTaikei extends Taikei {
     private int direct;
 
-    private int speed = 7;
+    private int speed = 12;
 
     private Shot shot = null;
 
