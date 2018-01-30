@@ -1,0 +1,18 @@
+body>h1{/*子选择器*/
+	font-size:18px ;
+	color: green;
+}
+.class1~h1{ /* 兄弟选择器*/
+	color: red;
+}
+p{
+	font-size:14px ;
+}
+#d1 img{
+	width: 300px;
+	height: 200px;
+}
+a{
+	color: #640000;
+	font-size: 14px;
+}
