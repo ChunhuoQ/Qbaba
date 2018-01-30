@@ -31,14 +31,14 @@ public class CopyDemo {
 
     private static void write() throws IOException {
 
-        String path = "D:\\git\\songhang724\\new.txt";// 声明一个路径的属性并赋值
-        String path1 = "D:\\git\\songhang724\\new1.txt";// 声明一个路径的属性并赋值
+        String path = "D:\\git\\songhang724\\new.txt";// 声明一个路径的属性并赋值,也是创建一个源数据源
+        String path1 = "D:\\git\\songhang724\\new1.txt";// 声明一个路径的属性并赋值，也是创建一个目标数据源
         FileInputStream fos = null;
         FileOutputStream fis = null;
         try {
-            fos = new FileInputStream(path);// 创建一个对象并初始化
-            fis = new FileOutputStream(path1);
-            byte[] b = new byte[24];// 定义一个byte数组
+            fos = new FileInputStream(path);// 创建一个字节流对象并初始化
+            fis = new FileOutputStream(path1);// 创建一个字节流对象并初始化
+            byte[] b = new byte[1024];// 定义一个byte数组,也叫创建一个缓冲区
             int len = fos.read(b);// 通过fis工具从file中，读取byte数据到b数组中
 
             while ((len = fos.read(b)) != -1) {
