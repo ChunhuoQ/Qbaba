@@ -1,0 +1,75 @@
+*{
+		padding: 0px 0px;
+		margin: 0px 0px;
+}
+body{
+	background-color: lightpink;
+	margin: 0px 0px;
+}
+div.box{
+	width: 400px;
+	height: 210px;
+	background-color: white;
+	padding-top: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+}
+div.cai{
+	width: 400px;
+	height: 40px;
+	background-color: red;
+	color: white;
+	font-family: ""微软雅黑"";
+	font-size: 20px;
+	text-indent: 10px;
+	line-height: 40px;
+}
+ul{
+	list-style-type:none ;
+	margin-top: 0px;
+	padding-left: 0px;
+	line-height: 40px;
+}
+ul li{
+	border-bottom: dashed;
+}
+span{
+	width: 20px;
+	height: 40px;
+	text-align: center;
+	color: white;
+	display: inline-block;
+	background-image: url(image/dot_01.gif);
+	background-repeat: no-repeat;
+	background-position: -3px;
+	}
+ul a:hover span{
+	width: 20px;
+	height: 40px;
+	text-align: center;
+	color: white;
+	display: inline-block;
+	background-image: url(image/dot_02.gif);
+	background-repeat: no-repeat;
+	background-position: -3px;
+	}
+a{
+	text-decoration: none;
+	color: black;
+}
+ul a:hover{
+	color: pink;
+}
+ul li:hover div{
+	color: pink;
+	background-repeat: no-repeat;
+	background-position: -3px;
+	display: block;
+
+}
+
+li div{
+	background-color: white;
+	display: none;
+	text-align: center;
+}
