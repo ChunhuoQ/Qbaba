@@ -1,0 +1,50 @@
+           /*body{
+				background-color:#A9A9A9 ;
+			}*/
+			/*span p{
+				font-size: 24px;
+				background-color: red;
+				text-indent: 1em;
+			}*/
+			div.class1 {
+	        width: 400px;
+	        height: 10%;
+	        background-color: red;
+	        font-size: 20px;
+	        text-indent: 10px;
+	        color: #fcfcfc;
+	        line-height: 50px;
+}
+			#mydiv {
+				width: 400px;
+				height: 500px;
+				border:1px solid ;
+				line-height: 40px;
+			}
+			div{
+				font-size: 15px;
+				line-height: 40px;
+				text-indent: 20px;
+				
+			}
+			a{  width: 29px;
+			   
+				background: url(image/dot_01.gif) 0.1px no-repeat;
+				text-decoration: none;
+			}
+			a:hover{
+				background: url(image/dot_02.gif) 0.1px no-repeat;
+				color: #FF0000;
+			}
+      li{ 
+	   list-style-type: none;
+	    border-bottom: 1px black dashed;
+	    background-color: white;
+}
+     #mydiv ul li div{
+	    display: none;
+	  text-align: center;
+  }
+      #mydiv ul li a:hover  div{
+	   display: block;
+     }
