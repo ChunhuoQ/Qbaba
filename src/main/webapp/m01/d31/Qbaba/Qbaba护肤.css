@@ -1,0 +1,53 @@
+body{
+	background-color: aliceblue;
+}
+div{
+	background-color:  white;
+	width: 350px;
+}
+div#mydiv{
+	background:   deeppink;
+	width: 350px;
+	margin: 0;
+	height: 50px;
+	text-indent: 1em;
+	font-size:22px ;
+	color: #FFFAF0;
+	font-family: "黑体";
+	line-height: 50px;
+	text-shadow :  blanchedalmond 5px 5px 5px;
+	
+	
+}
+
+div.little a:hover div{
+	display:block;
+}
+.little a:hover{
+	color: darkred;
+	background: #FFFAF0 url(img/dot_02.gif) no-repeat 6px -4px;
+}
+div.little a div{
+	
+	display: none;
+	text-align: center;
+	
+	
+}
+a{
+	font-size:15px ;
+	color:  #9999CC;
+	text-decoration: none;
+	background: #FFFAF0 url(img/dot_01.gif) no-repeat 6px -4px;
+	line-height: 40px;
+	
+}
+a:visited{
+	font-size:15px ;
+	
+	color:  #9999CC;
+	text-decoration: none;
+	background: #FFFAF0 url(img/dot_01.gif) no-repeat 6px -4px;
+	line-height: 40px;
+	
+}
