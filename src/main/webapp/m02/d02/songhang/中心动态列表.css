@@ -1,0 +1,31 @@
+#mydiv{
+	font-size: 24px;
+	line-height:40px ;
+	text-indent: 40px;
+	background: url(图片素材/bg.gif) 1px no-repeat;
+	
+}
+
+#d1{
+	margin:auto;
+	width:250px ;
+	height: 280px;
+	border: #6495ED 1px solid;
+	background:linear-gradient(to top,white, white,white,white, #0000FF );
+   
+}
+#d1 ul li{
+	line-height: 30px;
+	list-style-type:none ;
+	background: url(图片素材/dotBg.gif) -10px;
+	padding-left: 10px;
+	
+	
+}
+#d1 ul li a{
+	text-decoration: none;
+}
+#d1 ul{
+	margin: 0;
+	padding: 5px;
+}
