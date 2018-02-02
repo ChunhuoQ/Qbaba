@@ -1,0 +1,39 @@
+body{
+	
+}
+#bg{
+	border-radius: 5px;
+	width: 320px;
+	height: 350px;
+	background:linear-gradient(to top, white, white, white, dodgerblue);	
+	border:solid 1px  dimgrey;
+}
+hr{
+	color: white ;
+}
+h3{
+	text-indent: 1em;
+	line-height:20px;
+	color: white;
+	
+}
+td{
+	font-weight: bold;
+	line-height: 28px;
+	text-indent: 2em;
+	width: 290px;
+}
+a{
+	color:  #696969;
+	text-decoration: none;
+}
+a:hover{
+	color: red;
+}
+table{
+	background: url(图片素材/图片素材/dotBg.gif) repeat-y 15px 63px;
+	}
+img{
+			vertical-align: middle;
+			
+		}
