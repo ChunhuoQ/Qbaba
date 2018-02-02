@@ -1,5 +1,6 @@
 body{
-	background-color: aliceblue;
+	margin: 0px;
+	background-color: gainsboro;
 }
 div{
 	background-color:  white;
@@ -19,13 +20,15 @@ div#mydiv{
 	
 	
 }
-
+.little{
+	border-bottom: 2px gainsboro dashed;
+}
 div.little a:hover div{
-	display:block;
+	display: block;
 }
 .little a:hover{
 	color: darkred;
-	background: #FFFAF0 url(img/dot_02.gif) no-repeat 6px -4px;
+	background: #FFFAF0 url(img/dot_02.gif) no-repeat 6px -3px;
 }
 div.little a div{
 	
@@ -38,7 +41,7 @@ a{
 	font-size:15px ;
 	color:  #9999CC;
 	text-decoration: none;
-	background: #FFFAF0 url(img/dot_01.gif) no-repeat 6px -4px;
+	background: white url(img/dot_01.gif) no-repeat 6px -3px;
 	line-height: 40px;
 	
 }
@@ -47,7 +50,7 @@ a:visited{
 	
 	color:  #9999CC;
 	text-decoration: none;
-	background: #FFFAF0 url(img/dot_01.gif) no-repeat 6px -4px;
+	background: #FFFAF0 url(img/dot_01.gif) no-repeat 6px -3px;
 	line-height: 40px;
 	
 }
