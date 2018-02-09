@@ -99,6 +99,7 @@ public class BrotherTank extends Taikei  implements Runnable{
         
         while (true) {
             try {
+                
                 Thread.sleep(5);
                 
             } catch (Exception e) {

@@ -418,9 +418,14 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
             //  Auto-generated catch block
             e.printStackTrace();
          }
+     
        }
        
     }
+   
+
+  
+
     @Override
     public void keyPressed(KeyEvent e) {
         // TODO Auto-generated method stub
