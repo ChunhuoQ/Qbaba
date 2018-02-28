@@ -1,0 +1,26 @@
+h1{
+font-family:微软雅黑;
+font-size:23px;
+color:#99ccff;
+text-align:center;
+text-shadow:rgba(176,107,239,0.5) 40px 10px 7px;
+
+}
+p{
+text-indent:2em;
+line-height:28px;
+margin-top:20px;
+}
+body{
+background-color:#66ccff;
+background-image:url(line.png);
+
+}
+span{
+font-style:italic;
+color:#99ffff;
+font-family:隶书;
+font-size:25px;
+
+
+}

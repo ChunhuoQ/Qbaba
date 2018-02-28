@@ -1,0 +1,13 @@
+.sbaba{
+	color:white;background-color: blue;text-align: center;
+}
+img{
+	border:1px dashed #9999cc ;float: left;margin:5px;
+}
+.td1{font-size: 12px;line-height:18px;text-indent:2em ;border-right: 3px double red;}
+.td2{font-size: 12px;line-height:18px;text-indent:2em ;border-right: 3px double orange;}
+
+body{
+	background-color:#ccccff ;
+	margin: 0px;
+}
