@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="学院免费.css" />
+		<script>
+			window.onload = function() {
+				var year = document.getElementById("d2");
+				var nian = year.options; //多个option 对象
+				for(var i = 1; i <= 120; i++) {
+					nian[i] = new Option(i, i);
+				}
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<div id="d1">
+			<ul>
+				<form action="你好.html">
+				<li><span>*</span>&nbsp;姓名：<input type="text" nema="name"></li>
+				<li><span>*</span>&nbsp;邮箱：<input type="email" name="email" required="required"></li>
+				<li><span>*</span>&nbsp;电话：<input type="text" name="tel"></li>
+				<li>性别：
+					<select>
+						<option>请选择</option>
+						<option>男</option>
+						<option>女</option>
+					</select>
+				</li>
+				<li>年龄：
+					<select id="d2">
+						<option>请选择</option>
+					</select>
+				</li>
+				<li>
+					<input type="image" src="image/btn.jpg" />
+				</li></form>
+			</ul>
+		</div>
+	</body>
+
+</html>

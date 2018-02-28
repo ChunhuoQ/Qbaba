@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>免费体验登录界面</title>
+		<link href="体验登录界面.css" rel="stylesheet" type="text/css">
+		<script>
+			window.onload=function(){
+			var year=document.getElementById("year");
+			var yy= year.options;
+			for(var i=1;i<=150;i++){
+					yy[i]=new Option(i,i);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class=box>
+			<form method="get" action="中心动态列表.html">
+				<table>
+					<tr>
+						<td><span id="red">*</span>&nbsp;<span>姓名：</span></td>
+						<td><input type="text" required/></td>
+					</tr>
+					<tr>
+						<td><span id="red">*</span>&nbsp;<span>邮箱：</span></td>
+						<td><input type="text" required/></td>
+					</tr>
+					<tr>
+						<td><span id="red">*</span>&nbsp;<span>电话：</span></td>
+						<td><input type="number" required/></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span>性别：</span>
+							<select>
+  								<option>请选择 </option>
+  								<option>男 </option>
+  								<option>女 </option>
+  							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<span>年龄：</span>
+							<select id="year">
+  								<option>请选择 </option>
+  							</select>
+						<td>
+					</tr>
+					<tr>
+						<td colspan="2" class="ph">
+							<input type="image" src="img/btn.jpg"/>
+						<td>
+					</tr>
+  				</table>
+  			</form>
+		</div>
+	</body>
+</html>

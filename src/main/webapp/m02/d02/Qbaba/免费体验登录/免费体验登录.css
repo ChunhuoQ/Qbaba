@@ -1,0 +1,45 @@
+body{
+background: #FFFAF0 url(图片素材/bg.jpg) no-repeat;
+}
+div:nth-of-type(1){
+	height: 80px;
+}
+div:last-child{
+	width: 280px;
+}
+p{
+	font-size: 15px;
+	text-indent: 2em;
+	font-weight: bolder;
+	color: white;
+	
+}
+red{
+	color: red;
+	font-size: 15px;
+
+}
+div input{
+	border-color: #9999CC;
+
+	text-indent: 5px;
+}
+div p input{
+
+	width: 120px; 
+	border:solid 2px  dimgrey;
+	border-color: #9999CC;
+	border-radius: 5px;
+
+	
+}
+select{
+	
+	border:solid 1px  dimgrey;
+	border-color: #9999CC;
+	border-radius:5px;
+
+}
+span{
+	text-indent: 2em;
+}

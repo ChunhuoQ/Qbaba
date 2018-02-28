@@ -1,0 +1,31 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: white url(图片素材/bg.jpg) no-repeat;
+	
+}
+#mydiv{
+	width: 312px;
+	height: 353px;
+	border:2px blue solid ;
+  }
+  
+  div:nth-of-type(1){
+  	height: 80px;
+  }
+#mydiv table{
+	line-height: 38px;
+	font-size:24px ;
+	color: white;
+	padding-left: 20px;
+}
+span{
+	color: red;
+}
+
+#mydiv td input{
+	width: 120px; 
+	border:solid 2px  dimgrey;
+	border-color: #9999CC;
+	border-radius: 5px;
+}

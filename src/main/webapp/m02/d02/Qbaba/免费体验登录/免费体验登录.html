@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="免费体验登录.css" />
+	<script>
+		window: onload = function() {
+			var age = document.getElementById("age");
+			var ag = age.options;
+
+			for(var i = 1; i <= 120; i++) {
+				ag[i] = new Option(i, i);
+			}
+
+		}
+	</script>
+
+	<body>
+		
+		<div></div>
+		
+		<div>
+			<p>
+				<red>*&nbsp; </red>姓名：<input type="text" /></p>
+
+		</div>
+
+		<div>
+			<p>
+				<red>*&nbsp; </red>邮箱：<input type="text" /></p>
+		</div>
+
+		<div>
+			<p>
+				<red>*&nbsp; </red>电话：<input type="text" /></p>
+		</div>
+
+		<div>
+			<p>
+				<span>
+					性别：
+					<select>
+						<option>请选择..</option>
+						<option>男</option>
+						<option>女</option>
+						<option>保密</option>
+					</select>
+				</span>
+			</p>
+		</div>
+
+		<div>
+			<p>
+				<span>
+					年龄：
+					<select id="age">
+						<option>请选择..</option>	
+					</select>
+				</span>
+			</p>
+		</div>
+		<div>
+			<center>
+				<input type="image" src="图片素材/btn.jpg"  onclick="reset();return false;" />
+			</center>
+		</div>
+	
+	</body>
+
+</html>
