@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 800px;
+				/*border: 1px red solid;*/
+				margin:auto;
+			}
+			
+			#box table tr td:nth-of-type(1) span{
+				margin-left:10px;
+			}
+			#box table tr td:nth-of-type(4) input{
+				width:50px;
+				border:none;
+			}
+			#box table tr:nth-of-type(2){
+				background-color:#FAFAFA;
+			}
+			#box table tr:nth-of-type(3){
+				background-color:#FAFAFA;
+			}
+			#box table tr:nth-of-type(4) input{
+				width: 60px;
+				border:none;
+			}
+			#box table tr:nth-of-type(4) td{
+				padding-right:-900px;
+				/*border: 1px solid #999999;*/
+			}
+			td input:nth-of-type(1){
+				border: 1px solid #999999;
+				position:relative;
+				left:5px;
+			}
+			td input:nth-of-type(2){
+				width: 40px;
+				text-align:center;
+				border: 1px solid #999999;
+				border-left:none;
+				border-right:none;
+				margin-right:0px;
+				}
+			td input:nth-of-type(3){
+				border: 1px solid #999999;
+				position:relative;
+				left:-5px;
+			}
+			input{
+				margin:0px;
+			}
+			a{
+				text-decoration: none;
+			}
+			
+			.layer01 span{
+				float:right;
+				position:relative;
+				left:-20px;
+				top:15px;
+				background-color:red;
+				width:50px;
+				height:25px;
+				text-align:center;
+				line-height:25px;
+			}
+			.layer01 span a:hover{
+				color:white;
+			}
+			img,span{
+				vertical-align: middle;
+			}
+			table img{
+				width: 50px;
+			}
+			#box>table{
+				width: 800px;
+				height: 400px;
+				/*border: 1px red solid;*/
+			}
+			td{
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			function sub(){
+				var jian=document.getElementById("jian");
+				var i=jian.nextElementSibling.value-1;
+				if (i>=0) {
+					jian.nextElementSibling.value=i;
+					document.getElementById("amount").value=parseFloat(i*21.9).toFixed(2);
+					total();
+				}else{
+					jian.nextElementSibling.value=0
+				}
+			}
+			function plu(){
+				var jia=document.getElementById("jia");
+				var i=parseInt(jia.previousElementSibling.value)+1;
+				jia.previousElementSibling.value=i;
+				document.getElementById("amount").value=parseFloat(i*21.9).toFixed(2);
+				total();
+			}
+			function sub1(){
+				var jian1=document.getElementById("jian1");
+				var i=jian1.nextElementSibling.value-1;
+				if (i>=0) {
+					jian1.nextElementSibling.value=i;
+					document.getElementById("amount1").value=parseFloat(i*24.00).toFixed(2);
+					total();
+				} else{
+					jian1.nextElementSibling.value=0
+				}
+				
+			}
+			function plu1(){
+				var jia1=document.getElementById("jia1");
+				var i=parseInt(jia1.previousElementSibling.value)+1;
+				jia1.previousElementSibling.value=i;
+				document.getElementById("amount1").value=parseFloat(i*24.00).toFixed(2);
+				total();
+			}
+			function total(){
+				document.getElementById("total").value=parseFloat(document.getElementById("amount").value)+parseFloat(document.getElementById("amount1").value);
+			}
+			total();
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="layer01">
+				<img src="images/dd_logo.jpg"/>
+				<span><a href="#">关闭</a></span>
+			</div>
+			<table cellpadding="">
+				<tr>
+					<th>商品信息</th>
+					<th>单价(元)</th>
+					<th>数量</th>
+					<th>金额(元)</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td><img src="images/dog.jpg"/><span>我和狗狗一起活下来</span></td>
+					<td>¥<span>21.90</span></td>
+					<td>
+						<input type="button" id="jian" value="-" onclick="sub();">
+						<input type="text" name="amount" value="0">
+						<input type="button" id="jia" value="+" onclick="plu();">
+					</td>
+					<td>¥<input type="text" id="amount" name="price"  value="0" readonly></td>
+					<td><p>移入收藏</p><p>删除</p></td>
+				</tr>
+				<tr>
+					<td><img src="images/mai.jpg"/><span>灰霾来了怎么办</span></td>
+					<td>¥<span>24.00</span></td>
+					<td>
+						<input type="button" id="jian1" value="-" onclick="sub1();">
+						<input type="text" name="amount" value="0">
+						<input type="button" id="jia1" value="+" onclick="plu1();">
+					</td>
+					<td>¥<input type="text" id="amount1" name="price" value="0" readonly></td>
+					<td><p>移入收藏</p><p>删除</p></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td >
+						结算：<input type="text" id="total" value="0" readonly>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
