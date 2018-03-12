@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Num(){
+				this.num=[12,13,14.5,15];
+			}
+			function Inter(){
+//				Num.call(this);
+				Num.apply(this);
+			}
+//			Inter.prototype=new Num();
+			var inter1=new Inter();
+			inter1.num.push("17");
+			alert(inter1.num);
+			var inter2=new Inter();
+			alert(inter2.num);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

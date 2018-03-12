@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="stu">
+			
+		</div>
+		<script type="text/javascript">
+			function Student(name,age,js){
+				this.name=name;
+				this.age=age;
+				this.js=js;
+				this.showMes=showMes;
+			}
+			function showMes(){
+				var stu=document.getElementById("stu");
+				var pp=document.createElement("p");
+				var str="姓名："+this.name+"<br/>年龄："+
+				this.age+"<br/>自我介绍："+this.js;
+				stu.appendChild(pp);
+				pp.innerHTML=str;
+				alert(stu.innerHTML);
+			}
+//			function stu(){
+//				Student.call(this);
+//			}
+			var stu1=new Student("王小明","16","我是高中一年级的学生，身高1.8米，很帅我喜欢学习语文和英语。")
+			stu1.showMes();
+			var stu2=new Student("黄妞妞","6","我今年6岁了，非常可爱，马上就要上小学了，就可能有很多很多的下坡朋友了。")
+			stu2.showMes();
+		</script>
+	</body>
+</html>
