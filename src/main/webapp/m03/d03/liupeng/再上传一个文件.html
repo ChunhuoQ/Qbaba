@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				padding-top:20px;
+			}
+			body li{
+				margin-bottom:20px;
+				list-style:none;
+			}
+		</style>
+		<script type="text/javascript">
+			function abc(){
+				var file=document.getElementById("file");
+				var add=document.createElement("li");
+				var li=file.lastElementChild.cloneNode(true)
+				file.appendChild(li);
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="file">
+			<li>
+				文件路径：<input type="file" />
+			</li>
+		</ul>
+		<input type="button" id="add" value="再上传一个文件" onclick="abc();"/>
+	</body>
+</html>
