@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				text-decoration: none;
+				color:white;
+			}
+			li{
+				list-style:none;
+			}
+			#aa li{
+				float:left;
+				margin-right:20px;
+				width:50px;
+				height:30px;
+				background-color:grey;
+				text-align:center;
+				line-height:30px;
+			}
+			div ul:nth-of-type(2){
+				clear:both;
+				display:block;
+			}
+			div ul:nth-of-type(3){
+				clear:both;
+				display:none;
+			}
+			div ul:nth-of-type(4){
+				clear:both;
+				display:none;
+			}
+		</style>
+		<script type="text/javascript">
+			function over1(k){
+				var uu=document.getElementById("uu");
+				for(var i=1;i<uu.children.length;i++){
+					if (i==k) {
+						uu.children[i].style.display="block";
+//						alert(uu.children[i].style.display);
+					}else{
+						uu.children[i].style.display="none";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="uu">
+			<ul id="aa">
+				<li><a href="javascript:;" onmouseover="over1(1);">小说</a></li>
+				<li><a href="javascript:;" onmouseover="over1(2);">非小说</a></li>
+				<li><a href="javascript:;" onmouseover="over1(3);">少儿</a></li>
+			</ul>
+				<ul>
+					<li>1 鬼吹灯</li>
+					<li>2 盗墓笔记</li>
+					<li>3 三体</li>
+				</ul>
+				<ul>
+					<li>1 人生若只如初见</li>
+					<li>2 我的太阳</li>
+					<li>3 定位</li>
+				</ul>
+				<ul >
+					<li>1 小猪佩奇</li>
+					<li>2 喜洋洋</li>
+					<li>3 数码宝贝</li>
+				</ul>
+		</div>
+	</body>
+</html>

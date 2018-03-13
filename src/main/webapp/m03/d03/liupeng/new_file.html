@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Tab切换</title>
+		<style>
+			.a {
+				text-decoration: none;
+				background-image: url(menu1.gif);
+				color: white;
+				position: relative;
+				left: -150px;
+				top: -230px;
+			}
+			/*.a:hover{
+				background-color: grey;
+			}*/
+			
+			.book {
+				font-size: 12px;
+				line-height: 20px;
+				position: absolute;
+				top: 70px;
+				display: none;
+			}
+		</style>
+		<script>
+			function over(k) {
+				var book = document.getElementsByClassName("a");
+				book[k].style.backgroundImage = "url(menu2.gif)";
+				var id = document.getElementsByClassName("book");
+				id[k].style.display = "block";
+
+								for(var i = 0; i < id.length; i++) {
+									if(i != k) {
+										id[i].style.display = "none";
+									}
+								}
+			}
+
+			function out(m) {
+				var book = document.getElementsByClassName("a");
+				book[m].style.backgroundImage = "url(menu1.gif)";
+			
+			}
+		</script>
+	</head>
+
+	<body onload="over(0)">
+		<img src="bg.jpg" />
+		<a href="" onmouseover="over(0)" onmouseout="out(0)" class="a">小说</a>
+		<a href="" onmouseover="over(1)" onmouseout="out(1)" class="a">非小说</a>
+		<a href="" onmouseover="over(2)" onmouseout="out(2)" class="a">少儿</a>
+		<ol class="book">
+			<li>时间旅行者的妻子</li>
+			<li>女心理师（下）</li>
+			<li>鬼吹灯之精绝古城</li>
+			<li>女心理师（上）</li>
+			<li>小时候</li>
+			<li>追风筝的人</li>
+			<li>盗墓笔记2</li>
+			<li>输赢</li>
+		</ol>
+		<ol class="book">
+			<li>人生若只如初见</li>
+			<li>高效能人士的七个</li>
+			<li>求医不如求己</li>
+			<li>人体使用手册</li>
+			<li>孩子，把你的手给我</li>
+			<li>别笑，我是英文单词书</li>
+			<li>人体经络使用手册</li>
+			<li>股市稳赚</li>
+		</ol>
+		<ol class="book">
+			<li>斯凯瑞金色童书</li>
+			<li>哈利・波特与“混</li>
+			<li>不一样的卡梅拉</li>
+			<li>女心理师（上）</li>
+			<li>小时候</li>
+			<li>追风筝的人</li>
+			<li>盗墓笔记2</li>
+			<li>输赢</li>
+		</ol>
+	</body>
+
+</html>

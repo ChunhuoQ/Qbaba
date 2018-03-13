@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>镂空的菱形</title>
+		<script type="text/javascript">
+			function abc(){
+				var sideLength=document.getElementById("sideLength").value;
+				for (var i=0;i<sideLength;i++) {
+					var k=sideLength-i-1;
+					for(j=0;j<sideLength;j++){
+						if(j<k||j>k){
+							document.write("&nbsp;");
+						}else{
+							document.write("*");
+						}
+					}
+					for (var j = 0; j < sideLength; j++) {
+						if(j>i-1||j<i-1){
+							document.write("&nbsp;");
+						}else{
+							document.write("*");
+						}
+            		}
+					document.write("<br>")
+				}
+				for (var i = 0; i < sideLength; i++) {
+            		var k = sideLength - i - 1;
+            		for (var j = 0; j < sideLength; j++) {
+						if (i>j-1||i<j-1) {
+							document.write("&nbsp;");
+						} else{
+							document.write("*");
+						}
+            		}
+            		for (var j = 0; j < sideLength; j++) {
+						if (j < k||j>k) {
+							document.write("&nbsp;");
+						} else{
+							document.write("*");
+						}
+            		}
+            		document.write("<br>");
+        		}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="sideLength"/>
+		<input type="button" value="镂空菱形" onclick="abc();"/>
+	</body>
+</html>
