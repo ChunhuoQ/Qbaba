@@ -49,22 +49,38 @@ public class Test3 extends JPanel implements KeyListener {
 
     int z;
 
-    public void paint(Graphics g) {
+    public void paint(Graphics g, int c) {
         super.paint(g);
+        switch (c) {
+        case 0:
+            g.setColor(Color.black);
+            g.fillRect(x + 20, y + 30, 40, 40);
+            g.setColor(Color.red);
+            g.fillOval(x + 25, y + 35, 30, 30);
 
-        g.setColor(Color.black);
-        g.fillRect(x + 20, y + 30, 40, 40);
-        g.setColor(Color.red);
-        g.fillOval(x + 25, y + 35, 30, 30);
+            g.setColor(Color.pink);
+            // g.fill3DRect(x - 10, y + 20, 30, 60, true);
+            g.fillRect(x - 10, y + 20, 30, 60);
+            g.fillRect(x + 60, y + 20, 30, 60);
+            // g.fill3DRect(x + 60, y + 20, 30, 60, true);
+            g.setColor(Color.pink);
+            g.drawLine(x + 42, y + 46, x + 43, y + 100);
+            break;
+        case 1:
+            g.setColor(Color.black);
+            g.fillRect(x + 20, y + 30, 40, 40);
+            g.setColor(Color.red);
+            g.fillOval(x + 25, y + 35, 30, 30);
 
-        g.setColor(Color.pink);
-        // g.fill3DRect(x - 10, y + 20, 30, 60, true);
-        g.fillRect(x - 10, y + 20, 30, 60);
-        g.fillRect(x + 60, y + 20, 30, 60);
-        // g.fill3DRect(x + 60, y + 20, 30, 60, true);
-        g.setColor(Color.pink);
-        g.drawLine(x + 42, y + 46, x + 43, y + 100);
-
+            g.setColor(Color.pink);
+            // g.fill3DRect(x - 10, y + 20, 30, 60, true);
+            g.fillRect(x - 10, y + 20, 30, 60);
+            g.fillRect(x + 60, y + 20, 30, 60);
+            // g.fill3DRect(x + 60, y + 20, 30, 60, true);
+            g.setColor(Color.pink);
+            g.drawLine(x + 42, y + 46, x + 43, y + 100);
+            break;
+        }
     }
 
     // int x = 30;
