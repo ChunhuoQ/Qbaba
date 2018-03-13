@@ -1,0 +1,164 @@
+
+div{
+	position: relative;
+	left: 30px;
+}
+
+header div:nth-last-of-type(1){
+	width: 1220px;
+}
+.headerlast{
+	position: relative;
+	left: -845px;
+	top: 75px;
+	width: 1170px;
+}
+header div:nth-last-of-type(2){
+	width: 1140px;
+	height: 35px;
+	background-color: #FE6915;
+	position: relative;
+	top: 60px;
+	left: 60px;
+}
+
+header div:nth-child(1){
+	
+	width: 60px;
+	float: left;
+}
+
+header div:nth-child(3){
+	position: relative;
+	left: 905px;
+	top: -23px;
+}
+
+.myli{
+	
+	list-style: none;
+	float: left;
+    margin-left: 5px;
+    font-size:12px ;
+    line-height: 25px;
+    color: #696969;
+    position: relative;
+    left: -40px;
+}
+.myul {
+	height:25px;
+	width: 190px;
+    position:absolute;
+	left:908px;
+	top: -45px;
+	background-color:#EAFFFA;
+    overflow: hidden;
+    white-space:nowrap; 
+    border: 1px #EAF7F4 solid;
+}
+ul{
+	width: 1130px;
+	 overflow: hidden;
+    white-space:nowrap; 
+     position:relative;
+	top: -45px;
+	
+}
+li{
+	list-style: none;
+	float: left;
+    margin-left: 35px;
+    color: white;
+    position: relative;
+    left: -50px;
+}
+
+li:hover{
+color: blue;	
+}
+.articlediv{
+	height: 500px;
+	width: 1168px;
+	border: 2px #D7EEBD solid;
+	position: relative;
+    left:60px;
+	top: 70px;
+}
+.cc{
+	position: relative;
+    left:-43px;
+	top: 30px;
+}
+.c1{
+	position: relative;
+    left:150px;
+	top: -250px;
+	
+}
+.i1{
+	position: relative;
+    left:-230px;
+	
+	
+}
+p{
+	font-size:12px ;
+	color: #505050 ;
+	line-height: 15px;
+	position: relative;
+    top:-50px;
+	
+}span{
+	font-size:14px ;
+	color: #7FA9D4;
+}
+.c2{
+position: relative;
+    left:790px;
+	top: -520px;	
+}
+.c2 p{
+		line-height: 12px;
+		position: relative;
+    	top: -110px;
+    	left: 90px;
+    	font-size: 11px;
+}
+.i2{
+	position: relative;
+    	top: -70px;
+    	left: -95px;
+}
+.c3{
+position: relative;
+    left:800px;
+	top: -620px;	
+}
+.c3 p{
+		line-height: 12px;
+		position: relative;
+    	top: -110px;
+    	left: 90px;
+    	font-size: 11px;
+}
+.i3{
+	position: relative;
+    	top: -70px;
+    	left: -95px;
+}
+font{
+	font-weight: bolder;
+	color: #9A0F35;
+	font-size: 13px;
+}
+footer div{
+	position: relative;
+    	top: -670px;
+	text-align: center;
+	color:#B6B6B6 ;
+	font-size: 12px;
+}
+.i4{
+	position: relative;
+    	top: 20px;
+}
