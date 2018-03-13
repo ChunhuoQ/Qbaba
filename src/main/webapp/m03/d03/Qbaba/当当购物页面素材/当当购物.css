@@ -1,0 +1,89 @@
+body{
+	text-align: center;
+}
+.mytable{
+
+	height:400px ;
+	width: 900px;
+	background: url(images/shoppingBg.jpg) no-repeat;
+	margin: auto;
+}
+table{ 
+	
+	height:200px ;
+	width: 900px;
+	margin: auto;
+}
+
+#span1{
+	top:40px;
+	right: 50px;
+	position: relative;
+	
+	
+}
+#span2{
+	
+	position: relative;
+	right: 50px;
+	top:-40px;
+	
+}
+.c1{
+	
+	position: relative;
+	margin: auto;
+	text-align: left;
+	top: 40px;
+	left: 10px;
+}
+.c2{
+	left: 10px;
+	position: relative;
+	margin: auto;
+	text-align: left;	
+	top: -40px;
+}
+.c3{
+	
+	position: relative;
+	margin: auto;	
+	top: 40px;
+	
+}
+.c4{
+	
+	position: relative;
+	margin: auto;	
+	top: -40px;
+}
+.c5{
+
+	position: relative;
+	margin: auto;
+	text-align: left;	
+	top: 40px;
+	
+}
+.c6{
+	
+	position: relative;
+	margin: auto;	
+	text-align: left;
+	top: -40px;
+}
+.td1{
+	width: 500px;
+	text-align: right;
+}
+.zj{
+	font-size:15px ;
+	position: relative;
+	left: 170px;
+	top: -50px;
+}
+a:link{
+	background-color: azure;
+	text-decoration: none;
+}
+

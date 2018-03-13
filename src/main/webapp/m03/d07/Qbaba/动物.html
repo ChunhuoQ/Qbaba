@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动物世界</title>
+	</head>
+	
+	<body>
+		<div id="dd">
+			
+		</div>
+		
+		<script>
+		
+		function Animal(name,age,color){
+			this.name=name;
+			this.age=age;
+			this.color=color;
+		}
+		
+		function Poyltry(name,age,color,leg){
+			/*Animal.call(this,name,age,color);*/
+			
+			Animal.apply(this,[name,age,color]);
+			this.leg=leg;
+		}
+		Poyltry.prototype.info=function(){
+			var p=document.createElement('p');
+			var a=p.innerText="我是一个"+this.color+"的"+this.name+",我已经"+this.age+"岁了，我有"+this.leg+"条腿";
+			alert(a);
+			
+			return p;
+		}
+		var dd1=document.getElementById("dd");
+		var dog=new Poyltry("小狗狗",1,"灰色",4);
+		var cat=new Poyltry("茶杯猫",2,"白色",4);
+		var muj=new Poyltry("母鸡",1,"红色",2);
+		
+		dd1.appendChild(dog.info());
+		dd1.appendChild(cat.info());
+		dd1.appendChild(muj.info());
+	</script>
+	</body>
+</html>

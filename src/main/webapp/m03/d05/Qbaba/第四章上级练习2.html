@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上机练习2</title>
+	</head>
+	<script>
+		window.onload=function(){
+		function person(){
+		this.name="Qbaba";
+		this.age="20";
+		this.work="架构师";
+		this.place="湖北，武汉。";
+		}
+		function ps(){
+			this.height="175cm";
+		}
+		ps.prototype=new person();
+		ps.prototype.getName=function(){
+			return this.name;
+		}
+		ps.prototype.getAge=function(){
+			return this.age;
+		}
+		ps.prototype.getWork=function(){
+			return this.work;
+		}
+		ps.prototype.getPlace=function(){
+			return this.place;
+		}
+		var str="名字："+ps.prototype.getName()+"<br>年龄："+ps.prototype.getAge()+"<br>工作："+ps.prototype.getWork()+"<br>住址："+ps.prototype.getPlace();
+		document.getElementById("intro").innerHTML=str;
+		}
+
+	</script>
+	<body>
+		<div id="intro">
+			
+		</div>
+	</body>
+</html>

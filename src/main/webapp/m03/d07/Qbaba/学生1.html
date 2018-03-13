@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建学生对象</title>
+	</head>
+	
+	<body>
+		<div id="dd"></div>
+		
+		<script>
+		var student=new Object();
+		student.name="高乐乐";
+		student.age=15;
+		student.sj="我叫高乐乐，是一个初中三年级的学生，我非常喜欢音乐和打篮球";
+		function abc(){
+			var str="姓名："+student.name+"<br>年龄："+student.age+"<br>自我介绍："+student.sj;
+			return str;
+		}
+		var dd =document.getElementById("dd");
+		dd.innerHTML=abc();
+	</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+<title>分享特效</title>
+<style type="text/css">
+	dt{height:30px;}
+	dt img{margin-left:80px;display:none;}
+</style>
+<script type="text/javascript" src="分享特效/jquery-1.12.4.js" ></script>
+<script>
+	$(function (){
+		$("dd img").click(function (){
+			$("dt img").css("display","block");
+		})
+		$("dt img").click(function (){
+			$("dt img").css("display","none");
+		})
+	})
+</script>
+</head>
+<body>
+  <dl>
+  	<dt ><img src="分享特效/images/text.gif"  /></dt>
+    <dd>分享到：<img src="分享特效/images/iocns.gif" /></dd>
+  </dl>
+
+</body>
+</html>

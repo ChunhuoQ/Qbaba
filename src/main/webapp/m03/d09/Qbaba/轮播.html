@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播</title>
+	</head>
+	<style>
+		.mydiv{
+			color: #000000;
+			font-size: 20px;
+			line-height: 40px;
+			text-align: center;
+			height: 40px;
+			width: 40px;
+			font-weight: bolder;
+			border: 1px cornflowerblue solid;
+			position: relative;
+			top: 300px;
+			cursor: pointer;
+			
+		}
+		.mydiv1{
+			color: #000000;
+			font-size: 20px;
+			line-height: 40px;
+			text-align: center;
+			height: 40px;
+			width: 40px;
+			font-weight: bolder;
+			border: 1px cornflowerblue solid;
+			position: relative;
+			top: 260px;
+			left: 688px;
+			cursor: pointer;
+		}
+		ul{
+			position: relative;
+			top:-50px;
+			left: 500px;
+		}
+		li{
+			margin-left: 10px;	
+			text-align: center;
+			list-style: none;
+			border: 2px #DCDCDC solid;
+			float: left;
+			height: 15px;
+			width: 15px;
+			background-color: white;
+			
+		}
+		#l1{
+			background-color:  aquamarine;
+			
+		}
+		li{
+			
+		}
+		
+	</style>
+	<script type="text/javascript" src="jquery-1.8.3.js" ></script>
+	<script>
+		
+		var i=1;
+		$(document).ready(function(){
+			$(".mydiv").click(function (){
+				i-=1;
+				if(i<1){
+					i=1;
+					alert("这是第一张兄弟。");
+				}
+				$("#ii").attr("src","images/adver0"+i+".jpg");
+				var $ll=$("li");
+				$ll[i].style.backgroundColor="white";
+				$ll[i-1].style.backgroundColor="aquamarine";
+				
+			})
+			
+			$(".mydiv1").click(function (){
+					i+=1;
+					if(i>6){
+						i=6;
+						alert("这是最后一张奥~");
+						return;
+					}
+					
+				 $("#ii").attr("src","images/adver0"+i+".jpg");
+				 var $ll2=$("li");
+				 
+					$ll2[i-2].style.backgroundColor="white";
+				 $ll2[i-1].style.backgroundColor="aquamarine";
+				 
+				 
+			})
+		})
+		
+	</script>
+	<body>
+		<div>
+			<div class="mydiv"><</div>
+			<div class="mydiv1">></div>
+			<img id="ii" src="images/adver01.jpg">
+			<ul>
+				<li id="l1">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>

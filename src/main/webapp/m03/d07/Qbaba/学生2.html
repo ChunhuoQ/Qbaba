@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学生介绍</title>
+	</head>
+	
+	<body>
+		
+		
+		<div id="dd">
+			
+		</div>
+		<script>
+		function Student(name,age,js){
+			this.name=name;
+			this.age=age;
+			this.js=js;
+		}
+		var dd1=document.getElementById("dd");
+			Student.prototype.pout=function(){
+			
+			
+			var p=document.createElement("p");
+
+			var a=p.innerHTML="姓名："+this.name+"<br>年龄："+this.age+"<br>自我介绍："+this.js;
+			 alert(a);
+			
+			return p;
+	}
+		
+		var std1=new Student("王小明","16","我是高中一年级的学生，身高1.8米，很帅，我喜欢学习语文和英语。");
+		var std2=new Student("黄妞妞","6","我今年6岁了，非常可爱，马上就可以上小学了，可能有好多好多小朋友了。")
+		dd1.appendChild(std1.pout());
+		dd1.appendChild(std2.pout());
+	</script>
+	</body>
+</html>

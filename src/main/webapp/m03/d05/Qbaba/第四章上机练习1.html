@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上机练习1</title>
+	</head>
+	<script>
+		window.onload=function(){
+			var person=new Object();
+
+				person.name="Qbaba";
+				person.age="20";
+				person.height="175cm";
+				person.weight="60kg";
+			
+			var str="姓名："+person.name+"<br>年龄："+person.age+"<br>身高："+person.height+"<br>体重："+person.weight;
+			
+			document.getElementById("intro").innerHTML=str;
+			
+		}
+	</script>
+	<body>
+		<div id="intro"></div>
+	</body>
+</html>

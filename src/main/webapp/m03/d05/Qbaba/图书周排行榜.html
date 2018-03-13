@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图书周排行榜</title>
+	</head>
+	<style> 
+	.mydiv{
+	background-color: yellow;
+			width: 200px;
+	}
+	li{
+		list-style-type: decimal;
+	}
+	input{
+		float:left;
+	}
+	span{
+		color: #B6B6B6;
+		font-size:13px ;
+	}
+	font{
+		color: #DCDCDC;]
+		font-size: 10px;
+	}
+	</style>
+	<script>
+		function abc(name){
+			
+			var div=document.getElementsByClassName("mydiv");
+			
+			var oo=document.getElementById("oo");
+			var fxiaoshuo=["人生若只如初见","高效能人士的七个..","求医不如知己","人体使用手册","孩子，把你的手给我","别笑！我是英语单词书","人体经络使用手册","股市稳赚"];
+			var xiaoshuo=["时间旅行者的妻子","女心理师（上）","鬼吹灯之精绝古城","女心理师（下）","小时候","追风筝的人","盗墓笔记2","输赢"]
+			var ser=["十万个为什么","金龟子","小鹿的故事","安徒生童话","白雪公主","儿歌三百首","英语歌曲","少儿动画"]
+			if(name=="fxs"){
+				oo.style.backgroundColor="green";
+			for(var j=1;j<fxiaoshuo.length+1;j++){
+				
+					oo.childNodes[2*j-1].innerHTML=fxiaoshuo[j-1];
+					
+				}
+			}
+			if(name=="xs"){
+				oo.style.backgroundColor="yellow";
+				for(var o=1;o<xiaoshuo.length+1;o++){
+					
+					oo.childNodes[2*o-1].innerHTML=xiaoshuo[o-1];
+				}
+			}
+			if(name=="se"){
+				oo.style.backgroundColor="pink";
+				for(var b=1;b<ser.length+1;b++){
+					
+					oo.childNodes[2*b-1].innerHTML=ser[b-1];
+					
+					
+				}
+			}
+			
+			
+		}
+	</script>
+	<body>
+		<div class="mydiv">
+			 图书周排行榜<span>TOP&nbsp;100</span>
+			 <br />
+			 <font>近7天销量，每日更新</font>
+			 <br />
+			<input type="button" onmouseover="abc('xs');" value="小说" />
+			<input type="button" onmouseover="abc('fxs');" value="非小说" />
+			<input type="button" onmouseover="abc('se');" value="少儿" />
+			<br />
+			<ol id="oo">
+				<li>时间旅行者的妻子</li>
+				<li>女心理师（上）</li>
+				<li>鬼吹灯之精绝古城</li>
+				<li>女心理师（下）</li>
+				<li>小时候</li>
+				<li>追风筝的人</li>
+				<li>盗墓笔记2</li>
+				<li>输赢</li>
+			</ol>
+		</div>
+		
+	</body>
+</html>
