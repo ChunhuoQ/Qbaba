@@ -1,0 +1,74 @@
+div{
+	width: 1310px;
+	height: 640px;
+}
+div img{
+	z-index: 1;
+	width: 100%;
+	max-width: 300px;
+}
+img:first-of-type{
+	transform:translate(520px,126px) rotate(-45deg) ;
+}
+img:nth-of-type(2){
+	transform:translate(60px,26px) rotate(45deg) ;
+}
+img:nth-of-type(3){
+	transform:translate(60px,26px) rotate(5deg) ;
+	z-index: 2;
+	animation: spread 2s infinite;
+	/*box-shadow: 5px 5px 5px #DCDCDC;
+	transform: rotate(0deg) scale(1.5);
+	transition: all 3s ease 0.5s;*/
+}
+@keyframes spread{
+			0%{
+				
+				transform:scale(1.5);
+			}
+			30%{
+				
+				transform: scale(0.3);
+			}
+}
+}
+img:nth-of-type(4){
+	transform: translate(-60px,46px) rotate(25deg) ;
+}
+img:nth-of-type(5){
+	transform:translate(110px,-66px) rotate(-95deg) ;
+}
+img:nth-of-type(6){
+	transform:translate(30px,-46px) rotate(-5deg) ;
+}
+img:nth-of-type(7){
+	transform:translate(-50px,-46px) rotate(-45deg) ;
+	z-index: 2;
+	box-shadow: 5px 5px 5px #DCDCDC;
+	transform: scale(0.5);
+	animation: spread1 2s infinite;
+	position: relative;
+}
+@keyframes spread1{
+			0%{
+				
+				transform:scale(0.5);
+			}
+			30%{
+				
+				transform: scale(0.8);
+			}
+}
+img:nth-of-type(8){
+	
+	transform:translate(-160px,-46px) rotate(15deg) ;
+}
+img:nth-of-type(9){
+	transform:translate(460px,-226px) rotate(25deg) ;
+}
+img:hover{
+	z-index: 2;
+	box-shadow: 5px 5px 5px #DCDCDC;
+	transform: rotate(0deg) scale(1.5);
+	transition: all 3s ease 0.5s;
+}
