@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度注册页面</title>
+		<link rel="stylesheet" type="text/css" href="baidu.css"/>
+	</head>
+	<body>
+		<div class="register">
+			<div class="center"><img src="imgae/header1.jpg" /></div>
+			<form action="sev.html" method="get" id="myform">
+				<!---->
+				<dl>
+					<dt>用户名：</dt>
+					<dd><input id="user" type="text" class="inputs" placeholder="长度为4到12" />
+						<div id="userId"></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>密码：</dt>
+					<dd><input id="pwd" type="password" class="inputs" />
+						<div id="pwdId"></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>确认密码：</dt>
+					<dd><input id="repwd" type="password" class="inputs" />
+						<div id="repwdId"></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>性别：</dt>
+					<dd><input name="sex" type="radio" value="男" />男 <input name="sex" type="radio" value="女" />女
+						<div id="sexId"></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>电子邮件：</dt>
+					<dd><input id="email" type="text" class="inputs" />
+						<div id="emailId"></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>出生日期：</dt>
+					<dd>
+						<select id="year">
+							<script>
+								for(var i = 1900; i <= 2015; i++) {
+									document.write("<option value=" + i + ">" + i + "</option>");
+								}
+							</script>
+						</select>年
+						<select id="month">
+							<script>
+								for(var i = 1; i <= 12; i++) {
+									document.write("<option value=" + i + ">" + i + "</option>");
+								}
+							</script>
+						</select>月
+						<select id="day">
+							<script>
+								for(var i = 1; i <= 31; i++) {
+									document.write("<option value=" + i + ">" + i + "</option>");
+								}
+							</script>
+						</select>日</dd>
+				</dl>
+				<dl>
+					<dt>&nbsp;</dt>
+					<dd><input name="sub" type="submit" value="注册" class="btn" /> <input name="cancel" type="reset" value="清除" class="btn" /></dd>
+				</dl>
+			</form>
+		</div>
+        <script src="jquery-1.8.3.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				$("#user").blur(chuser);
+				$("#pwd").blur(chpass);
+				$("#repwd").blur(chre);	
+				$("#email").blur(chEmail);
+				$("#myform").submit(function() {
+					var flag = true;
+					if(!chuser()) flag = false
+					if(!chpass())flag = false
+					if(!chre()) flag = false
+					if(!chEmail())flag = false
+					return flag;
+				})
+				})
+			function chuser() {
+				var txt = $("#user").val();
+				var $m = $("#userId");
+				var reg = /^[0-9a-zA-Z_]{4,12}$/;
+				if(reg.test(txt) == false) {
+					$m.html("用户名必须由字母，数字和下划线组成")
+					return false
+				}
+				$m.html("");
+				return true;
+			}
+			function chpass() {
+				var txt1 = $("#pwd").val();
+				var regp = /^.{6,12}$/;
+				if(regp.test(txt1) == false) {
+					$("#pwdId").text("密码长度为在6—12字符")
+					return false;
+				}
+				$("#pwdId").text("")
+				return true;
+			}
+			function chre() {
+				var $pw = $("#pwd").val();
+				var $rep = $("#repwd").val()
+				$("#repwdId").text("")
+				if($pw !== $rep) {
+					$("#repwdId").text("两次密码不一致")
+					return false;
+				}
+					return true;
+			}
+			function chEmail() {
+				var $em = $("#email").val();
+				var regm = /^\w+@\w+(\.[a-zA-Z]{2,3}){1,2}$/;
+				if(regm.test($em) == false) {
+					$("#emailId").text("电子邮箱地址不能为空")
+					return false;
+				}
+				$("#emailId").text("")
+				return true;
+			}
+		</script>
+	</body>
+</html>
