@@ -34,42 +34,54 @@
   	</style>
   	<script src="jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
   	<script type="text/javascript">
+//		$(function(){
+//			$("ul li:nth-of-type(1)").hover(function(){
+//				$("ul li:nth-of-type(1) div").css("display","block");
+//				$(this).toggleClass("orange");
+//			})
+//			$("ul li:nth-of-type(1)").mouseout(function(){
+//				$("ul li:nth-of-type(1) div").css("display","none");
+//			})
+//			$("ul li:nth-of-type(2)").hover(function(){
+//				$("ul li:nth-of-type(2) div").css("display","block");
+//				$(this).toggleClass("orange");
+//			})
+//			$("ul li:nth-of-type(2)").mouseout(function(){
+//				$("ul li:nth-of-type(2) div").css("display","none");
+//			})
+//			$("ul li:nth-of-type(3)").hover(function(){
+//				$("ul li:nth-of-type(3) div").css("display","block");
+//				$(this).toggleClass("orange");
+//			})
+//			$("ul li:nth-of-type(3)").mouseout(function(){
+//				$("ul li:nth-of-type(3) div").css("display","none");
+//			})
+//			$("ul li:nth-of-type(4)").hover(function(){
+//				$("ul li:nth-of-type(4) div").css("display","block");
+//				$(this).toggleClass("orange");
+//			})
+//			$("ul li:nth-of-type(4)").mouseout(function(){
+//				$("ul li:nth-of-type(4) div").css("display","none");
+//			})
+//			$("ul li:nth-of-type(5)").hover(function(){
+//				$("ul li:nth-of-type(5) div").css("display","block");
+//				$(this).toggleClass("orange");
+//			})
+//			$("ul li:nth-of-type(5)").mouseout(function(){
+//				$("ul li:nth-of-type(5) div").css("display","none");
+//			})
+//		})
   		$(function(){
-  			$("ul li:nth-of-type(1)").hover(function(){
-  				$("ul li:nth-of-type(1) div").css("display","block");
-  				$(this).toggleClass("orange");
-  			})
-  			$("ul li:nth-of-type(1)").mouseout(function(){
-  				$("ul li:nth-of-type(1) div").css("display","none");
-  			})
-  			$("ul li:nth-of-type(2)").hover(function(){
-  				$("ul li:nth-of-type(2) div").css("display","block");
-  				$(this).toggleClass("orange");
-  			})
-  			$("ul li:nth-of-type(2)").mouseout(function(){
-  				$("ul li:nth-of-type(2) div").css("display","none");
-  			})
-  			$("ul li:nth-of-type(3)").hover(function(){
-  				$("ul li:nth-of-type(3) div").css("display","block");
-  				$(this).toggleClass("orange");
-  			})
-  			$("ul li:nth-of-type(3)").mouseout(function(){
-  				$("ul li:nth-of-type(3) div").css("display","none");
-  			})
-  			$("ul li:nth-of-type(4)").hover(function(){
-  				$("ul li:nth-of-type(4) div").css("display","block");
-  				$(this).toggleClass("orange");
-  			})
-  			$("ul li:nth-of-type(4)").mouseout(function(){
-  				$("ul li:nth-of-type(4) div").css("display","none");
-  			})
-  			$("ul li:nth-of-type(5)").hover(function(){
-  				$("ul li:nth-of-type(5) div").css("display","block");
-  				$(this).toggleClass("orange");
-  			})
-  			$("ul li:nth-of-type(5)").mouseout(function(){
-  				$("ul li:nth-of-type(5) div").css("display","none");
-  			})
+  			$("li").hover(
+  				function(){
+  					$(this).children("div").show();
+  					$(this).toggleClass("orange");
+  				},
+  				function(){
+  					$(this).children("div").hide();
+  					$(this).toggleClass("orange");
+  				}
+  			);
   		})
   	</script>
  </head>
