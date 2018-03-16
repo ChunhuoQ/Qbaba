@@ -51,5 +51,8 @@ SELECT * FROM penalty;
 
 DROP TABLE moneyType;
 
+
+DROP TABLE class;
+
 #alter table penalty add constraint fk_penalty_moneyType foreign key(pType) references moneyType(sid);
 
