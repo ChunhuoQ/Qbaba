@@ -39,7 +39,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable {
         super.paint(g);// 访问父类的方法
         g.setColor(Color.black);// 设置一个背景颜色
         g.fillRect(0, 0, 500, 400);// 给窗口固定填充颜色
-        drawtanke(mt.getX(), mt.getY(), mt.getDirect(), g, 0);
+        drawtanke(mt.getX(), mt.getY(), mt.getDirect(), g, 0);// 调用drawtanke（）；
         // 如何绘制坦克子弹
         for (int i = 0; i < mt.vect.size(); i++) {
             Shot st = mt.vect.get(i);

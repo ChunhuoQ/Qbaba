@@ -25,6 +25,7 @@ import org.apache.log4j.Logger;
 public class ListDemo {
     private final static Logger LOG = Logger.getLogger(ListDemo.class);
 
+    @SuppressWarnings("rawtypes")
     public static void main(String[] args) {
 
         List<Comparable> list = new ArrayList<Comparable>();// 接口List 由它的实现类

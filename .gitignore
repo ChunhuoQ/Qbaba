@@ -4,6 +4,6 @@
 /target/
 /log/
 /logs/
-/bin/
-/bin/
 /jquery-1.8.3.js
+/bin/
+/.gitignore
