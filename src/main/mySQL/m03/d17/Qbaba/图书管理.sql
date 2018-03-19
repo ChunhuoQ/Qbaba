@@ -2,7 +2,8 @@
 SQLyog Ultimate v11.24 (32 bit)
 MySQL - 5.7.17-log : Database - library
 *********************************************************************
-*/CREATE DATABASE controllby;
+*/
+CREATE DATABASE controllby;
 
 /*!40101 SET NAMES utf8 */;
 
@@ -127,7 +128,7 @@ SELECT * FROM book WHERE bid IN(
 SELECT rd.rname AS '读者',bk.bname AS '书名',
 py.pdate AS'罚款时间', py.amount AS '罚款金'
 FROM book bk  INNER JOIN penalty py ON bk.bid=py.bid 
-INNER JOIN reader rd ON rd.rid=py.rid;
+INNER JOIN reader rd ON rd.rid=py.rid  WHERE  YEAR(py.pdate)=YEAR(NOW());
 
 # 查询获得地址为空的所有读者尚未归还的图书清单
 
@@ -141,4 +142,4 @@ INNER JOIN reader rd ON bw.`rid`=rd.`rid`
 (SELECT rd.`rid` FROM reader WHERE rname IN(
 SELECT rname FROM reader WHERE raddress IS NULL
 )
-)
+)ORDER BY rid DESC;
