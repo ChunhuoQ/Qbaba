@@ -142,4 +142,4 @@ INNER JOIN reader rd ON bw.`rid`=rd.`rid`
 (SELECT rd.`rid` FROM reader WHERE rname IN(
 SELECT rname FROM reader WHERE raddress IS NULL
 )
-)ORDER BY rid DESC;
+)ORDER BY rid DESC, pdate DESC;
