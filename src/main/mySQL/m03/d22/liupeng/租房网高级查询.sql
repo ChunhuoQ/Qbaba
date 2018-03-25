@@ -173,4 +173,29 @@ FROM hos_house AS h WHERE CEIL(MONTH(HTIME)/3)=3 AND (SELECT DName FROM hos_dist
 ))='海淀区'
 GROUP BY 区县,房屋所在街道,房屋类型
 
+SELECT CEIL(MONTH(HTIME)/3) AS 季度,
+(SELECT DName FROM hos_district WHERE DID IN(
+	SELECT SDID FROM hos_street WHERE SID=h.`SID`
+)) AS 区县,
+(SELECT sName FROM hos_street AS s WHERE SID=h.`SID`) AS 房屋所在街道,
+(SELECT HTName FROM hos_type AS t WHERE HTID=h.`HTID`) AS 房屋类型,
+COUNT(*) AS 房屋数量
+FROM hos_house AS h 
+GROUP BY 季度,区县,房屋所在街道,房屋类型
 
+SELECT QUARTER(h.`HTIME`) AS 季度, d.DName AS 区县,s.SName AS 街道,t.HTName AS 房屋类型,COUNT(*) AS 房屋数量 
+FROM hos_house AS h
+INNER JOIN hos_type AS t ON t.HTID=h.`HTID`
+INNER JOIN hos_street AS s ON s.SID=h.`SID`
+INNER JOIN hos_district AS d ON d.DID=s.`SDID`
+GROUP BY QUARTER(h.`HTIME`),d.DName ,s.SName ,t.HTName
+UNION
+SELECT QUARTER(h.`HTIME`) AS 季度,d.DName AS 区县,' 小计','',COUNT(*) AS 房屋数量 FROM hos_house AS h
+INNER JOIN hos_type AS t ON t.HTID=h.`HTID`
+INNER JOIN hos_street AS s ON s.SID=h.`SID`
+INNER JOIN hos_district AS d ON d.DID=s.`SDID`
+GROUP BY QUARTER(h.`HTIME`),d.DName
+UNION
+SELECT QUARTER(h.`HTIME`) AS 季度,' 合计','','',COUNT(*) AS 房屋数量 FROM hos_house AS h
+GROUP BY QUARTER(h.`HTIME`)
+ORDER BY 1,2,3,4;
