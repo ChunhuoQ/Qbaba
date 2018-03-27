@@ -11,7 +11,8 @@ SELECT a.rid AS 读者编号,a.`rname`AS 读者名字 FROM reader a WHERE NOT EX
 SELECT rd.`rname`AS 读者姓名,bk.`bname` AS 书名,bw.`willdate` AS 应还日期 
 FROM borrow bw LEFT JOIN reader rd ON rd.`rid`=bw.`rid` 
 LEFT JOIN book bk ON bk.`bid`=bw.`nif` WHERE bk.bid IN(
- SELECT bw.`nif`  FROM borrow WHERE bw.`returndate` IS NULL) ORDER BY  willdate DESC;
+ SELECT bw.`nif`  FROM borrow WHERE bw.`returndate` IS NULL)
+ AND TIMEDIFF(willdate,NOW())<0 ORDER BY  willdate DESC;
  
 # 4.查询各种图书未借出的本数 显示查询书名和本书 如果bcount 是未借出数量
 
