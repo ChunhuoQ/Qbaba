@@ -20,7 +20,7 @@ SELECT * FROM view_borrow;
 
 CREATE VIEW view_book
 AS
-	SELECT b.bid,b.bName AS 图书名称,b.bcount AS 馆存量,(b.bcount-COUNT(*)) AS 可借阅数量,COUNT(*) FROM book AS b
+	SELECT b.bid,b.bName AS 图书名称,b.bcount AS 馆存量,(b.bcount-COUNT(bw.nif)) AS 可借阅数量,COUNT(bw.nif) FROM book AS b
 	LEFT JOIN borrow AS bw ON bw.nif=b.bid
 	GROUP BY bw.nif
 	ORDER BY b.bid;	
