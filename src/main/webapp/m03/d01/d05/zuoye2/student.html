@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建一个student</title>
+	</head>
+	<body id="info">
+		<script>
+			var student=new Object();
+			student.name="高乐乐";
+			student.age=15;
+			student.slef="我叫高乐乐，我是一个初中三年级的学生，我非常喜欢音乐和打篮球";
+			student.info=function(){
+				var str="姓名:"+student.name+"<br>年龄:"+student.age+
+				"<br>自我介绍："+student.slef
+				document.getElementById("info").innerHTML=str;
+			}
+			student.info();
+		</script>
+	</body>
+</html>

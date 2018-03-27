@@ -1,0 +1,265 @@
+*{
+	list-style: none;
+	text-decoration: none;
+}
+.header{
+	width: 1320px;
+	height: 850px;
+	border: 1px solid black;
+	background: url(../img/img/主页背景图.JPG);
+	position: fixed;
+}
+.hlogo{
+	width: 220px;
+	height: 90px;
+	/*border: 1px solid black;*/
+	position: relative;
+	top:30px;
+	left: 80px;
+}
+.hlogo img{
+	width: 125px;
+	height: 56px;
+}
+
+.font1 ul li{
+	font-size: 16px;
+	font-weight: 700;
+	margin-left: 20px;
+	float: left;
+	position: relative;
+	left: 474px;
+	top: -60px;
+}
+.font1 ul li a{
+	color: white;
+}
+.fontlogo{
+	width: 1320px;
+	height: 220px;
+	/*border: 1px solid black;*/
+}
+.fontlogo img{
+	position:relative ;
+	top:140px ;
+	left: -350px;
+}
+
+.font2 li:hover{
+	animation-play-state: paused;
+}
+.font2{
+	width: 350px;
+	height: 30px;
+	margin: auto;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+
+@keyframes anis{
+	100%{
+		transform: translateY(-88px);
+	}
+}
+.ul1{
+	animation:anis 5s ease-in-out infinite;
+}
+.ul1 li{
+	line-height:30px;
+	color:white ;
+}
+
+.ul1:hover{
+	animation-play-state: paused;
+}
+.font3{
+	width: 1320px;
+	height: 160px;
+	border: 1px solid black;
+}
+.font3 ul li a{
+	color: white;
+	font-size: 14px;
+	font-weight: 700px;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+	left: 180px;
+}
+.from1{
+	width: 1320px;
+	height: 120px;
+	border: 1px solid black;
+
+}
+.from2{
+	position: relative;
+	top:30px;
+	left: -120px;
+	width: 646px;
+	height:55px ;
+}
+.imgi{
+	width: 100%;
+	max-width: 15px;
+}
+/*.from1 input{
+	
+}*/
+.from3{
+	position: relative;
+	top:30px;
+	left: -125px;
+	width: 190px;
+	height:60px ;
+	background-color: #00B86B;
+}
+/*.nav2{
+	width: 1320px;
+	height: 860px;
+	border: 1px solid black;
+	position: relative;
+	top: 200px;
+	/*background-color: white;*/}*/
+/*.imglogo{
+		position: fixed;
+		top: -800px
+		left:800px;
+	}*/
+	.hlogo .exchange {
+    background: rgba(0,0,0,0.25);
+    display: inline-block;
+    height: 30px;
+    line-height:35px;
+    /*text-align: center;*/
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0 5px;
+    font-size: 10px;
+    position: relative;
+    top:-20px;
+    left: 10px;
+    }
+  .hlogo .exchange i{
+    background: url(../img/img/小图标/地理位置图标.png) no-repeat 0px 2px ;
+    width: 15px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+    top: 1px;
+    }
+   .ti-hover {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    height: 30px;
+}
+.font1 .ti-hover i{
+	background: url(../img/img/小图标/登录头标.png) no-repeat ;
+	width: 25px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    top:-82px;
+    left: -25px;
+}
+.font1 .ti-hover span{
+	color:white;
+	font-size:12px ;
+	position: relative;
+	top:-53px;
+	left:-15px;
+}
+.hfoot{
+	width: 1320px;
+	height: 150px;
+	/*border: 1px solid red;*/
+	margin: 20px auto 0;
+    position: absolute;
+    top:600px;
+    bottom: 34px;
+    color: #FFF;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 12px;
+}
+.open{
+	width: 320px;
+	height: 50px;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-left: 50px;
+}
+.open1{
+	width: 320px;
+	height: 50px;
+	/*border: 1px solid red;*/
+	margin-left:400px;
+}
+.nav{
+	width: 1320px;
+	height: 280px;
+	border: 1px solid black;
+	position: relative;
+	top: 200px;
+	background-color: white;
+}
+.tupan1{
+	width: 220px;
+	height: 150px;
+	border: 1px solid red;
+	float: right;
+	margin-left: 100px;
+	margin-right:100px ;
+	text-align: center;
+/*	position: relative;*/
+}
+.tupan2{
+	width: 220px;
+	height: 150px;
+	/*border: 1px solid red;*/
+	float: right;
+	margin-left: 100px;
+	text-align: center;
+}
+.tupan3{
+	width: 220px;
+	height: 150px;
+	/*border: 1px solid red;*/
+	float: right;
+	margin-left: 100px;
+	text-align: center;
+}
+.tupan4{
+	width: 220px;
+	height: 150px;
+	/*border: 1px solid red;*/
+	float: right;
+	text-align: center;
+}
+@keyframes sperd{
+	20%{
+		transform: translateY(18px);
+	}
+	60%{
+		transform: translateY(-18px);
+	}
+}
+/*.nav div img{
+	*/
+.nav div img:hover{
+	/*animation-play-state: paused;*/
+	animation:sperd 5s ease-in-out infinite;
+}
+.nav3{
+	width: 1320px;
+	height: 550px;
+	border: 1px solid red;
+	position:relative;
+	top:200px;
+	background: url(../img/bg-app.jpg) no-repeat center top;
+}

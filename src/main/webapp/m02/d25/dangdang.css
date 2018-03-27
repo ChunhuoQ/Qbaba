@@ -1,0 +1,168 @@
+*{
+	list-style: none;
+}
+.header{
+	width: 960px;
+	height: 60px;
+	margin: 10px auto;
+	border: 1px solid aquamarine;
+	background: url(图片素材/icon_count.png) no-repeat 650px 5px;
+}
+.header-left{
+	width: 101px;
+	height: 48px;
+	border: 1px solid aquamarine;
+	float: left;
+	background: url(图片素材/logo.jpg);
+}
+.header-right{
+	width: 300px;
+	height: 35px;
+	border: 1px solid aquamarine;
+	float: right;
+	margin: 20px;
+	text-align: center;
+	line-height: 10px;
+	background-color: #EAFFFA;
+}
+.nav{
+	width: 960px;
+	height: 35px;
+	border: 1px solid red;
+	margin-top: 5px ;
+	margin: 10px auto;
+	line-height: 10px;
+	text-align: center;
+	background-color: #FE6915;
+	
+}
+.nav li{
+	display: inline-block;
+	padding: 0px 8px;
+	color: #FFF;
+}
+.datu{
+	width: 960px;
+	height: 120px;
+	border: 1px solid red;
+	background: url(图片素材/banner.png);
+	margin: 10px auto;
+	
+}
+.content{
+	width: 960px;
+	height:390px;
+	border: 1px solid green;
+	margin: 10px auto;
+}
+.cxs{
+	width: 960px;
+	height:39px;
+	/*border: 1px solid green;*/
+	background: url(图片素材/bg_bang.gif) no-repeat;
+	margin-left:-15px ;
+	margin-top: 10px;
+}
+.c1{
+	width: 480px;
+	height:300px;
+	/*border: 1px solid green;*/
+	
+	margin-top: 10px;
+	font-size: 15px;
+}
+.c1 img{
+	position: relative;
+	top:30px;
+	left: 15px;
+}
+.cc1{
+	position: relative;
+	top:-350px;
+	left: 20px;
+	
+}
+.c2{
+	width: 280px;
+	height:100px;
+	/*border: 1px solid green;*/
+	float: right;
+	position: relative;
+	top: -250px;
+	left: -90px;
+}
+.cc2{
+	float: right;
+	position: relative;
+	top: -260px;
+	left: -70px;
+}
+
+.c3{
+	width: 280px;
+	height:100px;
+	/*border: 1px solid green;*/
+	float: right;
+	position: relative;
+	top: -100px;
+	left: 220px;
+}
+.cc3{
+	float: right;
+	position: relative;
+	top: -110px;
+	left: 240px;
+}
+.c1 p{
+	position: relative;
+	top: -280px;
+	left: 250px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.c2 p{
+	position: relative;
+	top: -120px;
+	left: 90px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.c3 p{
+	position: relative;
+	top: -120px;
+	left: 90px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.footer{
+	width: 960px;
+	height: 90px;
+	/*border: 1px solid green;*/
+	margin: 10px auto;
+}
+.footer li {
+	float: left;
+	line-height:2px;
+	padding: 0px 10px;
+	font-size: 10px;
+	position: relative;
+	left: 110px;
+	top: -70px;
+	}
+/*.footer img{
+		position: relative;
+	    
+	    left: 430px;*/
+	}
+/*.myimg{
+	position: relative;
+	top: 20px;
+}*/
+.ccl{
+	position: relative;
+	top: -40px;
+}
+.cc1 img{
+	position: relative;
+	top: 100px;
+}

@@ -1,0 +1,70 @@
+.box{
+	width: 960px;
+	margin: 200px auto;
+	position: relative;
+}
+.box img{
+	width: 254px;
+	height: 220px;
+	border:1px solid #ddd;
+	padding: 10px;
+	position: absolute;
+	background: #FFF;
+	z-index: 1;
+}
+.box img:nth-child(1){
+	top: 0px;
+	left: 300px;
+	transform: rotate(-15deg);
+}
+.box img:nth-child(2){
+	top:-50px;
+	left: 600px;
+	transform: rotate(-20deg);
+}
+.box img:nth-child(3){
+	top:-50px;
+	left: 800px;
+	transform: rotate(-20deg);
+}
+.box img:nth-child(4){
+	top:40px;
+	left: 500px;
+	transform: rotate(-25deg);
+}
+.box img:nth-child(5){
+	top:-80px;
+	left: 300px;
+	transform: rotate(-25deg);
+}
+.box img:nth-child(6){
+	top:60px;
+	left: 200px;
+	transform: rotate(-5deg);
+}
+.box img:nth-child(7){
+	top:90px;
+	left: 300px;
+	transform: rotate(20deg);
+}
+.box img:nth-child(8){
+	top:-30px;
+	left: -10px;
+	transform: rotate(-25deg);
+}
+.box img:nth-child(9){
+	top:-30px;
+	left: 500px;
+	transform: rotate(25deg);
+}
+.box img:nth-child(10){
+	top:-20px;
+	left: 280px;
+	transform: rotate(20deg);
+}
+#box img:hover{
+	z-index: 2;
+	box-shadow: 5px 5px 5px #DDD;
+	transform: rotate(0deg) scale(1.5);
+	transition: all 3s ease-in-out;
+}

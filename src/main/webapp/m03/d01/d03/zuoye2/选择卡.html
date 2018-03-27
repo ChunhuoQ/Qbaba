@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择卡练习</title>
+		<style>
+			.cc{
+				width:170px;
+				height:310px;
+				border:1px solid black ;
+			}
+		</style>
+		<script>
+			function abc(name){
+				
+				var cc=document.getElementsByClassName("cc");
+				var xs=document.getElementById("bb");
+				
+				var fxiaoshuo=["人生若只如初见","高效能人士的七个..","求医不如知己"];
+				var xiaoshuo=["人生","高效","秋衣"];
+				var ser=["十万个为什么","金龟子","小鹿的故事"];
+				
+				if(name=="xs"){
+					xs.style.backgroundColor="yellow";
+					for(var i;i<xiaoshuo.length+1;i++){
+						xs.childNodes[2*i-1].innerHTML=xiaoshuo[i-1];
+					}
+				}
+//				alert();
+				if(name=="fxs"){
+				xs.style.backgroundColor="green";
+			    for(var j=1;j<fxiaoshuo.length+1;j++){
+					xs.childNodes[2*j-1].innerHTML=fxiaoshuo[j-1];
+				}
+				}
+				if(name=="se"){
+				xs.style.backgroundColor="pink";
+				for(var b=1;b<ser.length+1;b++){
+					xs.childNodes[2*b-1].innerHTML=ser[b-1];
+				}
+				}
+				}
+		</script>
+	</head>
+	<body>
+		<div class="cc">
+			<h3>图书排行榜 T100</h3>
+			<p>近7天销量 每日更新</p>
+			
+			<input type="button" value="小说" onmouseover="abc('xs')"/>
+			<input type="button" value="非小说" onmouseover="abc('fxs')"/>
+			<input type="button" value="少儿" onmouseover="abc('se')"/>
+			<br />
+			<ol id="bb">
+				<li>人生</li>
+				<li>高效</li>
+				<li>秋衣</li>
+			</ol>
+		</div>
+	</body>
+</html>

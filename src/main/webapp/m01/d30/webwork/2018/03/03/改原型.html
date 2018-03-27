@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>改原型</title>
+	</head>
+	<body><script>
+		function person(){
+			
+		}
+		person.prototype.name="小明";
+		person.prototype.age=20;
+		
+		person.prototype.showname=function(){
+			alert(this.name);
+		}
+		person.prototype.showage=function(){
+			alert(this.age);
+		}
+		var sp=new person();
+		sp.showname();
+	</script>
+	</body>
+</html>
