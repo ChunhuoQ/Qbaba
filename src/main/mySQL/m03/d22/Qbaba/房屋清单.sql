@@ -55,7 +55,7 @@ LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
 LEFT JOIN hos_type t ON t.`HTID`=h.`HTID`
 WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
-UNION ALL SELECT 当前季度,'合计'区县,'','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,' 合计'区县,'','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -64,7 +64,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=1
-UNION ALL SELECT 当前季度,'合计'区县,'','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,' 合计'区县,'','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -73,7 +73,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=2
-UNION ALL SELECT 当前季度,'合计'区县,'','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,' 合计'区县,'','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -82,7 +82,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=3
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -91,7 +91,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=1 AND 区县='海淀区' 
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -100,7 +100,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=1 AND 区县='西城区' 
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -109,7 +109,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=1 AND 区县='朝阳区' 
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -118,7 +118,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=2 AND 区县='东城区' 
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -127,7 +127,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=2 AND 区县='海淀区' 
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -136,7 +136,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=2 AND 区县='西城区' 
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -145,7 +145,7 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=3 AND 区县='海淀区' 
-UNION ALL SELECT 当前季度,区县,'小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
+UNION ALL SELECT 当前季度,区县,' 小计','',SUM(房屋数量) FROM (SELECT QUARTER(HTIME) AS 当前季度,d.`DName` AS 区县,
 s.`SName` AS 街道,t.`HTName` AS 户型,COUNT(s.`SID`)AS 房屋数量
 FROM hos_house h LEFT JOIN hos_street s ON h.`SID`=s.`SID`
 LEFT JOIN hos_district	d ON d.`DID`=s.`SDID`
@@ -154,7 +154,8 @@ WHERE h.`HTIME` AND h.`HTID`
 GROUP BY h.`TOPIC`
 ORDER BY 当前季度 ASC) AS BIAO
 WHERE 当前季度=3 AND 区县='东城区' 
-ORDER BY 当前季度 ASC,房屋数量 DESC
+ORDER BY 1,2,3,4;
 
 
-
+ 
+DROP contents FROM hos_house WHERE hmid=11

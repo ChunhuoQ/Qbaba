@@ -1,0 +1,88 @@
+#first{
+	width: 1300px;
+	height: 80px;
+	padding-left: 100px;
+	float: left;
+}
+span{
+	font-size:20px ;
+	font-family: "微软雅黑";
+	padding-left: 10px;
+}
+img,span{
+	vertical-align:middle ;
+}
+#mydiv{
+	height: 600px;
+	width: 1300px;
+	background: url(image/banner.png)  repeat-x 240px 83px;
+}
+
+
+.login-box{
+	width: 100px;
+	height: 300px;
+	float: right;
+    padding-right: 200px ;
+    margin-top: 30px;
+    margin-right: 100px;
+    background-color: white;
+}
+.login-form{
+	line-height: 50px;
+	width: 260px;
+	height: 260px;
+	float: left;
+	margin: 10px;
+	padding: 10px;  
+	background: white url(image/icon5.jpg) no-repeat 190px 27px;
+}
+ .login-form a:link{
+  
+   float: right;
+   text-decoration: none;
+   font-size: 15px;
+   color:red;
+ 
+ }
+ a:visited{
+ 	color: #0000FF;
+ }
+ .myinput{
+ 	height: 35px;
+ 	width: 220px;
+ 	background: white url(image/icon1.jpg) no-repeat;
+ 	line-height: 10px;
+ 	text-indent: 3em;
+ 	border: 1px silver solid;
+ 	margin-right: 10px;
+ 	margin-top: 10px;
+ }
+ .myinput1{
+ 	height: 35px;
+ 	width: 220px;
+ 	background: white url(image/icon2.jpg) no-repeat;
+ 	line-height: 30px;
+ 	text-indent: 3em;
+ 	border: 1px silver solid;
+ 	margin-right: 10px;
+ 	margin-top: 10px;
+ }
+ .myinput2{
+ 	height: 35px;
+ 	width: 220px;
+ 	background-color: crimson;
+ 	border: 1px crimson solid;
+ 	font-weight: bolder;
+ 	color: white;
+ 	line-height: 20px;
+ }
+ .myinput3 {
+ 	font-size:11px ;
+	color:  #696969;
+	
+	
+ }
+ p{
+	font-size: 10px;
+	color: #DCDCDC;

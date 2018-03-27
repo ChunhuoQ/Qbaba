@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>toggleClass演示</title>
+	</head>
+	<style>
+		.red{
+			font-size: 22px;
+			color: red;
+		}
+	</style>
+	<script src="jquery-1.8.3.js"></script>
+	<script>
+		$(function(){
+			$("input[type='button']").click(function(){
+				$("p").toggleClass("red");
+			})
+		})
+	</script>
+	<body>
+		<input type="button" value="点我吧" />
+		<p>我是高事情 ，我是宋事情的后代</p>
+	</body>
+</html>
