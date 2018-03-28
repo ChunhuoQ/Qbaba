@@ -160,7 +160,7 @@
          var bx1=document.getElementById("bx1");
          bx1.innerHTML=zongxi1+ben;
   	}
-  }
+  
   //000000000000000000000000
   $(function(){
 	$("#zxd ul li:nth-of-type(1)").hover(function(){
