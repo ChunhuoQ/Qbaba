@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package Demojdbc;
+package m03.d27.lvruiling;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
