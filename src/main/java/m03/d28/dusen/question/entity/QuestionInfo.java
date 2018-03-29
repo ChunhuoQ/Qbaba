@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.question.entity;
+package m03.d28.dusen.question.entity;
 /**
  * Description:   <br/>
  * Date:     2018年3月28日 下午3:06:34 <br/>

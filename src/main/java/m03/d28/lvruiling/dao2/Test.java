@@ -58,23 +58,25 @@ public class Test {
             }
         }
         if (num == 4) {
-            System.out.println("请输入要修改的编号：");
-            qui1.setQuestionId(scanner.nextInt());
-            System.out.println("请输入要修改的题目:");
+            System.out.println("请输入新的科目：");
+            qui1.setSubject(scanner.nextInt());
+            System.out.println("请输入要添加的题目:");
             qui1.setQuestion(scanner.next());
-            System.out.println("请输入要修改的选项A：");
+            System.out.println("请输入新的选项A：");
             qui1.setOptionA(scanner.next());
-            System.out.println("请输入要修改的选项B：");
+            System.out.println("请输入新的选项B：");
             qui1.setOptionB(scanner.next());
-            System.out.println("请输入要修改的选项C：");
+            System.out.println("请输入新的选项C：");
             qui1.setOptionC(scanner.next());
-            System.out.println("请输入要修改的选项D：");
+            System.out.println("请输入新的选项D：");
+            qui1.setOptionD(scanner.next());
+            System.out.println("请输入新的答案：");
             qui1.setOptionD(scanner.next());
             int flag = qui.saveInfo2(qui1);
             if (flag > 0) {
-                System.out.println("修改成功！");
+                System.out.println("添加成功！");
             } else {
-                System.out.println("修改失败！");
+                System.out.println("添加失败！");
             }
         }
         if (num == 5) {

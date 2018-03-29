@@ -6,15 +6,14 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.question.java;
+package m03.d28.dusen.question.java;
 
 import java.util.List;
 import java.util.Scanner;
 
-import com.question.dao.BaseDao;
-import com.question.dao.QuestionInfoDao;
-import com.question.dao.impl.QuestionInfoDaoImpl;
-import com.question.entity.QuestionInfo;
+import m03.d28.dusen.question.dao.QuestionInfoDao;
+import m03.d28.dusen.question.dao.impl.QuestionInfoDaoImpl;
+import m03.d28.dusen.question.entity.QuestionInfo;
 
 /**
  * Description: <br/>
