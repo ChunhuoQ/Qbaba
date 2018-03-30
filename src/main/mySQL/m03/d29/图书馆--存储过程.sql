@@ -1,29 +1,3 @@
-#增
-DELIMITER ;;
-CREATE PROCEDURE pro_test_04(IN rnam VARCHAR(200),IN rbook VARCHAR(200),IN pt INT,IN am FLOAT)
-BEGIN
-	INSERT INTO penalty(rid,bid,pdate,ptype,amount) VALUE(
-	(SELECT rid FROM reader WHERE rname=rnam),
-	(SELECT bid FROM book WHERE bname=rbook),
-	NOW(),
-	pt,
-	am
-	);
-END
-;;
-DELIMITER ;
-
-CALL pro_test_04('刘冰冰','西游记',1,4.6);
-
-#改
-DELIMITER ;;
-CREATE PROCEDURE pro_test_05(IN _rname VARCHAR(200))
-BEGIN
-	UPDATE borrow SET returndate=NOW() WHERE rid=(SELECT rid FROM reader WHERE rname=_rname);
-END
-;;
-DELIMITER ;
-
 #事务存储过程
 DELIMITER ;;
 CREATE PROCEDURE pro_test_06(IN rnam VARCHAR(200),IN rbook VARCHAR(200),IN pt INT,IN am FLOAT)

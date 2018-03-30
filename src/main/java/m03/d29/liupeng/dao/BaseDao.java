@@ -24,7 +24,6 @@ import java.util.Properties;
  * @see
  */
 public class BaseDao {
-
     protected Connection con = null;// 连接通道
 
     protected PreparedStatement pst = null;// 预编译
@@ -96,6 +95,9 @@ public class BaseDao {
     // 关闭的方法
     public void close(Connection con, PreparedStatement pst, ResultSet rs, CallableStatement cstate) {
         try {
+            if (cstate != null) {
+                cstate.close();
+            }
             if (rs != null) {
                 rs.close();
             }
@@ -104,9 +106,6 @@ public class BaseDao {
             }
             if (con != null) {
                 con.close();
-            }
-            if (cstate != null) {
-                cstate.close();
             }
         } catch (Exception e) {
             e.printStackTrace();

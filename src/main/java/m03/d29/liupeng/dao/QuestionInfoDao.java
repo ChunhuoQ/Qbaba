@@ -31,8 +31,5 @@ public interface QuestionInfoDao<T> {
 
     int deleteInfo(int id);
 
-    List<QuestionInfo> callProcedureAllInfo();
-
-    List<QuestionInfo> callProcedureLikeInfo(String str);
 }
 
