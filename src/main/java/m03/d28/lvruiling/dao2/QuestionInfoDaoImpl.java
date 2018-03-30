@@ -73,7 +73,7 @@ public class QuestionInfoDaoImpl extends BaseDao implements questionInfoDao {
         int flag = 0;
         try {
             String sql = "INSERT INTO question_info(question,optionA,optionB,optionC,optionD,SUBJECT,answer) VALUES(?,?,?,?,?,?,?)";
-            Object[] obj = new Object[2];
+            Object[] obj = new Object[7];
             if (t instanceof QuestionInfo) {
                 QuestionInfo ff = (QuestionInfo) t;
                 obj[0] = ff.getQuestion();

@@ -81,7 +81,6 @@ public class QuestionDaoImpl extends BaseDao implements QuestionDao  {
             Object[] obj=new Object[7];
             if(t instanceof QuestionInfoDaoImpl){
                 QuestionInfoDaoImpl ff=(QuestionInfoDaoImpl)t;
-               
                 obj[0]=ff.getQuestion();
                 obj[1]=ff.getOptionA();
                 obj[2]=ff.getOptionB();
