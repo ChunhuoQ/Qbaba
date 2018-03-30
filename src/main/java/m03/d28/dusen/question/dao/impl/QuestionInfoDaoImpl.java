@@ -6,15 +6,11 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.question.dao.impl;
+package m03.d28.dusen.question.dao.impl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.question.dao.BaseDao;
-import com.question.dao.QuestionInfoDao;
-import com.question.entity.QuestionInfo;
 
 /**
  * Description:   <br/>

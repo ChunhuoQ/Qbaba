@@ -30,5 +30,6 @@ public interface QuestionInfoDao<T> {
     int addInfo(T t);
 
     int deleteInfo(int id);
+
 }
 

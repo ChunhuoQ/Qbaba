@@ -45,6 +45,8 @@ public class QuestionInfoDaoImpl extends BaseDao implements QuestionInfoDao {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            close(con, pst, rs);
         }
         return list;
     }
@@ -71,6 +73,8 @@ public class QuestionInfoDaoImpl extends BaseDao implements QuestionInfoDao {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            close(con, pst, rs);
         }
         return list;
     }
@@ -97,6 +101,8 @@ public class QuestionInfoDaoImpl extends BaseDao implements QuestionInfoDao {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            close(con, pst, rs);
         }
         return list;
     }

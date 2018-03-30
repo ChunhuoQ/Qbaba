@@ -6,11 +6,9 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.question.dao;
+package m03.d28.dusen.question.dao;
 
 import java.util.List;
-
-import com.question.entity.QuestionInfo;
 
 /**
  * Description:   <br/>
