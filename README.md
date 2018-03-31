@@ -13,10 +13,10 @@
 
 
 # 目录结构
-$组仓库名$/src/main/java/m01/d04/Qbaba
+组仓库名$/src/main/java/m01/d04/Qbaba
 - 
-$java文件$/src/main/java
+java文件$/src/main/java
 - 
 $web文件$/src/main/webapp
-- 
-- 》》》注：m代表月份、d代表哪一天。
+-
+- 注：m代表月份、d代表哪一天。
