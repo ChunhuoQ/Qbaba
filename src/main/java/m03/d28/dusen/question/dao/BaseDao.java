@@ -100,6 +100,8 @@ public class BaseDao {
         } catch (SQLException e) {
             
             e.printStackTrace();
+        } finally {
+            close(con, pst, rs);
         }
         return flag;
     }

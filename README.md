@@ -9,14 +9,14 @@
 - 杜森 dusen
 
 # 组介绍
-宇宙无敌第59班Qbaba超级小组
+天行健，君子以自强不息。地势坤，君子以厚德载物
 
 
 # 目录结构
-$组仓库名$/src/main/java/m01/d04/Qbaba
+组仓库名/src/main/java/m01/d04/Qbaba
 - 
-$java文件$/src/main/java
+java文件/src/main/java
 - 
-$web文件$/src/main/webapp
-- 
-- 》》》注：m代表月份、d代表哪一天。
+web文件/src/main/webapp
+-
+- 注：m代表月份、d代表哪一天。
