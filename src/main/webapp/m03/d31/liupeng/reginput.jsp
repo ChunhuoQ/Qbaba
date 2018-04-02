@@ -9,7 +9,7 @@
     <body>
     	<div align="center">请输入注册信息
     		<form action="reginfo.jsp" method="post" name="forml">
-    			<table border="0" cellspacing="" cellpadding="" align="center">
+    			<table border="0" align="center">
     				<tr>
     					<td>用户名：</td>
     					<td><input type="text" name="name" /></td>
