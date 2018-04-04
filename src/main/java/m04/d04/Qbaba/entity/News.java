@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package Qbaba.entity;
+package m04.d04.Qbaba.entity;
 
 import java.io.Serializable;
 

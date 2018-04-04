@@ -15,6 +15,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="main/java/Qbaba/impl/NewsDaoImpl.xml" />
+		<mapper resource="m04/d04/Qbaba/impl/NewsDaoImpl.xml" />
 	</mappers>
 </configuration>

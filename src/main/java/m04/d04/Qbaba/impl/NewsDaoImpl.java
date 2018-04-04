@@ -6,19 +6,21 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package Qbaba.impl;
+package m04.d04.Qbaba.impl;
 
 import java.io.IOException;
+
+
 import java.io.InputStream;
 import java.util.List;
+
+import m04.d04.Qbaba.entity.News;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
-
-import Qbaba.entity.News;
 
 /**
  * Description:   <br/>
@@ -41,12 +43,12 @@ public void getNews() throws IOException{
     SqlSessionFactory ssf=sfb.build(ins);
     SqlSession session= ssf.openSession();
     //3 调用StudentDaoImpl.xml中的Sql语句
-    List<News> list=session.selectList("Qbaba.impl.NewsDaoImpl.getNews");
+    List<News> list=session.selectList("m04.d04.Qbaba.impl.NewsDaoImpl.getNews");
     for (News news : list) {
         System.out.println(news.getUsername()+"\t"+news.getPassword());
     }
      } catch (Exception e) {
-         // TODO: handle exception
+         e.printStackTrace();
      }
 }
 }

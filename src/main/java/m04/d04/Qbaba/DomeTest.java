@@ -6,11 +6,11 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package Qbaba;
+package m04.d04.Qbaba;
 
 import java.io.IOException;
 
-import Qbaba.impl.NewsDaoImpl;
+import m04.d04.Qbaba.impl.NewsDaoImpl;
 
 /**
  * Description:   <br/>
