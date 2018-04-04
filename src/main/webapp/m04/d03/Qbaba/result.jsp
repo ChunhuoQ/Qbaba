@@ -12,6 +12,13 @@
 		request.setCharacterEncoding("utf-8");
 		String uname = request.getParameter("uname");
 		String pwd = request.getParameter("pwd");
+		Integer count=(Integer)application.getAttribute("count");
+		if(count!=null){
+		    count=count+1;
+		}else{
+		    count=1;
+		}
+		application.setAttribute("count", count);
 		UserInfoDaoImpl user= new UserInfoDaoImpl();
 		user.setUsername(uname);
 		user.setPassword(pwd);

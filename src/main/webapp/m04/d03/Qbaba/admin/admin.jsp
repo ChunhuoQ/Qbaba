@@ -16,7 +16,15 @@
   </div>
 </div>
 <div id="admin_bar">
-  <div id="status">管理员：<span id="sp"><%=session.getAttribute("uname")%></span> 登录  &#160;&#160;&#160;&#160; <a href="../index.html">login out</a></div>
+  <div id="status">管理员：<span id="sp"><%=session.getAttribute("uname")%></span> 登录  &#160;&#160;&#160;&#160; <a href="../index.html">login out</a>
+   <c:if test="${i== null}">
+    <%
+    Integer i=(Integer)application.getAttribute("count");
+    %>
+  <span>尊敬的<%=session.getAttribute("uname")%>,您是第<span id="sp"><%=i %><c:out value="1"/></span>位访问本网站的用户！</span>
+  
+   </c:if>
+  </div>
   <div id="channel"> </div>
 </div>
 <div id="main">
@@ -45,8 +53,8 @@
                                                    
         &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
      <% }%>
-      <!-- <li class='space'></li>
-      <li> 国内成品油价格上调几成定局 <span> 作者：
+       <li class='space'></li>
+     <!-- <li> 国内成品油价格上调几成定局 <span> 作者：
         news                                              
         &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
       <li> 俄数百所幼儿园和学校因流感停课 <span> 作者：
@@ -61,7 +69,14 @@
       <li> 国台办将授权福建等六省市部分赴台管理审批权 <span> 作者：
         news                                              
         &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
-      --> <li class='space'></li>
+      --> 
+      <%
+    	 for (NewsInfo fo : list) { %>
+      <li><% out.print(fo.getNews_title()); %> <span> 作者：<% out.print(fo.getNews_author()); %> 
+                                                   
+        &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
+     <% }%>
+      <li class='space'></li>
       <p align="right"> 当前页数:[1/3]&nbsp; <a href="#">下一页</a> <a href="#">末页</a> </p>
     </ul>
   </div>
