@@ -21,7 +21,7 @@ public class News implements Serializable{
 /**
      * serialVersionUID:
      */
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -3661354076930876321L;
 private String username;
 private String password;
 
