@@ -23,7 +23,7 @@ import m03.d28.songhang.dt59.entity.QuestionInfo;
  * @version
  * @see
  */
-public class QuestionInfoDaoImpl extends BaseDao implements QuestionInfoDao {
+public class QuestionInfoDaoImpl extends BaseDao implements QuestionInfoDao<Object> {
 
     @Override
     public List<QuestionInfo> getAllQuestion(String str) {

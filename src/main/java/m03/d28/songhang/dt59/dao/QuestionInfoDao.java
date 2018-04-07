@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Demo_pro_jdbc_fc_01
  * File Name:QuestionInfoDao.java
@@ -23,9 +24,18 @@ import m03.d28.songhang.dt59.entity.QuestionInfo;
  *      添加试题，删除试题、按试题编号查询试题的方法。<br/>
  */
 public interface QuestionInfoDao<T> {
-    List<QuestionInfo> getAllQuestion(String str);// 定义查询所有试题
+    /**
+     * @see 定义查询所有试题
+     * */
+    List<QuestionInfo> getAllQuestion(String str);
 
+    /**
+     * @see 定义删除试题的方法
+     * */
     int deleteQuestion(int id);
 
+    /**
+     * @see 定义添加试题的方法
+     * */
     int addQuestion(T t);
 }
