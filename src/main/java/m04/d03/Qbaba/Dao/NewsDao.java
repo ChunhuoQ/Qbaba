@@ -24,4 +24,5 @@ import m04.d03.Qbaba.entity.UserInfoDaoImpl;
 public interface NewsDao<T> {
     boolean validateUser(UserInfoDaoImpl user);
     List<NewsInfo> getAllNewsInfo();
+    int Deletenews(int id);
 }
