@@ -8,8 +8,6 @@
 
 package m04.d04.Qbaba;
 
-import java.io.IOException;
-
 import m04.d04.Qbaba.impl.NewsDaoImpl;
 
 /**
@@ -23,12 +21,14 @@ public class DomeTest {
 public static void main(String[] args) {
     NewsDaoImpl nl=new NewsDaoImpl();
     try {
+        
         nl.getNews();
-    } catch (IOException e) {
+        nl.getNewsInsert3("Qbaba", "12356");
+        nl.getNewsSelect();
+    } catch (Exception e) {
         //  Auto-generated catch block
         e.printStackTrace();
-        
-    }
+   }
 }
 }
 

@@ -7,25 +7,47 @@
 <title>新闻中国</title>
 <link href="CSS/main.css" rel="stylesheet" type="text/css" />
 </head>
+<script type="text/javascript">
+	function login() {
+		var uname = document.getElementById("uname").value;
+		var upwd = document.getElementById("upwd").value;
+		window.location.href = "result.jsp?uname=" + uname + "&upwd=" + upwd;
+	}
+</script>
+<%
+    String uname = "";
+    String upwd = "";
+    //得到cookie对象
+    //请求
+    Cookie[] ck = request.getCookies();
+    if (ck != null) {
+        for (int i = 0; i < ck.length; i++) {
+            //原则：通过键找到值
+            if (ck[i].getName().equals("uname")) {
+                uname = ck[i].getValue();//获取了值
+            } else if (ck[i].getName().equals("upwd")) {
+                upwd = ck[i].getValue();
+            }
+        }
+    }
+%>
 <body>
 	<div id="header">
-		<form action="result.jsp" method="post">
-			<div id="top_login">
-				<label> 登录名 </label> <input type="text" id="uname" name="uname"
-					value="" class="login_input" /> <label> 密&#160;&#160;码 </label> <input
-					type="password" id="upwd" name="pwd" value="" class="login_input" />
-				<input type="submit" class="login_sub" value="登录" onclick="login()" />
-				<label id="error"><%=session.getAttribute("error") == null ? "" : session.getAttribute("error")%>
-				</label> <span class="sp"> <c:if test="${i== null}">
-						<%
-						    Integer i = (Integer) application.getAttribute("count");
-						%>
-  	目前有<span class="sp1"><%=i%></span>
-						<c:out value="0" />个人访问过本网站
-    </c:if>
-				</span> <img src="Images/friend_logo.gif" alt="Google" id="friend_logo" />
-			</div>
-		</form>
+		<!-- <form action="result.jsp" method="post"> -->
+		<div id="top_login">
+			<label> 登录名 </label> <input type="text" id="uname" name="uname"
+				value="<%=uname%>" class="login_input" /> <label>
+				密&#160;&#160;码 </label> <input type="password" id="upwd" name="upwd"
+				value="<%=upwd%>" class="login_input" /> <input type="button"
+				class="login_sub" value="登录" onclick="login();" /> <label
+				id="error"><%=session.getAttribute("error") == null ? "" : session.getAttribute("error")%>
+			</label> <span class="sp"> <%
+     Integer i = (Integer) application.getAttribute("count");
+ %> 目前有<span class="sp1"><%=i%></span>个人访问过本网站
+
+			</span> <img src="Images/friend_logo.gif" alt="Google" id="friend_logo" />
+		</div>
+		<!-- </form> -->
 		<div id="nav">
 			<div id="logo">
 				<img src="Images/logo.jpg" alt="新闻中国" />

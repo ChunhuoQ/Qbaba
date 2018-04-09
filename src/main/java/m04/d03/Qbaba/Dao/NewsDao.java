@@ -10,6 +10,7 @@ package m04.d03.Qbaba.Dao;
 
 import java.util.List;
 
+import m04.d03.Qbaba.entity.NewsCommentInfo;
 import m04.d03.Qbaba.entity.NewsInfo;
 import m04.d03.Qbaba.entity.UserInfoDaoImpl;
 
@@ -24,4 +25,8 @@ import m04.d03.Qbaba.entity.UserInfoDaoImpl;
 public interface NewsDao<T> {
     boolean validateUser(UserInfoDaoImpl user);
     List<NewsInfo> getAllNewsInfo();
+    int Deletenews(int id);
+    List<NewsInfo> getNewsInfo(int id);
+    int UpdateNews(Object id,String author,String title);
+    List<NewsCommentInfo> getAllNewsComment();
 }
