@@ -60,7 +60,7 @@
     	
     	for(int o=0;o<list.size();o++){
    			out.print("<li>"+list.get(o).getNews_title()+"<span>作者:"+
-   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='Mresult.jsp?idl="+list.get(o).getNews_id()+"&author="+list.get(o).getNews_author()+"&title="+list.get(o).getNews_title()+"' onclick=''>修改</a> &#160;&#160;&#160;&#160; "+
+   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='Mresult.jsp?idl="+list.get(o).getNews_id()+"&author="+list.get(o).getNews_author()+"&title="+list.get(o).getNews_title()+"&nsummary="+list.get(o).getNews_summary()+"&ncontent="+list.get(o).getNews_content()+"' onclick=''>修改</a> &#160;&#160;&#160;&#160; "+
    			"<a href='javascript:;' onclick='del("+list.get(o).getNews_id()+");'>删除</a> </span></li>");}%>
        <li class='space'></li>
      <!-- <li> 国内成品油价格上调几成定局 <span> 作者：

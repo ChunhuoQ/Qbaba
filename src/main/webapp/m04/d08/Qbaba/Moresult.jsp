@@ -17,12 +17,12 @@ Object idl=session.getAttribute("idl1");
 
 NewsDaoImpl ndi=new NewsDaoImpl();
 int flag=ndi.UpdateNews(idl, Nauthor, nTilet);
-/* if(flag>0){
-    request.getRequestDispatcher("admin/admin.jsp").forward(request, response);
+ if(flag>0){
+     response.sendRedirect("result.jsp?uname=admin&upwd=123");
 }else{
     response.sendRedirect("news_modify.jsp");
 }
-  */
+  
 %>
 <%=nTilet %>
 <%=Nauthor %>

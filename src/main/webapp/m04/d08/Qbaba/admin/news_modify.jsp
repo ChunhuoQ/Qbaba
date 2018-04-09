@@ -31,7 +31,7 @@
   </div>
   <div id="opt_area">
     <h1 id="opt_type"> 修改新闻： </h1>
-    <form action="../Moresult.jsp" method="get" enctype="multipart/form-data" onsubmit="return check()">
+    <form action="../Moresult.jsp" method="post">
       <p>
         <label> 主题 </label>
         <select name="ntid">
@@ -51,11 +51,11 @@
       
       <p>
         <label> 摘要 </label>
-        <textarea name="nsummary" cols="40" rows="3" >摘要</textarea>
+        <textarea name="nsummary" cols="40" rows="3" ><%=request.getParameter("nsummary") %></textarea>
       </p>
       <p>
         <label> 内容 </label>
-        <textarea name="ncontent" cols="70" rows="10" >内容</textarea>
+        <textarea name="ncontent" cols="70" rows="10" ><%=request.getParameter("nsummary") %></textarea>
       </p>
       <p>
         <label> 上传图片 </label>
