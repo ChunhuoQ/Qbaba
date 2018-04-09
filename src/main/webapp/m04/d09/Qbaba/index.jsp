@@ -1,4 +1,4 @@
-<%@page import="m04.d03.Qbaba.entity.NewsCommentInfo"%>
+<%@page import="m04.d09.Qbaba.entity.NewsCommentInfo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>

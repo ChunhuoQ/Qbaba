@@ -6,16 +6,17 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m04.d03.Qbaba.Dao.impl;
+package m04.d09.Qbaba.Dao.impl;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
-import m03.d28.Qbaba.Dao.BaseDao;
-import m04.d03.Qbaba.Dao.NewsDao;
-import m04.d03.Qbaba.entity.NewsCommentInfo;
-import m04.d03.Qbaba.entity.NewsInfo;
-import m04.d03.Qbaba.entity.UserInfoDaoImpl;
+import m04.d09.Qbaba.Dao.BaseDao;
+import m04.d09.Qbaba.Dao.NewsDao;
+import m04.d09.Qbaba.entity.NewsCommentInfo;
+import m04.d09.Qbaba.entity.NewsInfo;
+import m04.d09.Qbaba.entity.UserInfoDaoImpl;
 
 /**
  * Description: <br/>
