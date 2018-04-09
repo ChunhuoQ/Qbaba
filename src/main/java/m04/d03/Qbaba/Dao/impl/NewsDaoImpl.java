@@ -97,4 +97,53 @@ public class NewsDaoImpl extends BaseDao implements NewsDao {
         // Auto-generated method stub
         return list;
     }
+    public List<NewsInfo> getNewsInfo(int id) {
+        List<NewsInfo> list1 = new ArrayList<NewsInfo>();
+        try {
+            String sql = "SELECT * FROM news_info where id=?";
+
+            pst = getCon().prepareStatement(sql);
+            pst.setInt(1, id);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                NewsInfo info = new NewsInfo();
+                info.setNews_id(rs.getInt(1));
+                info.setType_id(rs.getInt(2));
+                info.setNews_title(rs.getString(3));
+                info.setNews_author(rs.getString(4));
+                info.setNews_summary(rs.getString(5));
+                info.setNews_content(rs.getString(6));
+                info.setNews_pic(rs.getString(7));
+                list1.add(info);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            close(con, pst, rs);
+        }
+        // Auto-generated method stub
+        return list1;
+    }
+
+    @Override
+    public int UpdateNews(Object id,String author,String title) {
+       
+        int flag=0;
+        try {
+            String id2=(String)id;
+            Integer id1=Integer.valueOf(id2);
+            String sql="UPDATE news_info SET news_author=?,news_title=? WHERE news_id=?";
+            pst = getCon().prepareStatement(sql);
+            pst.setString(1, author);
+            pst.setString(2, title);
+            pst.setInt(3, id1);
+            flag = pst.executeUpdate();
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return flag;
+    }
 }

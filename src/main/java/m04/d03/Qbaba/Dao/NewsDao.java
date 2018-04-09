@@ -25,4 +25,6 @@ public interface NewsDao<T> {
     boolean validateUser(UserInfoDaoImpl user);
     List<NewsInfo> getAllNewsInfo();
     int Deletenews(int id);
+    List<NewsInfo> getNewsInfo(int id);
+    int UpdateNews(Object id,String author,String title);
 }

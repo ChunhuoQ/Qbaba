@@ -6,8 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>添加主题--管理后台</title>
 <link href="CSS/admin.css" rel="stylesheet" type="text/css" />
-
-
 </head>
 <body>
 <div id="header">
@@ -50,10 +48,10 @@
 		window.location.href="resultDel.jsp?id="+id; 
 		
 	}
-	function clickUpdate(idl){
+/* 	function clickUpdate(idl){
+ window.location.href="Mresult.jsp?idl="+idl;
 		
-		 window.location.href="admin/news_modify.jsp?idl="+idl; 
-	}
+	} */
 </script>
     <ul class="classlist">
     	<%
@@ -62,7 +60,7 @@
     	
     	for(int o=0;o<list.size();o++){
    			out.print("<li>"+list.get(o).getNews_title()+"<span>作者:"+
-   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='javascript:;'onclick='clickUpdate("+list.get(o).getNews_id()+")' >修改</a> &#160;&#160;&#160;&#160; "+
+   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='Mresult.jsp?idl="+list.get(o).getNews_id()+"&author="+list.get(o).getNews_author()+"&title="+list.get(o).getNews_title()+"' onclick=''>修改</a> &#160;&#160;&#160;&#160; "+
    			"<a href='javascript:;' onclick='del("+list.get(o).getNews_id()+");'>删除</a> </span></li>");}%>
        <li class='space'></li>
      <!-- <li> 国内成品油价格上调几成定局 <span> 作者：
@@ -84,7 +82,7 @@
       <%
     		for(int o=0;o<list.size();o++){
    			out.print("<li>"+list.get(o).getNews_title()+"<span>作者:"+
-   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='javascript:;' onclick='clickUpdate("+list.get(o).getNews_id()+")'>修改</a> &#160;&#160;&#160;&#160; "+
+   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='Mresult.jsp?idl="+list.get(o).getNews_id()+"&author="+list.get(o).getNews_author()+"&title="+list.get(o).getNews_title()+"' onclick=''>修改</a> &#160;&#160;&#160;&#160; "+
    			"<a href='javascript:;' onclick='del("+list.get(o).getNews_id()+");'>删除</a> </span></li>");}%>
       <li class='space'></li>
       <p align="right"> 当前页数:[1/3]&nbsp; <a href="#">下一页</a> <a href="#">末页</a> </p>

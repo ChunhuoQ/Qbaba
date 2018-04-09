@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"import="m04.d03.Qbaba.entity.UserInfoDaoImpl,m04.d03.Qbaba.Dao.impl.NewsDaoImpl,java.util.List,m04.d03.Qbaba.entity.NewsInfo" 
+
+<%@ page language="java" contentType="text/html;charset=UTF-8" import="m04.d03.Qbaba.entity.UserInfoDaoImpl,m04.d03.Qbaba.Dao.impl.NewsDaoImpl,java.util.List,m04.d03.Qbaba.entity.NewsInfo"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -30,7 +31,7 @@
   </div>
   <div id="opt_area">
     <h1 id="opt_type"> 修改新闻： </h1>
-    <form action="#" method="post" enctype="multipart/form-data" onsubmit="return check()">
+    <form action="../Moresult.jsp" method="get" enctype="multipart/form-data" onsubmit="return check()">
       <p>
         <label> 主题 </label>
         <select name="ntid">
@@ -41,22 +42,13 @@
       </p>
       <p>
         <label> 标题 </label>
-        <%
-    	NewsDaoImpl ndi=new NewsDaoImpl();
-    	List<NewsInfo> list=ndi.getAllNewsInfo();
-    	
-    	String idl=request.getParameter("idl");
-    	int i = Integer.parseInt(idl);
-    	NewsInfo nf=new NewsInfo();
-    	    
-   			out.print("<input name='ntitle' type='text' class='opt_input'  value='"+nf.getNews_title()+"'"
-   		+ "/>"
-      +"</p>"
-      +"<p>"
-        +"<label> 作者 </label>"
-        +"<input name='nauthor' type='text' class='opt_input' value='"+"老王"+"' />"
-      +"</p>");
-      %>
+       <input name='ntitle' type='text' class='opt_input'  value='<%=session.getAttribute("title") %> '/>
+     </p>
+     <p>
+      <label> 作者 </label>
+      <input name='nauthor' type='text' class='opt_input' value='<%=session.getAttribute("author") %> ' />
+      </p>
+      
       <p>
         <label> 摘要 </label>
         <textarea name="nsummary" cols="40" rows="3" >摘要</textarea>
