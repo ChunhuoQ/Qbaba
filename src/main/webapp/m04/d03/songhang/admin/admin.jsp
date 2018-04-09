@@ -1,17 +1,17 @@
-<%@page import="m04.d03.dao.impl.BizDaoImpl" %>
-<%@page import="m04.d03.service.impl.BizServiceImpl" %>
+<%@page import="m04.d03.songhang.entity.NewsInfo"%>
 <%@page import="java.util.List"%>
-<%@page import="m04.d03.entity.NewsInfo"%>
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@page import="m04.d03.songhang.service.impl.BizServiceImpl"%>
+<%@page import="m04.d03.songhang.dao.impl.BizDaoImpl"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>添加主题--管理后台</title>
 <link href="CSS/admin.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 <div id="header">
   <div id="welcome">欢迎使用新闻管理系统！</div>
@@ -21,7 +21,7 @@
   </div>
 </div>
 <div id="admin_bar">
-  <div id="status">管理员： 登录  &#160;&#160;&#160;&#160; <a href="index.html">login out</a></div>
+  <div id="status">管理员：<span id=sp><%=session.getAttribute("uname")%></span> 登录  &#160;&#160;&#160;&#160; <a href="../index.html">login out</a></div>
   <div id="channel"> </div>
 </div>
 <div id="main">
@@ -36,23 +36,30 @@
   <div id="opt_area">
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
     <script language="javascript">
-	/* function clickdel(){
+	function clickdel(){
 		return confirm("删除请点击确认");
-	} */
+	}
+	function del(id){
+		//alert("aaa");
+		window.location.href="resultdel.jsp?id="+id;
+	}
 	
 </script>
     <ul class="classlist">
+    
     <%
     BizDaoImpl bdi = new BizDaoImpl();
     BizServiceImpl bs = new BizServiceImpl();
     bs.setBizdao(bdi);
     List<NewsInfo> list=bs.all();
     for(int i=0;i<list.size();i++){
-        NewsInfo nf=list.get(i);
-        out.print("<li>"+nf.getNewsTitle()+"<span>"+nf.getNewsAuthor()+
-                "&#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a>&#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a></span></li>");
+        NewsInfo fo= list.get(i);
+        out.print("<li>"+fo.getNewsTitle()+"<span>"+fo.getNewsAuthor()+
+                "&#160;&#160;&#160;&#160; <a href='news_modify.jsp/* ?ntitle="+fo.getNewsTitle()+" */'>修改</a>&#160;&#160;&#160;&#160;"+" <a href='javascript:;' onclick='del("+fo.getNewsId()+");'>删除</a></span></li>");
     }
     %>
+    
+    
       <!-- <li> 深足教练组：说我们买球是侮辱 朱广沪常暗中支招 <span> 作者：
         sport                                             
         &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>

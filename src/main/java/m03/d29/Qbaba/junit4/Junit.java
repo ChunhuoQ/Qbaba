@@ -42,8 +42,7 @@ public class Junit {
            
                 List<QuestionInfoDaoImpl> list1 = qd.getAllQuestionInfoDaoImpl("SELECT * FROM question_info WHERE SUBJECT="+out2);
                 for (QuestionInfoDaoImpl fo : list1) {
-                    System.out
-                            .println(fo.getQuestionId() + "." + fo.getQuestion() + "\n" + fo.getOptionA() + "\n"
+                    System.out.println(fo.getQuestionId() + "." + fo.getQuestion() + "\n" + fo.getOptionA() + "\n"
                                     + fo.getOptionB() + "\n" + fo.getOptionC() + "\n" + fo.getOptionD() + "\n"
                                     + fo.getAnswer());
                 }
