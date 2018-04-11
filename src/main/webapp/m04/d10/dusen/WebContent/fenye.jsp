@@ -1,8 +1,10 @@
-<%@page import="com.xin.entity.Page"%>
-<%@page import="com.xin.entity.NewsInfo"%>
+
+<%@page import="m04.d10.dusen.xin.entity.NewsInfo"%>
+<%@page import="m04.d10.dusen.xin.entity.Page"%>
+<%@page import="m04.d10.dusen.xin.service.impl.BizServicerImpl"%>
+<%@page import="m04.d10.dusen.xin.dao.impl.BizDaolmpl"%>
 <%@page import="java.util.List"%>
-<%@page import="com.xin.service.impl.BizServicerImpl"%>
-<%@page import="com.xin.dao.impl.BizDaolmpl"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

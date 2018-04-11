@@ -6,14 +6,15 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.xin.dao;
+package m04.d10.dusen.xin.dao;
 
 import java.util.List;
 
-import com.xin.entity.CommentInfo;
-import com.xin.entity.NewsInfo;
-import com.xin.entity.Page;
-import com.xin.entity.UserInfo;
+import m04.d10.dusen.xin.entity.CommentInfo;
+import m04.d10.dusen.xin.entity.NewsInfo;
+import m04.d10.dusen.xin.entity.Page;
+import m04.d10.dusen.xin.entity.UserInfo;
+
 
 /**
  * Description:   <br/>

@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.xin.entity;
+package m04.d10.dusen.xin.entity;
 /**
  * Description:   <br/>
  * Date:     2018年4月8日 上午10:00:40 <br/>

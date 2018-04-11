@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.xin.entity;
+package m04.d10.dusen.xin.entity;
 
 import java.util.Date;
 
