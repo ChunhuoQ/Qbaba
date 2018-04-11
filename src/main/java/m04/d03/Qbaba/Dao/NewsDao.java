@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Qbaba
  * File Name:QuestionInfoDao.java
@@ -21,7 +22,27 @@ import m04.d03.Qbaba.entity.UserInfoDaoImpl;
  * @version
  * @see
  */
+
+import java.util.List;
+
+import m04.d03.Qbaba.entity.NewsCommentInfo;
+import m04.d03.Qbaba.entity.NewsInfo;
+import m04.d03.Qbaba.entity.UserInfoDaoImpl;
+
+/**
+ * Description: <br/>
+ * Date: 2018年3月28日 下午1:50:35 <br/>
+ * 
+ * @author Qbaba
+ * @version
+ * @see
+ */
 public interface NewsDao<T> {
     boolean validateUser(UserInfoDaoImpl user);
     List<NewsInfo> getAllNewsInfo();
+    int Deletenews(int id);
+    List<NewsInfo> getNewsInfo(int id);
+    int UpdateNews(Object id,String author,String title);
+    List<NewsCommentInfo> getAllNewsComment();
 }
+

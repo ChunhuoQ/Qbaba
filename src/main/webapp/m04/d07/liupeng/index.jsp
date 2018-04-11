@@ -25,6 +25,7 @@
 </head>
 <body>
 	<div id="header">
+
 		<!-- <form action="result.jsp" method="post"> -->
 		  	<div id="top_login">
 			    <label> 登录名 </label>

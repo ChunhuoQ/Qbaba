@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m04.d08.Qbaba.impl.NewsCommentDaoImpl">
+	<!-- resultType 返回值类型 -->
+	<select id="getNewsCommentSelect" resultType="m04.d08.Qbaba.entity.NewsComment_info">
+	SELECT * FROM comment_info;
+	</select>
+	<!--
+	paramterType 参数类型：
+	insert , delate , update 不能指定返回值类型 只能返回一个int
+	-->
+	<insert id="getNewsInsert">
+	INSERT INTO comment_info SET username=?,PASSWORD=?;
+	</insert>
+	<insert id="getNewsInsert2" parameterType="m04.d08.Qbaba.entity.NewsComment_info">
+	INSERT INTO user_info SET username=#{username},PASSWORD=#{password};
+	</insert>
+	<insert id="getNewsInsert3" parameterType="Map">
+	INSERT INTO user_info SET username=#{username},PASSWORD=#{password};
+	</insert>
+	<delete id="getNewsDelete" parameterType="java.lang.Long" >
+	DELETE FROM user_info WHERE user_id=#{0};
+	</delete>
+	<update id="getNewsUpdate">
+	UPDATE FROM 
+	</update>
+</mapper>

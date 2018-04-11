@@ -22,7 +22,7 @@
 			String id=(String)session.getAttribute("nid");
 			int flag=bsi.upDataNewsInfoById(title, author, summary, content, Integer.valueOf(id));
 			if(flag>0){
-			    response.sendRedirect("admin/admin.jsp");
+			    response.sendRedirect("result.jsp?uname=jack&upwd=123");
 			}else{
 			    response.sendRedirect("updata.jsp");
 			}

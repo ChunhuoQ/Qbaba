@@ -11,6 +11,7 @@ package m01.d04.songhang;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 
@@ -46,10 +47,12 @@ public class HashMapDemo {
         LOG.info(map.get(1) + " " + map.get(2));
         LOG.info(map.get(3) + " " + map.get(4));
         // 遍历（不是很懂）
-        Iterator<Integer> ite = map.keySet().iterator();
+        Set<Integer> keys = map.keySet();
+        Iterator<Integer> ite = keys.iterator();
         while (ite.hasNext()) {
-            Object key = ite.next();
-            LOG.info("new:" + key + "\t" + map.get(key));
+            Integer key = ite.next();
+            String value = map.get(key);
+            LOG.info("new:" + key + "\t" + value);
 
         }
 

@@ -1,3 +1,5 @@
+
+
 <%@ page language="java" import="m04.d03.Qbaba.entity.UserInfoDaoImpl,m04.d03.Qbaba.Dao.impl.NewsDaoImpl,java.util.List,m04.d03.Qbaba.entity.NewsInfo" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -6,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>添加主题--管理后台</title>
 <link href="CSS/admin.css" rel="stylesheet" type="text/css" />
+
+
 </head>
 <body>
 <div id="header">
@@ -42,17 +46,21 @@
 	function clickdel(){
 		return confirm("删除请点击确认");
 	}
-	
+	function del(id){
+		//alert("del:"+id);
+		window.location.href="resultDel.jsp?id="+id; 
+		
+	}
 </script>
     <ul class="classlist">
     	<%
     	NewsDaoImpl ndi=new NewsDaoImpl();
     	List<NewsInfo> list=ndi.getAllNewsInfo();
-    	 for (NewsInfo fo : list) { %>
-      <li><% out.print(fo.getNews_title()); %> <span> 作者：<% out.print(fo.getNews_author()); %> 
-                                                   
-        &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
-     <% }%>
+    	
+    	for(int o=0;o<list.size();o++){
+   			out.print("<li>"+list.get(o).getNews_title()+"<span>作者:"+
+   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='admin/news_modify.jsp'>修改</a> &#160;&#160;&#160;&#160; "+
+   			"<a href='javascript:;' onclick='del("+list.get(o).getNews_id()+");'>删除</a> </span></li>");}%>
        <li class='space'></li>
      <!-- <li> 国内成品油价格上调几成定局 <span> 作者：
         news                                              
@@ -71,11 +79,10 @@
         &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
       --> 
       <%
-    	 for (NewsInfo fo : list) { %>
-      <li><% out.print(fo.getNews_title()); %> <span> 作者：<% out.print(fo.getNews_author()); %> 
-                                                   
-        &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
-     <% }%>
+    		for(int o=0;o<list.size();o++){
+   			out.print("<li>"+list.get(o).getNews_title()+"<span>作者:"+
+   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='admin/news_modify.jsp'>修改</a> &#160;&#160;&#160;&#160; "+
+   			"<a href='javascript:;' onclick='del("+list.get(o).getNews_id()+");'>删除</a> </span></li>");}%>
       <li class='space'></li>
       <p align="right"> 当前页数:[1/3]&nbsp; <a href="#">下一页</a> <a href="#">末页</a> </p>
     </ul>
@@ -90,4 +97,5 @@
 </div>
 
 </body>
+
 </html>
