@@ -1,5 +1,5 @@
 
-<%@ page language="java" contentType="text/html;charset=UTF-8" import="m04.d03.Qbaba.entity.UserInfoDaoImpl,m04.d03.Qbaba.Dao.impl.NewsDaoImpl,java.util.List,m04.d03.Qbaba.entity.NewsInfo"
+<%@ page language="java" contentType="text/html;charset=UTF-8" import="m04.d09.Qbaba.entity.UserInfoDaoImpl,m04.d09.Qbaba.Dao.impl.NewsDaoImpl,java.util.List,m04.d09.Qbaba.entity.NewsInfo"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -8,6 +8,7 @@
 <title>添加主题--管理后台</title>
 <link href="../CSS/admin.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 <div id="header">
   <div id="welcome">欢迎使用新闻管理系统！</div>
@@ -18,7 +19,7 @@
 </div>
 <div id="admin_bar">
   <div id="status">管理员： 登录  &#160;&#160;&#160;&#160; <a href="../index.html">login out</a></div>
-  <div id="channel"> </div>
+  <div id="channel"></div>
 </div>
 <div id="main">
    <div id="opt_list">
@@ -31,7 +32,7 @@
   </div>
   <div id="opt_area">
     <h1 id="opt_type"> 修改新闻： </h1>
-    <form action="../Moresult.jsp" method="post">
+    <form action="../resultShow.jsp" method="post"  enctype="multipart/form-data" >
       <p>
         <label> 主题 </label>
         <select name="ntid">
@@ -51,16 +52,18 @@
       
       <p>
         <label> 摘要 </label>
-        <textarea name="nsummary" cols="40" rows="3" ><%=request.getParameter("nsummary") %></textarea>
+        <textarea name="nsummary" cols="40" rows="3" ><%=session.getAttribute("nsummary") %></textarea>
       </p>
       <p>
         <label> 内容 </label>
-        <textarea name="ncontent" cols="70" rows="10" ><%=request.getParameter("nsummary") %></textarea>
+        <textarea name="ncontent" cols="70" rows="10" ><%=session.getAttribute("ncontent") %></textarea>
       </p>
+      
       <p>
         <label> 上传图片 </label>
-        <input name="file" type="file" class="opt_input" />
+        <input name='upluod' type="file" class="opt_input" />
       </p>
+      
       <input type="submit" value="提交" class="opt_sub" />
       <input type="reset" value="重置" class="opt_sub" />
     </form>

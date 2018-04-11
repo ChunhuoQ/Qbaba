@@ -11,8 +11,11 @@ package m04.d09.Qbaba.Dao;
 import java.util.List;
 
 
+
+
 import m04.d09.Qbaba.entity.NewsCommentInfo;
 import m04.d09.Qbaba.entity.NewsInfo;
+import m04.d09.Qbaba.entity.Page;
 import m04.d09.Qbaba.entity.UserInfoDaoImpl;
 
 /**
@@ -28,6 +31,9 @@ public interface NewsDao<T> {
     List<NewsInfo> getAllNewsInfo();
     int Deletenews(int id);
     List<NewsInfo> getNewsInfo(int id);
-    int UpdateNews(Object id,String author,String title);
+    int UpdateNews(Object id,String author,String title,String nsummary,String ncontent);
     List<NewsCommentInfo> getAllNewsComment();
+    List<NewsInfo> getNewsInfoByPage(Page page);
+    int getNewsInfoLastPage(Page page);
+    
 }
