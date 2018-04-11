@@ -10,12 +10,14 @@ package m04.d09.Qbaba.Dao.impl;
 
 import java.util.ArrayList;
 
+
 import java.util.List;
 
 import m04.d09.Qbaba.Dao.BaseDao;
 import m04.d09.Qbaba.Dao.NewsDao;
 import m04.d09.Qbaba.entity.NewsCommentInfo;
 import m04.d09.Qbaba.entity.NewsInfo;
+import m04.d09.Qbaba.entity.Page;
 import m04.d09.Qbaba.entity.UserInfoDaoImpl;
 
 /**
@@ -129,17 +131,19 @@ public class NewsDaoImpl extends BaseDao implements NewsDao {
     }
 
     @Override
-    public int UpdateNews(Object id,String author,String title) {
+    public int UpdateNews(Object id,String author,String title,String nsummary,String ncontent) {
        
         int flag=0;
         try {
             String id2=(String)id;
             Integer id1=Integer.valueOf(id2);
-            String sql="UPDATE news_info SET news_author=?,news_title=? WHERE news_id=?";
+            String sql="UPDATE news_info SET news_author=?,news_title=?,news_summary=?,news_content=? WHERE news_id=?";
             pst = getCon().prepareStatement(sql);
             pst.setString(1, author);
             pst.setString(2, title);
-            pst.setInt(3, id1);
+            pst.setString(3, nsummary);
+            pst.setString(4, ncontent);
+            pst.setInt(5, id1);
             flag = pst.executeUpdate();
             
         } catch (Exception e) {
@@ -176,6 +180,61 @@ public class NewsDaoImpl extends BaseDao implements NewsDao {
             // TODO: handle exception
         }
         return listc;
+    }
+
+    @Override
+    public List<NewsInfo> getNewsInfoByPage(Page page) {
+        List<NewsInfo> list2=new ArrayList<NewsInfo>();
+        try {
+            String sql="SELECT * FROM news_info LIMIT ?,?";
+            pst=getCon().prepareStatement(sql);
+            pst.setInt(1,(page.getCurrentpage()-1)*page.getPagesize());
+            pst.setInt(2,page.getPagesize());
+            rs=pst.executeQuery();
+            while (rs.next()) {
+                NewsInfo info = new NewsInfo();
+                info.setNews_id(rs.getInt(1));
+                info.setType_id(rs.getInt(2));
+                info.setNews_title(rs.getString(3));
+                info.setNews_author(rs.getString(4));
+                info.setNews_summary(rs.getString(5));
+                info.setNews_content(rs.getString(6));
+                info.setNews_pic(rs.getString(7));
+                list2.add(info);
+            
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+        //  Auto-generated method stub
+        return list2;
+    }
+
+    /**
+     *
+     * @see m04.d09.Qbaba.Dao.NewsDao#getNewsInfoLastPage()
+     */
+    @Override
+    public int getNewsInfoLastPage(Page page) {
+            int oo = 0;
+        try {
+            String sql="SELECT COUNT(1) FROM news_info";
+            pst=getCon().prepareStatement(sql);
+            rs=pst.executeQuery();
+            
+            while (rs.next()) {
+            page.setLastpage(rs.getInt(1));
+            int i=page.getLastpage();
+            oo=(i%3==0)?i/3:i/3+1;
+            page.setLastpage(oo);
+            }
+            
+             
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+        return page.getLastpage();
     }
     
     

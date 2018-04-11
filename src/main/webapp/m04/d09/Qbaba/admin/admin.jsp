@@ -1,4 +1,5 @@
-<%@ page language="java" import="m04.d03.Qbaba.entity.UserInfoDaoImpl,m04.d03.Qbaba.Dao.impl.NewsDaoImpl,java.util.List,m04.d03.Qbaba.entity.NewsInfo" contentType="text/html; charset=UTF-8"
+<%@page import="m04.d09.Qbaba.entity.Page"%>
+<%@ page language="java" import="m04.d09.Qbaba.entity.UserInfoDaoImpl,m04.d09.Qbaba.Dao.impl.NewsDaoImpl,java.util.List,m04.d09.Qbaba.entity.NewsInfo" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -17,13 +18,13 @@
 </div>
 <div id="admin_bar">
   <div id="status">管理员：<span id="sp"><%=session.getAttribute("uname")%></span> 登录  &#160;&#160;&#160;&#160; <a href="../index.html">login out</a>
-   <c:if test="${i== null}">
+   
     <%
     Integer i=(Integer)application.getAttribute("count");
     %>
   <span>尊敬的<%=session.getAttribute("uname")%>,您是第<span id="sp"><%=i %><c:out value="1"/></span>位访问本网站的用户！</span>
   
-   </c:if>
+   
   </div>
   <div id="channel"> </div>
 </div>
@@ -55,8 +56,9 @@
 </script>
     <ul class="classlist">
     	<%
+    	Page pg=(Page)request.getAttribute("page2");
     	NewsDaoImpl ndi=new NewsDaoImpl();
-    	List<NewsInfo> list=ndi.getAllNewsInfo();
+    	List<NewsInfo> list=ndi.getNewsInfoByPage(pg);
     	
     	for(int o=0;o<list.size();o++){
    			out.print("<li>"+list.get(o).getNews_title()+"<span>作者:"+
@@ -79,14 +81,22 @@
         news                                              
         &#160;&#160;&#160;&#160; <a href='news_modify.html'>修改</a> &#160;&#160;&#160;&#160; <a href='#' onclick='return clickdel()'>删除</a> </span> </li>
       --> 
-      <%
+     <%--  <%
     		for(int o=0;o<list.size();o++){
    			out.print("<li>"+list.get(o).getNews_title()+"<span>作者:"+
-   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='Mresult.jsp?idl="+list.get(o).getNews_id()+"&author="+list.get(o).getNews_author()+"&title="+list.get(o).getNews_title()+"' onclick=''>修改</a> &#160;&#160;&#160;&#160; "+
-   			"<a href='javascript:;' onclick='del("+list.get(o).getNews_id()+");'>删除</a> </span></li>");}%>
+   			list.get(o).getNews_author()+"&#160;&#160;&#160;&#160; <a href='Mresult.jsp?idl="+list.get(o).getNews_id()+"&author="+list.get(o).getNews_author()+"&title="+list.get(o).getNews_title()+"&nsummary"+list.get(o).getNews_summary()+"&ncontent"+list.get(o).getNews_content()+"' onclick=''>修改</a> &#160;&#160;&#160;&#160; "+
+   			"<a href='javascript:;' onclick='del("+list.get(o).getNews_id()+");'>删除</a> </span></li>");}%> --%>
+      <c:if test="${pg.getCurrentpage()==1}">
+      <!-- 算了不这样搞 三目简单粗暴 -->
       <li class='space'></li>
-      <p align="right"> 当前页数:[1/3]&nbsp; <a href="#">下一页</a> <a href="#">末页</a> </p>
-    </ul>
+   
+      <p align="right">
+      <a href="spage.jsp?currentpage=1">首页</a> &nbsp; &nbsp;
+      <a href="spage.jsp?currentpage=<%=pg.getCurrentpage()==1?pg.getCurrentpage():pg.getCurrentpage()-1%>">上一页</a> 
+      <a href="spage.jsp?currentpage=<%=pg.getCurrentpage()==pg.getLastpage()?pg.getCurrentpage():pg.getCurrentpage()+1%>">下一页</a>  &nbsp; &nbsp;
+      <a href="spage.jsp?currentpage=<%=pg.getLastpage() %>">末页</a> </p>
+	</c:if>   
+ </ul>
   </div>
 </div>
 <div id="site_link"> <a href="#">关于我们</a><span>|</span> <a href="#">Aboue Us</a><span>|</span> <a href="#">联系我们</a><span>|</span> <a href="#">广告服务</a><span>|</span> <a href="#">供稿服务</a><span>|</span> <a href="#">法律声明</a><span>|</span> <a href="#">招聘信息</a><span>|</span> <a href="#">网站地图</a><span>|</span> <a href="#">留言反馈</a> </div>

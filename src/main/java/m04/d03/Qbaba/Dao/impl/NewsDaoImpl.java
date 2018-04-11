@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Qbaba
  * File Name:BizDaoImpl.java
@@ -7,6 +8,24 @@
  */
 
 package m04.d03.Qbaba.Dao.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import m03.d28.Qbaba.Dao.BaseDao;
+import m04.d03.Qbaba.Dao.NewsDao;
+import m04.d03.Qbaba.entity.NewsInfo;
+import m04.d03.Qbaba.entity.UserInfoDaoImpl;
+
+
+
+/**
+ * Description:   <br/>
+ * Date:     2018年3月28日 下午1:51:57 <br/>
+ * @author   Qbaba
+ * @version
+ * @see
+ */
 
 import java.util.ArrayList;
 import java.util.List;
@@ -179,3 +198,4 @@ public class NewsDaoImpl extends BaseDao implements NewsDao {
     
     
 }
+

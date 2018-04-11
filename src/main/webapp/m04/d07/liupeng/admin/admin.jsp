@@ -46,7 +46,7 @@
 	}
 	function upData(id,ntitle,nauthor,nsummary,ncontent){
 		/* alert(id,ntitle,nauthor,nsummary,ncontent); */
-		window.location.href="admin/news_modify.jsp?id="+id+"&ntitle="+ntitle+"&nauthor="+nauthor+"&nsummary="+nsummary+"&ncontent="+ncontent;
+		window.location.href="news_modify.jsp?id="+id+"&ntitle="+ntitle+"&nauthor="+nauthor+"&nsummary="+nsummary+"&ncontent="+ncontent;
 	}
 	
 </script>

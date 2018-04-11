@@ -15,6 +15,7 @@
 	BizServiceImpl bsi=new BizServiceImpl();
 	bsi.setBizdao(bdi);//注入
 	String id=request.getParameter("id");
+
 	/*int flag=bsi.delNewsInfoById(id);
 	 if(flag>0){
 		response.sendRedirect("delone.jsp");
@@ -23,5 +24,14 @@
 	} */
 	%>
 	<%=id %>
+
+	int flag=bsi.delNewsInfoById(Integer.valueOf(id));
+	if(flag>0){
+		response.sendRedirect("delone.jsp");
+	}else{
+		response.sendRedirect("deltwo.jsp");
+	}
+	%>
+
 </body>
 </html>

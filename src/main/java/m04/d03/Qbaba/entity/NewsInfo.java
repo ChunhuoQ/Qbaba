@@ -1,3 +1,12 @@
+
+/**
+ * Project Name:Qbaba
+ * File Name:NewsInfo.java
+ * Package Name:m04.d03.Qbaba.entity
+ * Date:2018年4月3日下午4:58:45
+ * Copyright (c) 2018, bluemobi All Rights Reserved.
+ */
+
 /**
  * Project Name:Qbaba
  * File Name:NewsInfo.java
@@ -157,3 +166,4 @@ public class NewsInfo {
     }
 
 }
+

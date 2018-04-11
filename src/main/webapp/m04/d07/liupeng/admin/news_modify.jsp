@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>添加主题--管理后台</title>
-<link href="../CSS/admin.css" rel="stylesheet" type="text/css" />
+<link href="CSS/admin.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 	function abc(){
 		var ntitle=document.getElementById("ntitle").value;
 		var nauthor=document.getElementById("nauthor").value;
 		var nsummary=document.getElementById("nsummary").value;
 		var ncontent=document.getElementById("ncontent").value;
-		window.location.href="../resultUpdata.jsp?ntitle="+ntitle+"&nauthor="+nauthor+"&nsummary="+nsummary+"&ncontent="+ncontent;//get的方式
+		window.location.href="resultUpdata.jsp?ntitle="+ntitle+"&nauthor="+nauthor+"&nsummary="+nsummary+"&ncontent="+ncontent;//get的方式
 	}
 </script>
 	
@@ -21,12 +21,12 @@
 <div id="header">
   <div id="welcome">欢迎使用新闻管理系统！</div>
   <div id="nav">
-    <div id="logo"><img src="../Images/logo.jpg" alt="新闻中国" /></div>
-    <div id="a_b01"><img src="../Images/a_b01.gif" alt="" /></div>
+    <div id="logo"><img src="Images/logo.jpg" alt="新闻中国" /></div>
+    <div id="a_b01"><img src="Images/a_b01.gif" alt="" /></div>
   </div>
 </div>
 <div id="admin_bar">
-  <div id="status">管理员： 登录  &#160;&#160;&#160;&#160; <a href="../index.html">login out</a></div>
+  <div id="status">管理员： 登录  &#160;&#160;&#160;&#160; <a href="index.html">login out</a></div>
   <div id="channel"> </div>
 </div>
 <div id="main">
@@ -48,11 +48,11 @@
 		String id=request.getParameter("id");
 		/* int nid=Integer.valueOf(id); */
 		/* out.print(id); */
-		session.setAttribute("ntitle", title);
+		/* session.setAttribute("ntitle", title);
 		session.setAttribute("nauthor", author);
 		session.setAttribute("nsummary", summary);
-		session.setAttribute("ncontent", content);
-		session.setAttribute("nid", id);
+		session.setAttribute("ncontent", content);*/
+		session.setAttribute("nid", id); 
 	%> 
     <h1 id="opt_type"> 修改新闻： </h1>
 <!--     <form action="resultUpdata.jsp" method="post" enctype="multipart/form-data" onsubmit="return check()"> --> 
@@ -66,19 +66,19 @@
       </p>
       <p>
         <label> 标题 </label>
-        <input name="ntitle" id="ntitle" type="text" class="opt_input"  value="<%=session.getAttribute("ntitle") %>"/>
+        <input name="ntitle" id="ntitle" type="text" class="opt_input"  value="<%=title %>"/>
       </p>
       <p>
         <label> 作者 </label>
-        <input name="nauthor" id="nauthor" type="text" class="opt_input" value="<%=session.getAttribute("nauthor") %>" />
+        <input name="nauthor" id="nauthor" type="text" class="opt_input" value="<%=author %>" />
       </p>
       <p>
         <label> 摘要 </label>
-        <textarea name="nsummary" id="nsummary" cols="40" rows="3" ><%=session.getAttribute("nsummary") %></textarea>
+        <textarea name="nsummary" id="nsummary" cols="40" rows="3" ><%=summary %></textarea>
       </p>
       <p>
         <label> 内容 </label>
-        <textarea name="ncontent" id="ncontent" cols="70" rows="10" ><%=session.getAttribute("ncontent") %></textarea>
+        <textarea name="ncontent" id="ncontent" cols="70" rows="10" ><%=content %></textarea>
       </p>
       <p>
         <label> 上传图片 </label>
