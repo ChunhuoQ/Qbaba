@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Demo_pro_jdbc_fc_01
  * File Name:QuestionInfo.java
@@ -13,7 +14,8 @@ package m03.d28.songhang.dt59.entity;
  * Date: 2018年3月28日 下午5:45:47 <br/>
  * 
  * @author songhang
- * @version 创建实体类QuestionInfo，根据业务提供需要的构造方法和setter/getter方法。
+ * @version 创建实体类QuestionInfo，<br/>
+ *          根据业务提供需要的构造方法和setter/getter方法。<br/>
  * @see
  */
 public class QuestionInfo {

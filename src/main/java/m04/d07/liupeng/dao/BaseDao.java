@@ -8,13 +8,14 @@
 
 package m04.d07.liupeng.dao;
 
-import java.io.InputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Properties;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
 /**
  * Description:   <br/>
@@ -32,36 +33,39 @@ public class BaseDao {
 
     protected CallableStatement cstate = null;// 调用存储过程的接口
 
-    static String driver;
+    protected DataSource ds = null;
 
-    static String url;
-
-    static String username;
-
-    static String userpwd;
-
-    static {
-        init();
-    }
-
-    public static void init() {
-        // Properties提供加载属性文件的方法
-        Properties ps = new Properties();
-        // 属性文件的位置
-        String path = "database.properties";
-        try {
-            // 把属性文件以流的方式输出
-            InputStream ist = BaseDao.class.getClassLoader().getResourceAsStream(path);
-            // 加载二进制流
-            ps.load(ist);
-            driver = ps.getProperty("driver");
-            url = ps.getProperty("url");
-            username = ps.getProperty("username");
-            userpwd = ps.getProperty("password");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    // static String driver;
+    //
+    // static String url;
+    //
+    // static String username;
+    //
+    // static String userpwd;
+    //
+    // static {
+    // init();
+    // }
+    //
+    // public static void init() {
+    // // Properties提供加载属性文件的方法
+    // Properties ps = new Properties();
+    // // 属性文件的位置
+    // String path = "database.properties";
+    // try {
+    // // 把属性文件以流的方式输出
+    // InputStream ist =
+    // BaseDao.class.getClassLoader().getResourceAsStream(path);
+    // // 加载二进制流
+    // ps.load(ist);
+    // driver = ps.getProperty("driver");
+    // url = ps.getProperty("url");
+    // username = ps.getProperty("username");
+    // userpwd = ps.getProperty("password");
+    // } catch (Exception e) {
+    // e.printStackTrace();
+    // }
+    // }
 
     public int controlDml(String sql, Object[] obj) {
         int flag = 0;
@@ -84,8 +88,11 @@ public class BaseDao {
     // 连接方法
     public Connection getCon() {
         try {
-            Class.forName(driver);
-            con = DriverManager.getConnection(url, username, userpwd);
+            // Class.forName(driver);
+            // con = DriverManager.getConnection(url, username, userpwd);
+            Context ct = new InitialContext();
+            ds = (DataSource) ct.lookup("java:/comp/env/one");
+            con = ds.getConnection();
         } catch (Exception e) {
             e.printStackTrace();
         }

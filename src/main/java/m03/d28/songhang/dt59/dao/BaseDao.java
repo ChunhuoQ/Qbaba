@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Demo_pro_jdbc_fc_01
  * File Name:BaseDao.java
@@ -44,10 +45,11 @@ public class BaseDao {
     // 初始化数据连接
     public static void init() {
         Properties prop = new Properties();// 实例化Properties
-        String path = "database.properties";
+        String path = "database.properties";// 配置文件路径
         try {
             InputStream ist = BaseDao.class.getClassLoader().getResourceAsStream(path);
-            prop.load(ist);// 加载流
+            prop.load(ist);// 从输入流中读取属性列表
+            // 根据指定的获取对应的值
             driver = prop.getProperty("driver");
             url = prop.getProperty("url");
             username = prop.getProperty("username");
@@ -61,7 +63,9 @@ public class BaseDao {
     // 数据库连接
     public Connection getCon() {
         try {
+            // 1.加载驱动
             Class.forName(driver);
+            // 2.建立连接
             conn = DriverManager.getConnection(url, username, userpwd);
         } catch (Exception e) {
             // Auto-generated catch block
@@ -75,13 +79,14 @@ public class BaseDao {
     public int controlDml(String sql, Object[] obj) {
         int flag = 0;
         try {
+            // 3.发送SQl语句
             pst = getCon().prepareStatement(sql);
             if (obj != null) {
                 for (int i = 0; i < obj.length; i++) {
                     pst.setObject(i + 1, obj[i]);// 赋值
                 }
             }
-            flag = pst.executeUpdate();
+            flag = pst.executeUpdate();// 执行查询
         } catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();
@@ -91,7 +96,7 @@ public class BaseDao {
         return flag;
     }
 
-    // 关闭功能
+    // 关闭功能（工具类）
     public void close(Connection conn, PreparedStatement pst, ResultSet rsu) {
         try {
             if (rsu != null) {

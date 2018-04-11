@@ -27,7 +27,7 @@ public class Test1 {
     public static void main(String[] args) {
         System.out.println("=============欢迎使用试题管理系统==============");
         Scanner sc = new Scanner(System.in);
-        QuestionInfoDao<QuestionInfo> qa = new QuestionInfoDaoImpl();
+        QuestionInfoDao<Object> qa = new QuestionInfoDaoImpl();
         boolean a = true;
         while (a) {
             System.out.println("请选择操作(1.列出所有试题 2.按科目查询 3.按题干模糊查询4.添加试题5.删除试题6.退出)");
@@ -107,5 +107,6 @@ public class Test1 {
             }
 
         }
+        sc.close();
     }
 }
