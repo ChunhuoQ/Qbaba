@@ -35,16 +35,16 @@
   </div>
   <div id="opt_area">
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    
     <script language="javascript">
 	function clickdel(){
 		return confirm("删除请点击确认");
 	}
 	function del(id){
-		//alert("aaa");
-		window.location.href="resultdel.jsp?id="+id;
+		alert("del:"+id);
+		 window.location.href="resultdel.jsp?id="+id;
 	}
-	
-</script>
+	</script>
     <ul class="classlist">
     
     <%
@@ -52,10 +52,11 @@
     BizServiceImpl bs = new BizServiceImpl();
     bs.setBizdao(bdi);
     List<NewsInfo> list=bs.all();
+    
     for(int i=0;i<list.size();i++){
         NewsInfo fo= list.get(i);
         out.print("<li>"+fo.getNewsTitle()+"<span>"+fo.getNewsAuthor()+
-                "&#160;&#160;&#160;&#160; <a href='news_modify.jsp/* ?ntitle="+fo.getNewsTitle()+" */'>修改</a>&#160;&#160;&#160;&#160;"+" <a href='javascript:;' onclick='del("+fo.getNewsId()+");'>删除</a></span></li>");
+                "&#160;&#160;&#160;&#160; <a href='news_modify.jsp/* ?ntitle="+fo.getNewsTitle()+" */'>修改</a>&#160;&#160;&#160;&#160;"+"<a href='javascript:;' onclick='del("+list.get(i).getNewsId()+");'>删除</a> </span></li>");
     }
     %>
     

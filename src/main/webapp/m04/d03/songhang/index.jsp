@@ -43,7 +43,7 @@
 	   </div>
 	<!-- </form> -->
   <div id="nav">
-    <div id="logo"> <img src="../Images/logo.jpg" alt="新闻中国" /> </div>
+    <div id="logo"> <img src="Images/logo.jpg" alt="新闻中国" /> </div>
     <div id="a_b01"> <img src="Images/a_b01.gif" alt="" /> </div>
     <!--mainnav end-->
   </div>

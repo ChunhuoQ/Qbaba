@@ -57,14 +57,14 @@ public class BizServiceImpl implements BizService {
     }
 
     @Override
-    public int add(Object obj) {
+    public int updateNewsInfo(NewsInfo info) {
 
         // Auto-generated method stub
-        return bizdao.add(obj);
+        return bizdao.updateNewsInfo(info);
     }
 
     @Override
-    public int delNewsInfoById(int id) {
+    public int delNewsInfoById(String id) {
 
         // Auto-generated method stub
         return bizdao.delNewsInfoById(id);
