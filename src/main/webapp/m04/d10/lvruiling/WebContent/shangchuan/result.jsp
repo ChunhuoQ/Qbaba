@@ -1,6 +1,9 @@
 
 
-<%@page import="java.io.File"%>
+
+<%@page import="com.jspsmart.upload.File"%>
+<%@page import="com.jspsmart.upload.SmartUpload"%>
+
 <%@page import="java.util.UUID"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
