@@ -6,9 +6,11 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.xin.service;
+package m04.d07.dusen.service;
 
-import com.xin.dao.BizDao;
+import m04.d10.dusen.xin.dao.BizDao;
+
+
 
 /**
  * Description:   <br/>

@@ -11,6 +11,7 @@ package m04.d04.Qbaba.entity;
 
 import java.io.Serializable;
 
+
 /**
  * Description:   <br/>
  * Date:     2018年4月4日 下午4:38:27 <br/>
@@ -27,9 +28,6 @@ import java.io.Serializable;
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m04.d04.Qbaba.entity;
-
-import java.io.Serializable;
 
 /**
  * Description:   <br/>

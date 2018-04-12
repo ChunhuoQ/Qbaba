@@ -12,8 +12,11 @@ package m04.d04.Qbaba.impl;
 import java.io.IOException;
 
 
+
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import m04.d04.Qbaba.entity.News;
 
@@ -21,6 +24,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -39,24 +43,12 @@ import org.junit.Test;
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package m04.d04.Qbaba.impl;
+
+
+
 
 import java.io.IOException;
 
-
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import m04.d04.Qbaba.entity.News;
-
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Description:   <br/>
