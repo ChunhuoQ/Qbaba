@@ -12,11 +12,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.xin.dao.BaseDao;
-import com.xin.dao.BizDao;
-import com.xin.entity.CommentInfo;
-import com.xin.entity.NewsInfo;
-import com.xin.entity.UserInfo;
+import m04.d10.dusen.xin.dao.BaseDao;
+import m04.d10.dusen.xin.dao.BizDao;
+import m04.d10.dusen.xin.entity.CommentInfo;
+import m04.d10.dusen.xin.entity.NewsInfo;
+import m04.d10.dusen.xin.entity.Page;
+import m04.d10.dusen.xin.entity.UserInfo;
+
+
 
 /**
  * Description: <br/>
@@ -127,6 +130,20 @@ public class BizDaolmpl extends BaseDao implements BizDao {
             
         }
         return list;
+    }
+
+    @Override
+    public List<NewsInfo> getNewsInfoByPage(Page page) {
+        
+        //  Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public int jishu() {
+        
+        //  Auto-generated method stub
+        return 0;
     }
 
 }

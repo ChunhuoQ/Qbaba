@@ -3,12 +3,7 @@
 <%@page import="m04.d10.songhang.dao.impl.BizDaoImpl"%>
 <%@page import="m04.d10.songhang.entity.UserInfo"%>
 <%@page import="com.jspsmart.upload.SmartUpload"%>
-<%@page import="cn.dt59.entity.Page"%>
-<%@page import="cn.dt59.entity.NewsInfo"%>
-<%@page import="cn.dt59.dao.BizDao"%>
-<%@page import="cn.dt59.service.impl.BizServiceImpl"%>
-<%@page import="cn.dt59.dao.impl.BizDaoImpl"%>
-<%@page import="cn.dt59.entity.UserInfo"%>
+
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();

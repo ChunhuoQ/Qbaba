@@ -1,20 +1,27 @@
 /**
  * Project Name:xinwen2
+
  * File Name:BizServicerImpl.java
  * Package Name:com.xin.service.impl
  * Date:2018年4月8日上午10:19:34
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.xin.service.impl;
+package m04.d07.dusen.service.impl;
 
 import java.util.List;
 
-import com.xin.dao.BizDao;
-import com.xin.entity.CommentInfo;
-import com.xin.entity.NewsInfo;
-import com.xin.entity.UserInfo;
-import com.xin.service.BizService;
+
+
+
+import m04.d10.dusen.xin.dao.impl.BizDaolmpl;
+import m04.d10.dusen.xin.entity.CommentInfo;
+import m04.d10.dusen.xin.entity.NewsInfo;
+import m04.d10.dusen.xin.entity.Page;
+import m04.d10.dusen.xin.entity.UserInfo;
+import m04.d10.dusen.xin.service.BizService;
+
+
 
 /**
  * Description:   <br/>
@@ -24,13 +31,13 @@ import com.xin.service.BizService;
  * @see
  */
 public class BizServicerImpl implements BizService{
-    private BizDao bizdao;
+    private BizDaolmpl bizdao;
     
-    public BizDao getBizdao() {
+    public m04.d10.dusen.xin.dao.impl.BizDaolmpl getBizdao() {
         return bizdao;
     }
 
-    public void setBizdao(BizDao bizdao) {
+    public void setBizdao(BizDaolmpl bizdao) {
         this.bizdao = bizdao;
     }
 
@@ -67,6 +74,20 @@ public class BizServicerImpl implements BizService{
         
         //  Auto-generated method stub
         return bizdao.all1();
+    }
+
+    @Override
+    public List<NewsInfo> getNewsInfoByPage(Page page) {
+        
+        //  Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public int jishu() {
+        
+        //  Auto-generated method stub
+        return 0;
     }
 
 }

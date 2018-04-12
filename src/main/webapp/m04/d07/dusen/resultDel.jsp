@@ -1,5 +1,7 @@
-<%@page import="com.xin.service.impl.BizServicerImpl"%>
-<%@page import="com.xin.dao.impl.BizDaolmpl"%>
+<%@page import="m04.d10.dusen.xin.entity.CommentInfo"%>
+<%@page import="m04.d10.dusen.xin.service.impl.BizServicerImpl"%>
+<%@page import="m04.d10.dusen.xin.dao.impl.BizDaolmpl"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
