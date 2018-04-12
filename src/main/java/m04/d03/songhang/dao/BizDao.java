@@ -29,7 +29,7 @@ public interface BizDao {
 
     List<CommentInfo> showInfo();
 
-    int delNewsInfoById(int id);
+    int delNewsInfoById(String id);
 
-    int add(Object obj);
+    int updateNewsInfo(NewsInfo info);
 }

@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Mybatis
  * File Name:NewsDaoImpl.java
@@ -9,6 +10,7 @@
 package m04.d04.Qbaba.impl;
 
 import java.io.IOException;
+
 
 
 import java.io.InputStream;
@@ -24,6 +26,29 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
+
+/**
+ * Description:   <br/>
+ * Date:     2018年4月4日 下午5:27:02 <br/>
+ * @author   Qbaba
+ * @version
+ * @see
+ */
+
+/**
+ * Project Name:Mybatis
+ * File Name:NewsDaoImpl.java
+ * Package Name:main.java.m04.d04.impl
+ * Date:2018年4月4日下午5:27:02
+ * Copyright (c) 2018, bluemobi All Rights Reserved.
+ */
+
+
+
+
+
+import java.io.IOException;
+
 
 /**
  * Description:   <br/>
@@ -97,4 +122,5 @@ public void getNewsDelete(){
      }
  }
 }
+
 

@@ -73,6 +73,25 @@ public class BaseDao {
         return con;
     }
 
+    public int controlDml(String sql, Object[] obj) {
+        int flag = 0;
+        try {
+            pat = getCon().prepareStatement(sql);
+            if (obj != null) {
+                for (int i = 0; i < obj.length; i++) {
+                    pat.setObject(i + 1, obj[i]);// 赋值
+                }
+            }
+            flag = pat.executeUpdate();
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        } finally {
+            colse(con, pat, rs);
+        }
+        return flag;
+    }
+
     // 关闭的方法(工具类)
     public void colse(Connection con, PreparedStatement pat, ResultSet rs) {
 

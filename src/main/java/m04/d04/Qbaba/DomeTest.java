@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Mybatis
  * File Name:DomeTest.java
@@ -8,7 +9,26 @@
 
 package m04.d04.Qbaba;
 
+import java.io.IOException;
+
+
 import m04.d04.Qbaba.impl.NewsDaoImpl;
+
+/**
+ * Description:   <br/>
+ * Date:     2018年4月4日 下午4:42:34 <br/>
+ * @author   Qbaba
+ * @version
+ * @see
+ */
+
+/**
+ * Project Name:Mybatis
+ * File Name:DomeTest.java
+ * Package Name:main.java.m04.d04.test
+ * Date:2018年4月4日下午4:42:34
+ * Copyright (c) 2018, bluemobi All Rights Reserved.
+ */
 
 /**
  * Description:   <br/>
@@ -31,4 +51,5 @@ public static void main(String[] args) {
    }
 }
 }
+
 

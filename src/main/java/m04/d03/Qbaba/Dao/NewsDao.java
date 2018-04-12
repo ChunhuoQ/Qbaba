@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Qbaba
  * File Name:QuestionInfoDao.java
@@ -7,6 +8,20 @@
  */
 
 package m04.d03.Qbaba.Dao;
+
+import java.util.List;
+
+import m04.d03.Qbaba.entity.NewsInfo;
+import m04.d03.Qbaba.entity.UserInfoDaoImpl;
+
+/**
+ * Description: <br/>
+ * Date: 2018年3月28日 下午1:50:35 <br/>
+ * 
+ * @author Qbaba
+ * @version
+ * @see
+ */
 
 import java.util.List;
 
@@ -30,3 +45,4 @@ public interface NewsDao<T> {
     int UpdateNews(Object id,String author,String title);
     List<NewsCommentInfo> getAllNewsComment();
 }
+

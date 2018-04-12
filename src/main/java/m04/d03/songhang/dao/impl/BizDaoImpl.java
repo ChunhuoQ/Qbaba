@@ -31,13 +31,18 @@ public class BizDaoImpl extends BaseDao implements BizDao {
     public List<NewsInfo> all() {
         List<NewsInfo> list = new ArrayList<NewsInfo>();
         try {
-            String sql = "select news_title,news_author from news_info";
+            String sql = "select * from news_info";
             pat = getCon().prepareStatement(sql);
             rs = pat.executeQuery();
             while (rs.next()) {
                 NewsInfo info = new NewsInfo();
-                info.setNewsTitle(rs.getString(1));
-                info.setNewsAuthor(rs.getString(2));
+                info.setNewsId(rs.getInt(1));
+                info.setTypeId(rs.getInt(2));
+                info.setNewsTitle(rs.getString(3));
+                info.setNewsAuthor(rs.getString(4));
+                info.setNewsSummary(rs.getString(5));
+                info.setNewsContent(rs.getString(6));
+                info.setNewsPic(rs.getString(7));
                 list.add(info);
             }
         } catch (Exception e) {
@@ -96,25 +101,24 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         } finally {
             colse(con, pat, rs);
         }
-
         return list;
     }
 
     @Override
-    public int add(Object obj) {
+    public int updateNewsInfo(NewsInfo info) {
         int flag1 = 0;
 
         try {
-            String sql = "UPDATE news_info SET news_title=?,news_author=? WHERE news_id=?";
+            String sql = "UPDATE news_info SET type_id=?,news_title=?,news_author=?,news_summary=?,news_content=? WHERE news_id=?";
             pat = getCon().prepareStatement(sql);
-            Object[] objt = new Object[3];
-            if (obj instanceof NewsInfo) {
-                NewsInfo nfi = new NewsInfo();
-                objt[0] = nfi.getNewsTitle();
-                objt[1] = nfi.getNewsAuthor();
-                objt[2] = nfi.getNewsId();
-            }
+            pat.setInt(1, info.getTypeId());
+            pat.setString(2, info.getNewsTitle());
+            pat.setString(3, info.getNewsAuthor());
+            pat.setString(4, info.getNewsSummary());
+            pat.setString(5, info.getNewsContent());
+            pat.setInt(6, info.getNewsId());
             flag1 = pat.executeUpdate();
+
         } catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();
@@ -126,12 +130,13 @@ public class BizDaoImpl extends BaseDao implements BizDao {
     }
 
     @Override
-    public int delNewsInfoById(int id) {
+    public int delNewsInfoById(String id) {
         int flog = 0;
+        int id1 = Integer.valueOf(id);
         try {
             String sql = "DELETE FROM news_info WHERE news_id=?";
             pat = getCon().prepareStatement(sql);
-            pat.setInt(1, id);
+            pat.setInt(1, id1);
             flog = pat.executeUpdate();
         } catch (Exception e) {
             // TODO: handle exception
@@ -142,5 +147,4 @@ public class BizDaoImpl extends BaseDao implements BizDao {
 
         return flog;
     }
-
 }

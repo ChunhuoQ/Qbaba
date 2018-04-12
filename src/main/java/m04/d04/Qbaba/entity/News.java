@@ -1,3 +1,4 @@
+
 /**
  * Project Name:Mybatis
  * File Name:Student.java
@@ -9,6 +10,24 @@
 package m04.d04.Qbaba.entity;
 
 import java.io.Serializable;
+
+
+/**
+ * Description:   <br/>
+ * Date:     2018年4月4日 下午4:38:27 <br/>
+ * @author   Qbaba
+ * @version
+ * @see
+ */
+
+/**
+ * Project Name:Mybatis
+ * File Name:Student.java
+ * Package Name:main.java.m04.d04
+ * Date:2018年4月4日下午4:38:27
+ * Copyright (c) 2018, bluemobi All Rights Reserved.
+ */
+
 
 /**
  * Description:   <br/>
@@ -71,4 +90,5 @@ public void setPassword(String password) {
 }
 
 }
+
 
