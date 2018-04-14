@@ -6,16 +6,17 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.dao.impl;
+package m04.d12.dusen.com.dao.impl;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dao.BaseDao;
-import com.dao.BizDao;
-import com.entity.News;
-import com.entity.Product;
+import m04.d12.dusen.com.dao.BaseDao;
+import m04.d12.dusen.com.dao.BizDao;
+import m04.d12.dusen.com.entity.News;
+import m04.d12.dusen.com.entity.Product;
+
+
 
 /**
  * Description:   <br/>

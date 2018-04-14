@@ -6,7 +6,7 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.dao;
+package m04.d12.dusen.com.dao;
 
 import java.io.IOException;
 import java.io.InputStream;

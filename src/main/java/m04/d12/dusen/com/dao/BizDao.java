@@ -6,12 +6,15 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.dao;
+package m04.d12.dusen.com.dao;
 
 import java.util.List;
 
-import com.entity.News;
-import com.entity.Product;
+import m04.d12.dusen.com.entity.News;
+import m04.d12.dusen.com.entity.Product;
+
+
+
 
 /**
  * Description:   <br/>
