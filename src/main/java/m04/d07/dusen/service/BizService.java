@@ -20,7 +20,7 @@ import m04.d10.dusen.xin.dao.BizDao;
  * @see
  */
 public interface BizService extends BizDao{
-
-
+    
+    
 }
 

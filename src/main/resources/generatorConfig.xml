@@ -16,36 +16,49 @@
         </commentGenerator>
         <!-- jdbc连接配置 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://localhost:3306/news" userId="root" 
+            connectionURL="jdbc:mysql://localhost:3306/pinhong" userId="root" 
             password="root">
         </jdbcConnection>
         <!-- 数字字段是否强制使用BigDecimal类 -->
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
-        <!-- entity创建后放在那个项目的哪个包路径上 -->
-        <javaModelGenerator targetPackage="m04.d11.entity"
-            targetProject="E:\git\Qbaba\src\main\java">
+      
+        <javaModelGenerator
+         targetPackage="entity"
+            targetProject="E:\git\Qbaba\src\main\java\m04\d12\Qbaba">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <!-- dao创建后放在那个项目的哪个包路径上 -->
-        <sqlMapGenerator targetPackage="m04.d11.dao"
-            targetProject="E:\git\Qbaba\src\main\java">
+        
+        <sqlMapGenerator targetPackage="mapper"
+            targetProject="E:\git\Qbaba\src\main\java\m04\d12\Qbaba">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
-        <!-- dao的.xml描述sql文件创建后放在那个项目的哪个包路径上 -->
+       
         <javaClientGenerator type="XMLMAPPER"
-            targetPackage="m04.d11.dao" 
-            targetProject="E:\git\Qbaba\src\main\java">
+            targetPackage="mapper" 
+            targetProject="E:\git\Qbaba\src\main\java\m04\d12\Qbaba">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- 
-            要生成的表配置，可以多个
+          	要生成的表配置，可以多个
             tableName：表名
             domainObjectName：指定类名
         -->
-        <table tableName="news_info" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"  
+        <table tableName="message" domainObjectName="Message" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+            <table tableName="news" domainObjectName="News" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+            <table tableName="product" domainObjectName="Product" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+            <table tableName="revert" domainObjectName="Revert" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+            <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"  
             enableDeleteByExample="false" enableSelectByExample="false"  
             selectByExampleQueryId="false"></table>
     </context>

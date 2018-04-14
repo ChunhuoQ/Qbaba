@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m04.d12.Qbaba.impl.ProductDaoImpl">
+	<!-- resultType 返回值类型 -->
+	<select id="selectProAll" resultType="m04.d12.Qbaba.entity.Product">
+	SELECT * FROM product;
+	</select>
+	<select id="selectProLimit" parameterType="m04.d12.Qbaba.entity.ProPage" resultType="m04.d12.Qbaba.entity.Product">
+	SELECT * FROM product LIMIT #{starPage},3;
+	</select>
+	<select id="getAllPage" resultType="Integer">
+	SELECT COUNT(1) FROM product;
+	</select>
+</mapper>
+
