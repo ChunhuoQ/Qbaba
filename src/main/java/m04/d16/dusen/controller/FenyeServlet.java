@@ -1,4 +1,4 @@
-package com.controller;
+package m04.d16.dusen.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dao.impl.BizDaoImpl;
-import com.entity.Page;
-import com.entity.Product;
-import com.service.impl.BizServiceImpl;
+import m04.d16.dusen.dao.impl.BizDaoImpl;
+import m04.d16.dusen.entity.Page;
+import m04.d16.dusen.entity.Product;
+import m04.d16.dusen.service.impl.BizServiceImpl;
+
+
 
 /**
  * Servlet implementation class FenyeServlet

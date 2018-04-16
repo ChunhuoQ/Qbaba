@@ -6,16 +6,16 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package com.service.impl;
+package m04.d16.dusen.service.impl;
 
 import java.util.List;
 
-import com.dao.BizDao;
-import com.entity.News;
-import com.entity.Page;
-import com.entity.Product;
-import com.entity.Use;
-import com.service.BizService;
+import m04.d16.dusen.dao.BizDao;
+import m04.d16.dusen.entity.News;
+import m04.d16.dusen.entity.Page;
+import m04.d16.dusen.entity.Product;
+import m04.d16.dusen.entity.Use;
+import m04.d16.dusen.service.BizService;
 
 /**
  * Description:   <br/>

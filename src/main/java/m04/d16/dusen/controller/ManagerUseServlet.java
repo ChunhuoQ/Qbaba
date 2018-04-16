@@ -1,4 +1,4 @@
-package com.controller;
+package m04.d16.dusen.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,9 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dao.impl.BizDaoImpl;
-import com.entity.Use;
-import com.service.impl.BizServiceImpl;
+import m04.d16.dusen.dao.impl.BizDaoImpl;
+import m04.d16.dusen.entity.Use;
+import m04.d16.dusen.service.impl.BizServiceImpl;
+
+
 
 /**
  * Servlet implementation class ManagerUseServlet
