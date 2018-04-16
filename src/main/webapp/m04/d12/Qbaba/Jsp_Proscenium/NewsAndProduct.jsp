@@ -32,7 +32,17 @@
 		}
 	</style>
   </head>
-  
+<script type="text/javascript" src="../js/jquery-1.8.3.js" ></script>
+<script type="text/javascript">
+	$(function(){
+		  $("table").attr("bgColor", "green");
+          $("#news").attr("bgColor", "#3366CC");//为单数行表格设置背景颜色  
+          $("a:even").css("background-color", "#CC0000");//为双数行表格设置背颜色素
+          $("table").css("width","300px");//为表格添加样式，设置表格长度为300像素
+
+	})
+
+</script>
   <body>
 	<table align="center" width="620" height="230" border="0" cellpadding="0" cellspacing="0">
 	  <tr height="35">
@@ -67,7 +77,7 @@
 			 %> --%>
 			 
 				 <tr>
-					<td height="22">&nbsp;<a target="_parent" href="News?id= ${n.nid } "> ${n.ntitle }&nbsp;&nbsp;&nbsp;<span style="color: red;">[${n.ndate}]</span></a></td>
+					<td id="news" height="22">&nbsp;<a target="_parent" href="News?id= ${n.nid } "> ${n.ntitle }&nbsp;&nbsp;&nbsp;<span style="color: red;">[${n.ndate}]</span></a></td>
 				</tr> 
 			  	<tr>
 					<td><img src="../Img_Proscenium/d03.jpg" width="352" height="1" /></td>

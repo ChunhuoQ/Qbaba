@@ -74,7 +74,6 @@ public class InitServlet extends HttpServlet {
         session.setAttribute("listpro", listpro);
         session.setAttribute("listpl", listpl);
         response.sendRedirect("m04/d12/Qbaba/index.jsp");
-        
     }
 
     

@@ -22,10 +22,10 @@
   <body  background="Img_Background/1/bookbg.gif">
     <table align="center">
     	<tr height="165">
-    		<td><iframe src="Jsp_Proscenium/MessageBoard_top.jsp" width="750" marginheight="0" scrolling="no" frameborder="0" height="100%"></iframe></td>
+    		<td><iframe src="MessageBoard_top.jsp" width="850" marginheight="0" scrolling="no" frameborder="0" height="100%"></iframe></td>
     	</tr>
     	<tr>
-    		<td><iframe src="Jsp_Proscenium/MessageBoard_main.jsp" width="750" marginheight="0" scrolling="no" frameborder="0" height="100%"></iframe></td>
+    		<td><iframe src="MessageBoard_main.jsp" width="850" marginheight="0" scrolling="no" frameborder="0" height="100%"></iframe></td>
     	</tr>
     </table>
   </body>

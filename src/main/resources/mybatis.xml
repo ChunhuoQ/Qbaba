@@ -18,5 +18,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="m04/d12/Qbaba/mapper/NewsMapper.xml" />
 		<mapper resource="m04/d12/Qbaba/mapper/ProductMapper.xml"/>
 		<mapper resource="m04/d12/Qbaba/mapper/UserMapper.xml"/>
+		<mapper resource="m04/d12/Qbaba/mapper/MessageMapper.xml"/>
+		<mapper resource="m04/d12/Qbaba/mapper/RevertMapper.xml"/>
 	</mappers>
 </configuration>

@@ -62,4 +62,16 @@ public class Message {
     public void setRcount(Integer rcount) {
         this.rcount = rcount;
     }
+
+    /**
+     *
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return "Message [mid=" + mid + ", mtitle=" + mtitle + ", mcontent=" + mcontent + ", mname=" + mname
+                + ", mdate=" + mdate + ", rcount=" + rcount + "]";
+    }
+    
+    
 }

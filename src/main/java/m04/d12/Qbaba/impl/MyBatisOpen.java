@@ -9,6 +9,9 @@
 package m04.d12.Qbaba.impl;
 
 import java.io.InputStream;
+import java.util.List;
+
+import m04.d12.Qbaba.entity.Message;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -37,5 +40,6 @@ public class MyBatisOpen {
                  e.printStackTrace();
              }
     }
+
 }
 
