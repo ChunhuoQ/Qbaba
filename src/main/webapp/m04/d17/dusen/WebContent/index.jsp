@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<jsp:forward page="Jsp_Proscenium/M_Index.jsp"></jsp:forward>
+		<jsp:forward page="Jsp_Proscenium/M_Index.jsp"></jsp:forward> 
 </body>
 </html>
