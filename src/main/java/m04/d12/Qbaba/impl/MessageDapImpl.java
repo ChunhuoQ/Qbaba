@@ -39,11 +39,14 @@ public class MessageDapImpl extends MyBatisOpen implements MessageMapper{
         return listmes;
     }
     
-   @Test
-   public void go(){
-       Message mg=new Message();
-       
-       System.out.println(messListById("2"));
-   }
+
+
+@Override
+public void updatemess(Integer id) {
+    
+   session.update("m04.d12.Qbaba.impl.MessageDapImpl.updatemess",id);
+   session.commit();
+    
+}
 }
 

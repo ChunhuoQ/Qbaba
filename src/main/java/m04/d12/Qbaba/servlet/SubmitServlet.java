@@ -16,15 +16,15 @@ import m04.d12.Qbaba.impl.MessageDapImpl;
 import m04.d12.Qbaba.impl.RevertDaoImpl;
 
 /**
- * Servlet implementation class ReadyServlet
+ * Servlet implementation class Submit
  */
-public class ReadyServlet extends HttpServlet {
+public class SubmitServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ReadyServlet() {
+    public SubmitServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -56,20 +56,24 @@ public class ReadyServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	    HttpSession session=request.getSession();
+	    RevertDaoImpl rdl=new RevertDaoImpl();
+	    MessageDapImpl mdl=new MessageDapImpl();
+	    String mid=(String)session.getAttribute("id");
+	    String rname=request.getParameter("name");
+	    String rcontent=request.getParameter("content");
+	    Revert revert =new Revert();
+	    revert.setMid(Integer.valueOf(mid));
+	    revert.setRname(rname);
+	    revert.setRcontent(rcontent);
+	    java.util.Date rdate = new java.util.Date();
+	    revert.setRdate(rdate);
+	    rdl.insertRev(revert);
+	    mdl.updatemess(Integer.valueOf(mid));
+	    List<Revert> listrev=rdl.reveListById(mid);
+	    session.setAttribute("listrev",listrev);
 	    
-	    HttpSession session= request.getSession();
-	    
-	    String id=request.getParameter("id");
-        MessageDapImpl mdl=new MessageDapImpl();
-        RevertDaoImpl rdl=new RevertDaoImpl();
-      
-        List<Message> listmess=mdl.messListById(id);
-        List<Revert> listrev=rdl.reveListById(id);
-        session.setAttribute("listmess",listmess);
-        session.setAttribute("listrev",listrev);
-        session.setAttribute("id", id);
-        System.out.println(id);
-        response.sendRedirect("m04/d12/Qbaba/Jsp_Proscenium/R_MessageBoard.jsp");
+	    response.sendRedirect("m04/d12/Qbaba/Jsp_Proscenium/R_MessageBoard.jsp");
 	}
 
 }

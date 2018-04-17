@@ -52,4 +52,15 @@ public class Revert {
     public void setRdate(Date rdate) {
         this.rdate = rdate;
     }
+
+    /**
+     *
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return "Revert [rid=" + rid + ", mid=" + mid + ", rcontent=" + rcontent + ", rname=" + rname + ", rdate="
+                + rdate + "]";
+    }
+    
 }
