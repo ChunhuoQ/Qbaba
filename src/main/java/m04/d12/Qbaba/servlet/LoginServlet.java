@@ -44,7 +44,6 @@ public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 	    HttpSession session= request.getSession();
-		request.setCharacterEncoding("utf-8");
 		String userName= request.getParameter("userName");
 		String password= request.getParameter("password");
 		User user=new User();

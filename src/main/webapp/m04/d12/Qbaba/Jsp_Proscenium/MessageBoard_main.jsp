@@ -69,7 +69,7 @@
     <table width="750" border="0" align="center" cellpadding="0" cellspacing="0" style="top:0;">
 	  <tr>
 	    <td width="12"><img src="../Img_Background/1/titlemu_1.gif" width="12" height="25" /></td>
-	    <td width="45" background="../Img_Background/1/titlemu_2.gif"><div align="center" class="newMessage" style="margin-top:4px;"><a href="Jsp_Proscenium/MessageBoard_replay.jsp" target="_parent">新留言</a></div></td>
+	    <td width="45" background="../Img_Background/1/titlemu_2.gif"><div align="center" class="newMessage" style="margin-top:4px;"><a href="R_MessageBoard.jsp" target="_parent">新留言</a></div></td>
 	    <td width="12"><img src="../Img_Background/1/titlemu_3.gif" width="12" height="25" /></td>
 	    <td width="681">&nbsp;</td>
 	  </tr>
@@ -92,16 +92,20 @@
 	            <td width="133" class="ltb"><div align="center">作者</div></td>
 	            <td width="136" class="ltrb"><div align="center">时间</div></td>
 	          </tr>
-			  <c:if test="${not empty messList}">
-			  	<c:forEach items="${messList}" var="m">
+			  <%-- <c:if test="${not empty listmes}"> --%>
+			  	<c:forEach items="${listmes}" var="m">
 	           	  <tr>
-		            <td class="lb"><div align="center">${m.count }</div></td>
-		            <td height="25" class="lb"><span class="gray">&nbsp;<img src="../Img_Background/1/jd-to.gif" width="13" height="13" border="0" />&nbsp;<a href="NewsDetails?id=${m.messageid }" target="_parent">${m.title }</a></span></td>
-		            <td class="lb"><div align="center"><span class="gray">${m.writer }</span></div></td>
-		            <td class="lrb"><span class="gray">&nbsp;${m.writeDate }</span></td>
+		            <td class="lb"><div align="center">${m.rcount }</div></td>
+		            <td height="25" class="lb">
+		            <span class="gray">&nbsp;
+		            <img src="../Img_Background/1/jd-to.gif" width="13" height="13" border="0" />&nbsp;
+		            <a href="../../../../ready?id=${m.mid}" target="_parent">${m.mtitle }</a></span></td>
+		            <td class="lb"><div align="center">
+		            <span class="gray">${m.mname }</span></div></td>
+		            <td class="lrb"><span class="gray">&nbsp;${m.mdate }</span></td>
 		          </tr>
 			  	</c:forEach>
-			  </c:if>
+			  <%-- </c:if> --%>
 	        </table>
 	        </td>
 	      </tr>

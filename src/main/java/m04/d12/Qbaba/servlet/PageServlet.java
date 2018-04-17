@@ -49,7 +49,7 @@ public class PageServlet extends HttpServlet {
 	    int currentpage=Integer.valueOf(request.getParameter("currentpage"));
 	    ProductDaoImpl pdi=new ProductDaoImpl();
 	    ProPage proPage=new ProPage();
-	    
+	 
 	    List<Product> listpl=pdi.getByView(currentpage);
 	    
 	    session.setAttribute("listpl", listpl);
