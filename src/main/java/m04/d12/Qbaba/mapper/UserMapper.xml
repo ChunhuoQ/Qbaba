@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m04.d12.Qbaba.impl.UserDaoImpl">
+	<!-- resultType 返回值类型 -->
+	<select id="selectUserAll" resultType="m04.d12.Qbaba.entity.User">
+	SELECT * FROM user;
+	</select>
+	
+	 <select id="getviliteUser" parameterType="m04.d12.Qbaba.entity.User" resultType="java.lang.Integer"> 
+     select COUNT(1)  from user WHERE uname=#{uname} AND upwd=#{upwd};
+</select>  
+	
+	
+	<!-- paramterType 参数类型：
+	insert , delate , update 不能指定返回值类型 只能返回一个int
+	-->
+	
+</mapper>
+

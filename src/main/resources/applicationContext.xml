@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+		<!-- bean :将某一个类交给spring容器来管理,那么这个类就是一个beam类
+			id：为指定beng类取一个唯一标识符
+			class：包路径
+			scope：常用
+			request：一次请求后销毁 
+			session ：一次会话后销毁
+			默认单例： singleton
+			 多例：prototype
+			 lazy-init:true ：使用时才创建 节省内寸资源
+			 
+		 -->
+		 
+		<bean id="User" class="m04.d11.entity.User" scope="singleton"  lazy-init="false">
+		<property name="newsId" value="2">
+		</property>
+		<property name="newsAuthor" value="Qbaba"></property>
+		</bean>
+</beans>

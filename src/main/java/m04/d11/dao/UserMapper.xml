@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m04.d11.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="m04.d11.entity.User" >
+    <id column="news_id" property="newsId" jdbcType="INTEGER" />
+    <result column="type_id" property="typeId" jdbcType="INTEGER" />
+    <result column="news_title" property="newsTitle" jdbcType="VARCHAR" />
+    <result column="news_author" property="newsAuthor" jdbcType="VARCHAR" />
+    <result column="news_summary" property="newsSummary" jdbcType="VARCHAR" />
+    <result column="news_content" property="newsContent" jdbcType="VARCHAR" />
+    <result column="news_pic" property="newsPic" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    news_id, type_id, news_title, news_author, news_summary, news_content, news_pic
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from news_info
+    where news_id = #{newsId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from news_info
+    where news_id = #{newsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="m04.d11.entity.User" >
+    insert into news_info (news_id, type_id, news_title, 
+      news_author, news_summary, news_content, 
+      news_pic)
+    values (#{newsId,jdbcType=INTEGER}, #{typeId,jdbcType=INTEGER}, #{newsTitle,jdbcType=VARCHAR}, 
+      #{newsAuthor,jdbcType=VARCHAR}, #{newsSummary,jdbcType=VARCHAR}, #{newsContent,jdbcType=VARCHAR}, 
+      #{newsPic,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="m04.d11.entity.User" >
+    insert into news_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="newsId != null" >
+        news_id,
+      </if>
+      <if test="typeId != null" >
+        type_id,
+      </if>
+      <if test="newsTitle != null" >
+        news_title,
+      </if>
+      <if test="newsAuthor != null" >
+        news_author,
+      </if>
+      <if test="newsSummary != null" >
+        news_summary,
+      </if>
+      <if test="newsContent != null" >
+        news_content,
+      </if>
+      <if test="newsPic != null" >
+        news_pic,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="newsId != null" >
+        #{newsId,jdbcType=INTEGER},
+      </if>
+      <if test="typeId != null" >
+        #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="newsTitle != null" >
+        #{newsTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="newsAuthor != null" >
+        #{newsAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="newsSummary != null" >
+        #{newsSummary,jdbcType=VARCHAR},
+      </if>
+      <if test="newsContent != null" >
+        #{newsContent,jdbcType=VARCHAR},
+      </if>
+      <if test="newsPic != null" >
+        #{newsPic,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m04.d11.entity.User" >
+    update news_info
+    <set >
+      <if test="typeId != null" >
+        type_id = #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="newsTitle != null" >
+        news_title = #{newsTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="newsAuthor != null" >
+        news_author = #{newsAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="newsSummary != null" >
+        news_summary = #{newsSummary,jdbcType=VARCHAR},
+      </if>
+      <if test="newsContent != null" >
+        news_content = #{newsContent,jdbcType=VARCHAR},
+      </if>
+      <if test="newsPic != null" >
+        news_pic = #{newsPic,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where news_id = #{newsId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m04.d11.entity.User" >
+    update news_info
+    set type_id = #{typeId,jdbcType=INTEGER},
+      news_title = #{newsTitle,jdbcType=VARCHAR},
+      news_author = #{newsAuthor,jdbcType=VARCHAR},
+      news_summary = #{newsSummary,jdbcType=VARCHAR},
+      news_content = #{newsContent,jdbcType=VARCHAR},
+      news_pic = #{newsPic,jdbcType=VARCHAR}
+      where news_id = #{newsId,jdbcType=INTEGER}
+  </update>
+</mapper>
