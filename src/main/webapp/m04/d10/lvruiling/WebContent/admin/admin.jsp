@@ -1,6 +1,6 @@
-<%@page import="com.dt59.entity.Page"%>
+<%@page import="m04.d10.lvruiling.com.dt59.entity.Page"%>
 
-<%@page import="com.dt59.entity.NewsInfo"%>
+<%@page import="m04.d10.lvruiling.com.dt59.entity.NewsInfo"%>
 <%@page import="java.util.List"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"

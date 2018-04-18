@@ -1,8 +1,6 @@
-package m04.d12.Qbaba.servlet;
+package m04.d16.dusen.controller;
 
 import java.io.IOException;
-
-
 import java.util.List;
 
 import javax.servlet.ServletConfig;
@@ -10,21 +8,23 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import m04.d12.Qbaba.entity.Revert;
-import m04.d12.Qbaba.impl.MessageDapImpl;
-import m04.d12.Qbaba.impl.RevertDaoImpl;
+
+import m04.d16.dusen.dao.impl.BizDaoImpl;
+import m04.d16.dusen.entity.Use;
+import m04.d16.dusen.service.impl.BizServiceImpl;
+
+
 
 /**
- * Servlet implementation class Submit
+ * Servlet implementation class ManagerUseServlet
  */
-public class SubmitServlet extends HttpServlet {
+public class ManagerUseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SubmitServlet() {
+    public ManagerUseServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -48,7 +48,7 @@ public class SubmitServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    doPost(request,response);
+	    doPost(request, response);
 	}
 
 	/**
@@ -56,25 +56,16 @@ public class SubmitServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    HttpSession session=request.getSession();
-	    RevertDaoImpl rdl=new RevertDaoImpl();
-	    MessageDapImpl mdl=new MessageDapImpl();
-	    String mid=(String)session.getAttribute("id");
-	    String rname=request.getParameter("name");
-	    String rcontent=request.getParameter("content");
-	    Revert revert =new Revert();
-	    revert.setMid(Integer.valueOf(mid));
-	    revert.setRname(rname);
-	    revert.setRcontent(rcontent);
-	    java.util.Date rdate = new java.util.Date();
-	    revert.setRdate(rdate);
-	    rdl.insertRev(revert);
-	    mdl.updatemess(Integer.valueOf(mid));
-	    List<Revert> listrev=rdl.reveListById(mid);
-	    session.setAttribute("listrev",listrev);
+	    request.setCharacterEncoding("utf-8");
+	    BizDaoImpl bdi=new BizDaoImpl();
+	    BizServiceImpl bsi=new BizServiceImpl();
+	    bsi.setBizDao(bdi);
 	    
-	    response.sendRedirect("m04/d12/Qbaba/Jsp_Proscenium/R_MessageBoard.jsp");
+	    List<Use> litsu=bsi.getAllUse();
+	    request.setAttribute("listu", litsu);
+	    request.getRequestDispatcher("admin/showUserList.jsp").forward(request, response);
+	    
+	    
 	}
 
 }
-

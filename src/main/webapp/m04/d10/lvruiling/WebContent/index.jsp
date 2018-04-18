@@ -1,4 +1,5 @@
-<%@page import="com.dt59.entity.CommentInfo"%>
+
+<%@page import="m04.d10.lvruiling.com.dt59.entity.CommentInfo"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();

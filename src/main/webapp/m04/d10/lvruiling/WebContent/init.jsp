@@ -1,8 +1,9 @@
 
 
+<%@page import="m04.d10.lvruiling.com.dt59.entity.CommentInfo"%>
 <%@page import="m04.d10.lvruiling.com.dt59.service.impl.BizServiceImpl"%>
 <%@page import="m04.d10.lvruiling.com.dt59.dao.impl.BizDaoImpl"%>
-<%@page import="com.dt59.entity.CommentInfo"%>
+
 <%@page import="java.util.List"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"

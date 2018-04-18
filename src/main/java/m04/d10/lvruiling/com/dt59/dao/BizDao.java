@@ -2,10 +2,12 @@ package m04.d10.lvruiling.com.dt59.dao;
 
 import java.util.List;
 
-import com.dt59.entity.CommentInfo;
-import com.dt59.entity.NewsInfo;
-import com.dt59.entity.Page;
-import com.dt59.entity.UserInfo;
+import m04.d10.lvruiling.com.dt59.entity.CommentInfo;
+import m04.d10.lvruiling.com.dt59.entity.NewsInfo;
+import m04.d10.lvruiling.com.dt59.entity.Page;
+import m04.d10.lvruiling.com.dt59.entity.UserInfo;
+
+
 
 public interface BizDao {
     boolean validateUser(UserInfo user);

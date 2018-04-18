@@ -2,7 +2,7 @@
 <%@page import="m04.d10.lvruiling.com.dt59.dao.impl.BizDaoImpl"%>
 <%@page import="java.io.PrintWriter"%>
 
-<%@page import="com.dt59.entity.NewsInfo"%>
+<%@page import="m04.d10.lvruiling.com.dt59.entity.NewsInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
