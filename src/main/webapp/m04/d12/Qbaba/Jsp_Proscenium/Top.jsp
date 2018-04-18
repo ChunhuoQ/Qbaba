@@ -42,10 +42,10 @@
 	  <tr>
 		<td align="center" style="position:absolute; top:174px; left:0px;"><img 
 		src="../Img_Proscenium/d_r3_c1.jpg" width="41" height="40" /><a href="M_Index.jsp" target="_parent"><img 
-		src="../Img_Proscenium/d_r3_c5.jpg" width="64" height="40" border="0" /></a><a href="M_ShowProduct.jsp" target="_parent"><img 
+		src="../Img_Proscenium/d_r3_c5.jpg" width="64" height="40" border="0" /></a><a href="../../../../page" target="_parent"><img 
 		src="../Img_Proscenium/d_r3_c7.jpg" width="94" height="40" border="0" /></a><a href="M_ShowNews.jsp" target="_parent"><img 
 		src="../Img_Proscenium/d_r3_c8.jpg" width="94" height="40" border="0" /></a><a href="#" target="_parent"><img 
-		src="../Img_Proscenium/d_r3_c9.jpg" width="94" height="40" border="0" /></a><a href="../../../../message" target="_blank"><img 
+		src="../Img_Proscenium/d_r3_c9.jpg" width="94" height="40" border="0" /></a><a href="Login2.jsp" target="_blank"><img 
 		src="../Img_Proscenium/d_r3_c10.jpg" width="94" height="40" border="0" /></a><a href="#" target="_parent"><img 
 		src="../Img_Proscenium/d_r3_c11.jpg" width="94" height="40" border="0" /></a><a href="#" target="_parent"><img 
 		src="../Img_Proscenium/d_r3_c12.jpg" width="94" height="40" border="0" /></a><a href="Login.jsp" target="_parent"><img 

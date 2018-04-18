@@ -41,5 +41,21 @@ public List<Revert> reveListById(String id) {
    
 }
 
+@Override
+public void insertRev(Revert revert) {
+    
+    int i=session.insert("m04.d12.Qbaba.impl.RevertDaoImpl.insertRev",revert);
+    System.out.println(i);
+}
+
+@Override
+public int reveByNum() {
+    
+    int num=session.selectOne("m04.d12.Qbaba.impl.RevertDaoImpl.reveByNum");
+    return num;
+}
+
+
+
 }
 

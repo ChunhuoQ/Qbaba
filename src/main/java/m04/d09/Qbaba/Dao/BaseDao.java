@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Properties;
@@ -63,11 +64,11 @@ public class BaseDao {
     //连接方法
     public Connection getCon(){
         try {
-            /*Class.forName(driver);
-            con= DriverManager.getConnection(url, username, userpwd);*/
-            Context ctx=new InitialContext();
+            Class.forName(driver);
+            con= DriverManager.getConnection(url, username, userpwd);
+            /*Context ctx=new InitialContext();
             ds=(DataSource)ctx.lookup("java:/comp/env/second");
-            con=ds.getConnection();
+            con=ds.getConnection();*/
         } catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();

@@ -119,4 +119,6 @@
     <servlet-name>ReadyServlet</servlet-name>
     <url-pattern>/ready</url-pattern>
   </servlet-mapping>
+
 </web-app>
+

@@ -10,5 +10,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<select id="messListById" parameterType="Integer" resultType="m04.d12.Qbaba.entity.Message">
 	SELECT * FROM message WHERE mid=#{mid};
 	</select>
+	<update id="updatemess" parameterType="Integer">
+	UPDATE message SET rcount=rcount+1 WHERE MID=#{id};
+	</update>
 </mapper>
 
