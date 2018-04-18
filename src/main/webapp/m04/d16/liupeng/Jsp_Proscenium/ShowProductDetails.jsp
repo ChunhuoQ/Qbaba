@@ -11,7 +11,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>My JSP 'ShowProductDetails.jsp' starting page</title>
-    
+    <link rel="stylesheet" href="css/jPages.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jPages.js"></script>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -54,13 +56,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 	</style>
   </head>
-  
+  <script language="javascript" >
+		$(function(){  
+			$("div.holder").jPages({  
+			  containerID : "itemContainer",  
+			  previous : "上一页", 
+			  next : "下一页",  
+			  perPage : 3,  
+			  delay : 100  
+			});  
+	 	});  
+	</script>
   <body>
-	<table>
+	<div id="itemContainer">
 		<c:if test="${not empty listp}">
 			<c:forEach items="${listp}" var="p">
-				<tr>
-					<td>
 						<table width="595" border="0" cellspacing="0" cellpadding="0">
 						  <tr height="10">
 						  	<td colspan="2">&nbsp;</td>
@@ -92,24 +102,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						    <td height="20" colspan="2" >&nbsp;</td>
 						  </tr>
 						</table>
-					</td>
-				</tr>
 			</c:forEach>
 		</c:if>
-		<tr>
-			<td>
-				<div align="right">
-					<a href="<%=path %>/productFenye?currentpage=1" target="_parent" style="text-decoration:none; color:#999999; font-size:13px;">首页</a> 
-					<span style="font-size:13px; color: #999999;">|</span> 
-					<a href="<%=path %>/productFenye?currentpage=${pagep.getCurrentpage()-1}" target="_parent" style="text-decoration:none; color:#999999; font-size:13px;">上一页</a> 
-					<span style="font-size:13px; color: #999999;">|</span> 
-					<a href="<%=path %>/productFenye?currentpage=${pagep.getCurrentpage()+1}" target="_parent" style="text-decoration:none; color:#999999; font-size:13px;">下一页</a>
-					<span style="font-size:13px; color: #999999;">|</span> 
-					<a href="<%=path %>/productFenye?currentpage=${pagep.getLastpage()}" target="_parent" style="text-decoration:none; color:#999999; font-size:13px;">末页</a> 
-				</div>
-			</td>
-			<td>&nbsp;</td>
-		</tr>
-	</table>
+	</div>
+	<div class="holder"></div>
   </body>
 </html>

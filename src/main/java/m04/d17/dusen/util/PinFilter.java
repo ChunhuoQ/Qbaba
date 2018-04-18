@@ -1,4 +1,4 @@
-package com.util;
+package m04.d17.dusen.util;
 
 import java.io.IOException;
 
@@ -26,7 +26,8 @@ public class PinFilter implements Filter {
 	/**
 	 * @see Filter#destroy()
 	 */
-	public void destroy() {
+	@Override
+    public void destroy() {
 		// TODO Auto-generated method stub
 	    System.out.println("=============走了没");
 	}
@@ -34,7 +35,8 @@ public class PinFilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
-	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+	@Override
+    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 	    HttpServletRequest request=(HttpServletRequest)req;
 	    HttpServletResponse response=(HttpServletResponse)res;
@@ -46,7 +48,8 @@ public class PinFilter implements Filter {
 	/**
 	 * @see Filter#init(FilterConfig)
 	 */
-	public void init(FilterConfig fConfig) throws ServletException {
+	@Override
+    public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
 	    System.out.println("=============走了没");
 	}

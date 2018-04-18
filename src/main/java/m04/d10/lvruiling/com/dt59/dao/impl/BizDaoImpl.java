@@ -3,17 +3,15 @@ package m04.d10.lvruiling.com.dt59.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dt59.dao.BaseDao;
-import com.dt59.dao.BizDao;
-import com.dt59.entity.CommentInfo;
-import com.dt59.entity.NewsInfo;
-import com.dt59.entity.Page;
-import com.dt59.entity.UserInfo;
+import m04.d10.lvruiling.com.dt59.dao.BizDao;
+import m04.d10.lvruiling.com.dt59.entity.NewsInfo;
+import m04.d10.lvruiling.com.dt59.entity.Page;
+import m04.d10.lvruiling.com.dt59.entity.UserInfo;
 
-public class BizDaoImpl extends BaseDao implements BizDao {
+public class BizDaoImpl extends m04.d10.lvruiling.com.dt59.dao.BaseDao implements BizDao {
 
     @Override
-    public List<NewsInfo> getNewsInfoBypage(Page page) {
+    public List<NewsInfo> getNewsInfoBypage1(Page page) {
         List<NewsInfo> list = new ArrayList<NewsInfo>();
         try {
             String sql = "SELECT * FROM news_info LIMIT ?,?";
@@ -42,6 +40,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return list;
     }
 
+    @Override
     public boolean validateUser(UserInfo user) {
         // TODO Auto-generated method stub
         boolean flag = false;
@@ -65,6 +64,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return flag;
     }
 
+    @Override
     public List<NewsInfo> getNews() {
         // TODO Auto-generated method stub
         List<NewsInfo> listnews = new ArrayList<NewsInfo>();
@@ -92,6 +92,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return listnews;
     }
 
+    @Override
     public int delNewsInfoById(int id) {
         // TODO Auto-generated method stub
         int flag = 0;
@@ -109,6 +110,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return flag;
     }
 
+    @Override
     public int updateNewsInfo(NewsInfo info) {
         // TODO Auto-generated method stub
         int flag = 0;
@@ -131,6 +133,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return flag;
     }
 
+    @Override
     public List<CommentInfo> getAllCommentInfo() {
         // TODO Auto-generated method stub
         List<CommentInfo> listc = new ArrayList<CommentInfo>();
@@ -155,6 +158,34 @@ public class BizDaoImpl extends BaseDao implements BizDao {
             close(con, pst, rs);
         }
         return listc;
+    }
+
+    @Override
+    public int updateNewsInfo(m04.d10.lvruiling.com.dt59.dao.NewsInfo info) {
+
+        // Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int updateNewsInfo(m04.d10.lvruiling.com.dt59.dao.NewsInfo info) {
+
+        // Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public boolean validateUser(UserInfo user) {
+
+        // Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public List<NewsInfo> getNewsInfoBypage(Page page) {
+
+        // Auto-generated method stub
+        return null;
     }
 
 }

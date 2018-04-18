@@ -1,5 +1,3 @@
-<%@page import="com.entity.Product"%>
-<%@page import="com.entity.News"%>
 <%@ page language="java" import="java.util.*" pageEncoding="GB18030"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%
