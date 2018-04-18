@@ -5,20 +5,17 @@
   <display-name>m04.d16.liupeng</display-name>
 
   <display-name>m04.d12.Qbaba</display-name>
+  <display-name>m04.d16.liupeng</display-name>
   <resource-ref>
     <res-ref-name>one</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
-
   <welcome-file-list>
 
     <welcome-file>init</welcome-file>
 
-    <welcome-file>init.java</welcome-file>
-    <welcome-file>index.html</welcome-file>
-
-  </welcome-file-list>
+ </welcome-file-list>
   <servlet>
     <description></description>
     <display-name>InitServlet</display-name>
@@ -103,7 +100,6 @@
     <servlet-name>MessageByIdServlet</servlet-name>
     <servlet-class>com.liupeng.controller.MessageByIdServlet</servlet-class>
   </servlet>
- 
   <filter-mapping>
     <filter-name>setChar</filter-name>
     <url-pattern>/*</url-pattern>
@@ -148,5 +144,8 @@
     <servlet-name>Logins2</servlet-name>
     <url-pattern>/login2</url-pattern>
   </servlet-mapping>
+
+
 </web-app>
+
 

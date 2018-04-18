@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import m04.d16.liupeng.dao.impl.BizDaoImpl;
-import m04.d16.liupeng.entity.Page;
 import m04.d16.liupeng.entity.Product;
 import m04.d16.liupeng.service.impl.BizServiceImpl;
 
@@ -60,21 +59,11 @@ public class ShowProductServlet extends HttpServlet {
 	 */
 	@Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        // request.setCharacterEncoding("utf-8");
-        // response.setCharacterEncoding("utf-8");
-        // response.setContentType("text/html; charset=utf-8");
-        // String currentpage = request.getParameter("currentpage");
-        Page pagep=new Page();
-        pagep.setCurrentpage(1);
-        // pagep.setCurrentpage(Integer.parseInt(currentpage));
         BizDaoImpl bizdao = new BizDaoImpl();
         BizServiceImpl bsi = new BizServiceImpl();
         bsi.setBizDao(bizdao);
-        
-        List<Product> listp = bsi.getProductByPage(pagep);
+        List<Product> listp = bsi.getAllProduct();
         HttpSession session = request.getSession();
-        session.setAttribute("pagep", pagep);
         session.setAttribute("listp", listp);
         request.getRequestDispatcher("Jsp_Proscenium/M_ShowProduct.jsp").forward(request, response);
 

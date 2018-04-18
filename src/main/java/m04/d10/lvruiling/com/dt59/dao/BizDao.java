@@ -9,6 +9,9 @@ import m04.d10.lvruiling.com.dt59.entity.UserInfo;
 
 
 
+
+
+
 public interface BizDao {
     boolean validateUser(UserInfo user);
 

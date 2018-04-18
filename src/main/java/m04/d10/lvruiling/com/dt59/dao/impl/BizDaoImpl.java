@@ -2,7 +2,6 @@ package m04.d10.lvruiling.com.dt59.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import m04.d10.lvruiling.com.dt59.dao.BaseDao;
 import m04.d10.lvruiling.com.dt59.dao.BizDao;
 import m04.d10.lvruiling.com.dt59.entity.CommentInfo;
@@ -44,6 +43,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return list;
     }
 
+    @Override
     public boolean validateUser(UserInfo user) {
         // TODO Auto-generated method stub
         boolean flag = false;
@@ -67,6 +67,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return flag;
     }
 
+    @Override
     public List<NewsInfo> getNews() {
         // TODO Auto-generated method stub
         List<NewsInfo> listnews = new ArrayList<NewsInfo>();
@@ -94,6 +95,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return listnews;
     }
 
+    @Override
     public int delNewsInfoById(int id) {
         // TODO Auto-generated method stub
         int flag = 0;
@@ -111,6 +113,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return flag;
     }
 
+    @Override
     public int updateNewsInfo(NewsInfo info) {
         // TODO Auto-generated method stub
         int flag = 0;
@@ -133,6 +136,7 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         return flag;
     }
 
+    @Override
     public List<CommentInfo> getAllCommentInfo() {
         // TODO Auto-generated method stub
         List<CommentInfo> listc = new ArrayList<CommentInfo>();
@@ -158,5 +162,8 @@ public class BizDaoImpl extends BaseDao implements BizDao {
         }
         return listc;
     }
+
+
+
 
 }
