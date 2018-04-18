@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上传文件</title>
+	</head>
+	<script>
+		function abc(){
+			var ul=document.getElementById("uu");//声明一个ul对象通过id获取元素
+			var cc=ul.childNodes[3];//该元素的节点数
+			var li=cc.cloneNode(true);//克隆该节点和内容
+			var dd=ul.appendChild(li);//拼接到后面
+//			var tt=ul.insertBefore(li,cc);//把A节点插入B节点之前
+//			alert(dd);
+		}
+	</script>
+	<body>
+		<ul id="uu">
+			<li>文件路径：<input type="button" value="选择文件">产品经理例会.mmap</li>
+			<li>文件路径：<input type="button" value="选择文件">平台建议.xls</li>
+			<li>文件路径：<input type="button" value="选择文件">未选择文件</li>
+			<li>文件路径：<input type="button" value="选择文件">未选择文件</li>
+		</ul>
+		<input type="button" value="再上传一个文件" onclick="abc()">
+	</body>
+</html>

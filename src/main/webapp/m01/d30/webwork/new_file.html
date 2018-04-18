@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var dd=document.getElementById("del");
+				dd.onclick=function(){
+					var cfn=confirm("是否要删除！");
+//					alert(cfn);
+        			if (cfn) {
+        				document.getElementById("mydiv").innerHTML="确定要删除！"
+        			} else{
+        				document.getElementById("mydiv").innerHTML="逗你玩的！"
+        			}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" /><input type="button" value="删除" onclick="abc();" id="del"/>
+		<br />
+		<div id="mydiv"></div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>当当网购物车</title>
+		<link rel="stylesheet" type="text/css" href="dangdang.css"/>
+		<script src="当当网购物车.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="border1">
+				<img src="img/dd_logo.jpg" /><span>关闭</span>
+			</div>
+			<div class="table">
+				<table> <!--border="1" cellspacing="2px" cellpadding="2px"-->>
+					<tr>
+						<td>￥<input type="text" name="price" value="21.50"></td>
+						<td>
+							<input class="int1"  type="button" name="minus" value="-" onclick="a1(0)">
+						    <input type="text" name="amount" value="1">
+						    <input class="int2" type="button" name="plus" value="+" onclick="b1(0);">
+						</td>
+						<td id="price0">¥21.50</td>
+						<td><p  onclick="collection();">移入收藏</p><p onclick="del();">删除</p></td>
+					</tr>
+					<tr>
+						<td>￥<input type="text" name="price" value="24.00"></td>
+						<td>
+							<input class="int1"  type="button" name="minus" value="-" onclick="a1(1);">
+						    <input type="text" name="amount" value="1">
+						    <input class="int2" type="button" name="plus" value="+" onclick="b1(1);">
+						</td>
+						<td id="price1">¥24.00</td>
+						<td><p  onclick="collection();">移入收藏</p><p onclick="del();">删除</p></td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

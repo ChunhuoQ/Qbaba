@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>邮箱验证</title>
+		<input name="btn" type="button" value="请输入邮箱的地址" onclick="abc(prompt('请输入邮箱的名称','email'))"/>
+		<script type="text/javascript">
+			function abc(email){
+				if(email.indexOf("susan")!=-1){
+					alert("邮箱地址正确，邮箱的名称是："+email.substring(6,10));
+				}
+				if(email.indexOf("@")==-1){
+					alert("邮箱地址必须包含@和.");
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

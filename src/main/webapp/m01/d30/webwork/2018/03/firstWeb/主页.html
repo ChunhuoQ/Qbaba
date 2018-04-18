@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="Shortcut Icon" href="img/浏览器logo.ico" type="image/x-icon">
+		<title>链家网</title>
+	</head>
+	<link rel="stylesheet" href="css/主页样式.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+	<script  type="text/javascript" src="js/主页.js">
+	
+		
+		
+		
+	</script>
+
+	<body>
+		<header>
+			<div class="ontdiv">
+				<div class="youbian">
+					<div class="youbiandiv">
+					<div id="d1" onmousemove="abc(1)" onmouseout="bcd(1)"></div>
+					<img src="img/一堆右侧图标/一根线.png" />
+					<div  id="d2" onmousemove="abc(2)" onmouseout="bcd(2)"></div>
+					<div onmousemove="abc(3)" onmouseout="bcd(3)"></div>
+					<img src="img/一堆右侧图标/一根线.png" />
+					<div onmousemove="abc(4)" onmouseout="bcd(4)"></div>
+					<div onmousemove="abc(5)" onmouseout="bcd(5)"></div>
+					<div onmousemove="abc(6)" onmouseout="bcd(6)"></div>
+					<div onmousemove="abc(7)" onmouseout="bcd(7)"></div>
+					<div onmousemove="abc(8)" onmouseout="bcd(8)"></div>
+					<div onmousemove="abc(9)" onmouseout="bcd(9)"></div>
+					<ul id="ul1">
+						<li>
+							<span>待看清单</span>
+							<font>一次可以选择多套房源预约带看</font>
+							<hr>
+						</li>
+						<img  src="img/一堆右侧图标/无所谓.png">
+						<img class="imghx" src="img/一堆右侧图标/横向滑块.png" />
+						<li><a>登录后可以查看清单</a></li>
+					</ul>
+					<ul id="ul2">
+						<li>
+							我关注的房源
+						</li>
+						<img id="imghxl"  src="img/一堆右侧图标/横向绿色滑块.png" />
+					</ul>
+					<!--<ul>
+						<li>
+							
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul>
+						<li>
+						
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>-->
+					</div>
+				</div>
+			</div>
+			<div class="ditudiv">
+				<a class="ditua" href="#">
+					<div class="ditu">
+						<img src="img/小图标/地理位置图标.png" />
+						<ac>武汉</ac>
+					</div>
+			</div>
+			</a>
+
+			<ul class="dengluul"><img src="img/小图标/登录头标.png" />
+				<a href="主页.html">
+					<li>立即注册</li>
+				</a>
+				<a href="主页.html">
+					<li>登录</li>
+				</a>
+			</ul>
+
+			<div class="logo">
+				<img src="img/logo.png" />
+			</div>
+
+			<ul class="ecvul">
+				<li>
+					<a href="#">二手房</a>
+				</li>
+				<li>
+					<a href="#">新房</a>
+				</li>
+				<li>
+					<a href="#">学校</a>
+				</li>
+				<li>
+					<a href="#">租房</a>
+				</li>
+				<li>
+					<a href="#"><img class="lvju" src="img/小图标/lvju.png" />旅居</a>
+				</li>
+				<li>
+					<a href="#">海外</a>
+				</li>
+				<li>
+					<a href="#">小区</a>
+				</li>
+				<li>
+					<a href="#">经纪人</a>
+				</li>
+				<li>
+					<a href="#">问答</a>
+				</li>
+				<li>
+					<a href="#">指南</a>
+				</li>
+				<li>
+					<a href="#">百科</a>
+				</li>
+				<li>
+					<a href="#">房价</a>
+				</li>
+				<li>
+					<a href="#">工具</a>
+				</li>
+			</ul>
+
+			</div>
+
+			<div>
+				<div class="gushi">
+					<img src="img/链接每个家的故事.png" />
+				</div>
+
+				<div class="div1">
+					<ul class="div2">
+						<p>深圳链家真实租房 5760 套</p>
+						<p>深圳链家在售新房楼盘 837 个</p>
+						<p>深圳链家真实在售二手房 23956 套</p>
+					</ul>
+				</div>
+				<div class="div3">
+					<ul onload="abc();">
+						<li id="myli1">
+							找二手房
+						</li>
+						<li id="myli2">
+							找新房
+						</li>
+						<li id="myli3" >
+							找租房
+						</li>
+						<li id="myli4" >
+							找小区
+						</li>
+						<li id="myli5" >
+							搜问答
+						</li>
+					</ul>
+				</div>
+
+				<div class="div4">
+
+					<input class="firstinput" list="downlist" type="search" placeholder="输入地铁线或者地铁站可以找到地铁附近房源" onClick="" />
+					<input type="button" class="myinput2" value="开始找房" />
+					<datalist id="downlist">
+                            	<option>热门搜索</option>
+                                <option label="Top1">水岸星城</option>
+								<option label="Top2">融科天城</option>
+								<option label="Top3">香榭琴台</option>
+								<option label="Top4">融侨锦城</option>
+								<option label="Top5">融侨华府</option>
+								<option label="Top6">金地太阳城</option>
+		 	 	 	 	 	 	<option label="Top7">汉口春天</option>
+								<option label="Top8">1号线</option>
+                        </datalist>
+					<img src="img/很多素材/移动滑块.png" />
+
+				</div>
+
+				<ul class="shengming">
+
+					<a href="主页.html">
+						<li>
+							<div class="radio">
+								<sp>!</sp>
+							</div>&nbsp; 关于仿冒我公司进行不正当竞争行为的郑重声明</li>
+					</a>
+					<a href="主页.html">
+						<li>
+							<div class="zerenshu"></div> &nbsp;房地产中介诚信承诺及保证书</li>
+					</a>
+				</ul>
+
+			</div>
+			</div>
+
+		</header>
+
+		<article>
+			<div class="acfrist">
+				<div>
+					<ul>
+						<li>
+							<img src="img/浮动标/房子.png" />
+							<p>找二手房</p>
+							<span>
+							真实二手房源，链家承诺真实在售<br>
+							所见即真</span>
+						</li>
+						<li>
+							<img src="img/浮动标/云端箭头.png" />
+							<p>地图找房</p>
+
+							<span>为您精准定位，位置周边配套设施<br />一览无余</span>
+						</li>
+						<li>
+							<img src="img/浮动标/计算器尺子.png" />
+							<p>找出租房</p>
+							<span>房源紧邻地铁站，交通出行更方便<br />说走就走</span>
+						</li>
+						<li>
+							<img src="img/浮动标/地铁.png" />
+							<p>找地铁房</p>
+							<span>海量出租房源，质优好房专业服务<br />全新呈现</span>
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<div class="a2">
+					<div>
+						<img src="img/很多素材/一链倾城为你为家.png" />
+					</div>
+
+					<p>集二手、新房、租房功能于一体，随时随地任性找房。IM匿名咨询让您放</p>
+
+					<p>心，消息动态推送让您省心，服务承诺让您安心，数据百科锦囊让您感受贴心</p>
+					<p>漫漫找房路，我们努力为您想更多。</p>
+					
+					<div class="a3"><a href="主页.html"><img src="img/很多素材/iPhone.png" /></a></div>
+					<div class="a4"><img src="img/很多素材/二维码.png"></div>
+					<div class="a5"><a href="主页.html"><img src="img/很多素材/Android.png" /></a></div>
+					
+					</div>
+				</div>
+				
+				<div>
+					<img class="acimg1" src="img/很多素材/二手好房为你而选.png" />
+					<p>好房源那么多，我们为你精选，链家网会越来越懂你</p>
+					<a class="aa" href="主页.html">更多武汉二手房</a>
+					<ul>
+						
+							<li>
+								<a href="">
+								<div><img src="img/房图片/f4.jpg"></div>
+								<span>中南路&nbsp;丁字桥&nbsp;99号公寓</span>
+								<br />
+								<font>99号公寓&nbsp;&nbsp;1室0厅&nbsp;&nbsp;42.68平米</font>
+								</a>
+								<br>
+								<font>链家推荐在售房源</font>
+						</li>
+						
+						<li>
+							<a href="">
+							<div><img src="img/房图片/f3.jpg"></div>
+							<span>越秀星汇君泊&nbsp;3室2厅</span>
+							<br />
+							<font>越秀星汇君泊&nbsp;&nbsp;3室2厅&nbsp;&nbsp;91.77平米</font>
+							</a>
+							<br>
+							<font>链家推荐在售房源</font>
+						</li>
+						
+						<li>
+							<a href="">
+							<div><img src="img/房图片/f2.jpg"></div>
+							<span>面积小，总价低，位于硚口区</span>
+							<br />
+							<font>富士雅庭&nbsp;&nbsp;2室2厅&nbsp;&nbsp;72.57平米</font>
+							</a>
+							<br>
+							<font>链家推荐在售房源</font>
+						</li>
+						
+						<li>
+							<a href="">
+							<div><img src="img/房图片/f1.jpg"></div>
+							<span>天宇万象国际&nbsp;2室2厅</span>
+							<br />
+							<font>天宇万象国际&nbsp;&nbsp;2室2厅&nbsp;&nbsp;52.89平米</font>
+							</a>
+							<br>
+							<font>链家推荐在售房源</font>
+						</li>
+						</ul>
+					
+				</div>
+					
+					
+				
+				<div>
+						
+							<img class="imgc1" src="img/房图片/xiaoqu-recom.png" />
+						
+						<p>纵览小区，恋上这座城</p>
+						<a class="aa" href="主页.html">更多武汉二手房</a>
+						<ul>
+						
+							<li>
+								<a href="">
+								<div><img src="img/房图片/xq1.jpg"></div>
+								<span>恒大首府</span>
+								<br />
+								<font>31923元/平</font>
+								</a>
+								
+						</li>
+						
+						<li>
+							<a href="">
+							<div><img src="img/房图片/xq2.jpg"></div>
+							<span>水域天际</span>
+							<br />
+							<font>26546/平</font>
+							</a>
+							
+						</li>
+						
+						<li>
+							<a href="">
+							<div><img src="img/房图片/xq3.jpg"></div>
+							<span>保利时代</span>
+							<br />
+							<font>25812/平</font>
+							</a>
+							
+						</li>
+						</ul>
+				</div>
+				<div class="acfristch5">
+					<img class="acfristimgc2" src="img/很多素材/二手好房为你而选.png" />
+					<p class="p1">真实信息准确同步，楼盘动态一手掌握</p>
+					<ul>
+						
+							<li>
+								<a href="">
+								<div style="width: 350px;height: 260px;">
+									<img src="img/房图片/xf1.jpg">
+								</div>
+								<font>万科主场</font>
+								<p>24200元/平</p>
+								</a>
+						</li>
+						<li>
+							<a href="">
+							<div style="width: 350px;height: 260px;">
+								<img src="img/房图片/xf2.jpg">
+							</div>
+							<font>ICC铂庭</font>
+							<p>33750元/平</p>
+							</a>
+							
+						</li>
+						<li>
+							<a href="">
+							<div style="width: 350px;height: 260px;"><img src="img/房图片/xf3.jpg">
+							</div>
+							<font>金珠港湾二湖</font>
+							<p>13500元/平</p>
+							</a>	
+						</li>
+						</ul>
+					</div>
+			</div>
+		</article>
+		<footer>
+		</footer>
+	</body>
+
+</html>

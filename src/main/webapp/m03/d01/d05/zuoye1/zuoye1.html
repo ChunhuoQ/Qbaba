@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建继承person的student的子类</title>
+	</head>
+	<body>
+		<script>
+			function person(name,chinese,math){
+				this.name=name;
+				this.chinese=chinese;
+				this.math=math;
+			}
+			person.prototype.showname=function(){
+				alert(this.name);
+			}
+			person.prototype.showchinese=function(){
+				alert(this.chinese);
+			}
+			person.prototype.showmath=function(){
+				alert(this.math);
+			}
+			function student(name,chinese,math,age){
+				person.call(this,name,chinese,math);
+				this.age=age;
+			}
+			student.prototype=new person();
+			student.prototype.showage=function(){
+				alert(this.age);
+			}
+			var student1=new student();
+			student1.showname();
+			student1.showchinese();
+			student1.showmath();
+			student1.showage();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+.header{
+	width:1026px;
+	height: 80px;
+	/*border: 1px solid red;*/
+	margin: 10px auto;
+}
+
+.border1{
+	width:1000px;
+	height: 80px;
+/*	border: 1px solid red;*/
+	margin: 0px 5px;
+}
+.border1 span{
+	display: inline-block;
+	float: right;
+	margin-top: 20px;
+	margin-right:20px ;
+	font-size: 14px;
+	color: white;
+	border-radius:10px;
+	background-color:red;
+	cursor: pointer;
+}
+.table{
+	width:1000px;
+	height: 420px;
+	/*border: 1px solid red;*/
+	margin: 10px auto;
+	background: url(img/shoppingBg.jpg) no-repeat /*0px 100px*/;
+	height: 414px;
+	overflow: hidden;
+	/*position: relative;
+	top: 50px;
+	left: 100px;*/
+}
+table{
+	position: relative;
+	top: 100px;
+	left: 360px;
+}
+tr{
+	height: 100px;
+}
+td{
+	width: 100px;
+	text-align: center;
+}
+table td input{
+	width:30px ;
+	text-align: center;
+}
+.int1{
+	width:10px ;
+	text-align: center;
+}
+.int2{
+	width: 13px;
+	text-align: center;
+}
+

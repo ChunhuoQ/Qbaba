@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>广告图片轮播</title>
+		<link rel="stylesheet" type="text/css" href="lunbo.css"/>
+	</head>
+	<script src="jquery-1.8.3.js" type="text/javascript"></script>
+	<script>
+		var i=1;
+		$(document).ready(function(){
+			$(".adver").mouseover(function(){
+				$(this).children(".arrowLeft").show();
+				$(this).children(".arrowRight").show();
+			}).mouseout(function(){
+				$(this).children(".arrowLeft").hide();
+				$(this).children(".arrowRight").hide();
+			})
+			$(".arrowRight").click(function(){
+				i++;
+				if(i>6){
+					i=6;
+					alert("这是最后一张图")
+				}else{
+			   $(".adver").css({"background":"url("+i+".jpg)"});
+			   $("li:nth-of-type("+i+")").css({"background-color":"orange"});
+			   $("li:nth-of-type("+i+")").siblings().css({"background-color":"#333333"});
+				}
+			})
+			$(".arrowLeft").click(function(){
+				i--;
+				if(i<1){
+					i=1;
+					alert("这是第一张图");
+			}else{
+			   $(".adver").css({"background":"url("+i+".jpg)"});
+			   $("li:nth-of-type("+i+")").css({"background-color":"orange"});
+			   $("li:nth-of-type("+i+")").siblings().css({"background-color":"#333333"});
+				}
+			})
+		})
+	</script>
+		
+	
+	<body>
+		<div class="adver">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <div class="arrowLeft"><</div>
+    <div class="arrowRight">></div>
+</div>
+	</body>
+</html>

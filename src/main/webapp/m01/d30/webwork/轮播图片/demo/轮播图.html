@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			span{
+				width:35px;
+				background-color:#FDFDFD;
+				margin-left:7px;
+				position:relative;
+				left:-150px;
+				top:-50px;
+				text-align:center;
+				cursor: pointer;
+			    }
+		</style>
+		<script>
+			var i=1;
+			var t;
+			function abc(){
+				var gg=document.getElementsByName("gg");
+				gg[i-1].style.backgroundColor="yellow";
+				for( var j=0;j<gg.length;j++){
+					if(j!=(i-1)){
+						gg[j].style.backgroundColor="#FDFDFD";
+					}
+				}
+//				var sp=document.getElementById("skl");
+				skl.src="img/image/"+i+".jpg";
+				i++;
+				if(i>4){
+					i=1;
+				}
+				t=setTimeout("abc()",500);
+			}
+			
+			function vest(k){
+				clearTimeout(t);
+				var gg=document.getElementsByName("gg");
+				gg[k-1].style.backgroundColor="yellow";
+				for(m=0;m<gg.length;j++){
+					if(m!=(k-1)){
+						gg[m].style.backgroundColor="#FDFDFD";
+						
+					}
+				}
+				skl.src="img/image/"+k+".jpg";
+				i=k;
+			}
+			function out(){
+				abc();
+			}
+		</script>
+	</head>
+	<body onload="abc();">
+	    <img src="img/image/1.jpg" id="skl" width="350px" height="200px"/>
+	    <span name="gg" onmouseover="vest(1);" onmouseout="out();">1</span>
+	    <span name="gg" onmouseover="vest(2);" onmouseout="out();">2</span>
+	    <span name="gg" onmouseover="vest(3);" onmouseout="out();">3</span>
+	    <span name="gg" onmouseover="vest(4);" onmouseout="out();">4</span>
+	</body>
+</html>
