@@ -63,4 +63,24 @@
     <servlet-name>S_InitServlet</servlet-name>
     <url-pattern>/S_Init</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>S_LoginServlet</display-name>
+    <servlet-name>S_LoginServlet</servlet-name>
+    <servlet-class>m04.d19.Qbaba.controller.S_LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S_LoginServlet</servlet-name>
+    <url-pattern>/S_login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BuyServlet</display-name>
+    <servlet-name>BuyServlet</servlet-name>
+    <servlet-class>m04.d19.Qbaba.controller.BuyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuyServlet</servlet-name>
+    <url-pattern>/buy</url-pattern>
+  </servlet-mapping>
 </web-app>
