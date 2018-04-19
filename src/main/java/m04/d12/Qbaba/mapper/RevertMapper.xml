@@ -10,5 +10,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="reveListById" parameterType="Integer" resultType="m04.d12.Qbaba.entity.Revert">
 	SELECT * FROM revert WHERE mid=#{mid};
 	</select>
+	<select id="reveByNum"  resultType="Integer">
+	SELECT count(1) FROM revert ;
+	</select>
+	<insert id="insertRev" parameterType="m04.d12.Qbaba.entity.Revert" >
+	INSERT INTO revert SET mid=#{mid},rcontent=#{rcontent},rname=#{rname},rdate=#{rdate};
+	</insert>
 </mapper>
 

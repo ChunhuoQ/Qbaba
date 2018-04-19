@@ -67,7 +67,8 @@ public class ReadyServlet extends HttpServlet {
         List<Revert> listrev=rdl.reveListById(id);
         session.setAttribute("listmess",listmess);
         session.setAttribute("listrev",listrev);
-       
+        session.setAttribute("id", id);
+        System.out.println(id);
         response.sendRedirect("m04/d12/Qbaba/Jsp_Proscenium/R_MessageBoard.jsp");
 	}
 

@@ -1,3 +1,4 @@
+
 /**
  * Project Name:pinhong1
  * File Name:BizDao.java
@@ -9,6 +10,7 @@
 package m04.d16.dusen.dao;
 
 import java.util.List;
+
 
 import m04.d16.dusen.entity.News;
 import m04.d16.dusen.entity.Page;

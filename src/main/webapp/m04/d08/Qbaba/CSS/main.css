@@ -8,15 +8,7 @@ li{ list-style:none;}
 
 a{ color:#335884; text-decoration:none;}
 a:hover{ color:#f00; text-decoration:underline;}
-.sp{
-	position:relative;
-	left:100px;
-	font-size:15px;
-	font-weight: bolder;
-}
-.sp1{
-	color:red;
-}
+
 #header{ clear:both; position:relative; margin:0 auto; margin-top:15px; width:947px; height:116px; border:1px solid #dfdfdf; background:url(../Images/topbg.gif) repeat-x;}
 	#top_login{ padding:6px 0 0 10px;}
 		.login_input{ height:19px; line-height:19px; width:118px; border:none; background:url(../Images/login_input.gif) no-repeat; margin:0 14px 0 6px;}

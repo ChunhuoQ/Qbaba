@@ -2,17 +2,19 @@ package m04.d10.lvruiling.com.dt59.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import m04.d10.lvruiling.com.dt59.dao.BaseDao;
 import m04.d10.lvruiling.com.dt59.dao.BizDao;
 import m04.d10.lvruiling.com.dt59.entity.CommentInfo;
 import m04.d10.lvruiling.com.dt59.entity.NewsInfo;
 import m04.d10.lvruiling.com.dt59.entity.Page;
 import m04.d10.lvruiling.com.dt59.entity.UserInfo;
 
-public class BizDaoImpl extends m04.d10.lvruiling.com.dt59.dao.BaseDao implements BizDao {
+
+
+public class BizDaoImpl extends BaseDao implements BizDao {
 
     @Override
-    public List<NewsInfo> getNewsInfoBypage1(Page page) {
+    public List<NewsInfo> getNewsInfoBypage(Page page) {
         List<NewsInfo> list = new ArrayList<NewsInfo>();
         try {
             String sql = "SELECT * FROM news_info LIMIT ?,?";
@@ -161,32 +163,7 @@ public class BizDaoImpl extends m04.d10.lvruiling.com.dt59.dao.BaseDao implement
         return listc;
     }
 
-    @Override
-    public int updateNewsInfo(m04.d10.lvruiling.com.dt59.dao.NewsInfo info) {
 
-        // Auto-generated method stub
-        return 0;
-    }
 
-    @Override
-    public int updateNewsInfo(m04.d10.lvruiling.com.dt59.dao.NewsInfo info) {
-
-        // Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public boolean validateUser(UserInfo user) {
-
-        // Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public List<NewsInfo> getNewsInfoBypage(Page page) {
-
-        // Auto-generated method stub
-        return null;
-    }
 
 }

@@ -5,15 +5,13 @@ body{ font:12px/20px Tahoma;}
 table{ border-collapse:collapse;}
 img{ border:0;}
 li{ list-style:none;}
-
-a{ color:#333; text-decoration:underline;}
-a:hover{ color:#f00; text-decoration:underline;}
-
 #sp{
-	font-weight: border;
 	color:red;
 	font-size:18px;
 }
+a{ color:#333; text-decoration:underline;}
+a:hover{ color:#f00; text-decoration:underline;}
+
 #header{ clear:both; margin:0 auto; margin-top:15px; width:947px; height:116px; border:1px solid #dfdfdf; background:url(../Images/topbg.gif) repeat-x;}
 	#welcome{ padding:6px 0 0 10px; height:30px;}
 	#nav{ clear:both; padding:0 10px;}

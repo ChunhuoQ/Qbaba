@@ -38,7 +38,7 @@
 				<iframe src="WebSrc.jsp" width="799" marginheight="0" scrolling="no" frameborder="0" height="100%"></iframe>				
 			</td>
 		</tr>
-		<tr height="600">
+		<tr height="900">
 			<td style="border-right: #E3E3E3 1px solid;">
 				<iframe src="ShowProduct.jsp" width="185" marginheight="0" scrolling="no" frameborder="0" height="100%"></iframe>
 			</td>

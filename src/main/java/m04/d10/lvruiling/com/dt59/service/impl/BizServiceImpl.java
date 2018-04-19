@@ -2,12 +2,13 @@ package m04.d10.lvruiling.com.dt59.service.impl;
 
 import java.util.List;
 
-import com.dt59.dao.BizDao;
-import com.dt59.entity.CommentInfo;
-import com.dt59.entity.NewsInfo;
-import com.dt59.entity.Page;
-import com.dt59.entity.UserInfo;
-import com.dt59.service.BizService;
+import m04.d10.lvruiling.com.dt59.service.BizService;
+import m04.d10.lvruiling.com.dt59.dao.BaseDao;
+import m04.d10.lvruiling.com.dt59.dao.BizDao;
+import m04.d10.lvruiling.com.dt59.entity.CommentInfo;
+import m04.d10.lvruiling.com.dt59.entity.NewsInfo;
+import m04.d10.lvruiling.com.dt59.entity.Page;
+import m04.d10.lvruiling.com.dt59.entity.UserInfo;
 
 public class BizServiceImpl implements BizService {
 
