@@ -1,112 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-
-  
-  <display-name>m04.d16.liupeng</display-name>
-
-  <display-name>m04.d12.Qbaba</display-name>
-  <display-name>m04.d16.liupeng</display-name>
-  <resource-ref>
-    <res-ref-name>one</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <res-auth>Container</res-auth>
-  </resource-ref>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Mybatis</display-name>
   <welcome-file-list>
-
-    <welcome-file>init</welcome-file>
-
- </welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
   <servlet>
-    <description></description>
     <display-name>InitServlet</display-name>
     <servlet-name>InitServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.InitServlet</servlet-class>
+    <servlet-class>m04.d12.Qbaba.servlet.InitServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InitServlet</servlet-name>
     <url-pattern>/init</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description></description>
-    <display-name>LoginServlet</display-name>
-    <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.LoginServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/login</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ManageUserServlet</display-name>
-    <servlet-name>ManageUserServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.ManageUserServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ManageUserServlet</servlet-name>
-    <url-pattern>/manageUser</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ShowProductServlet</display-name>
-    <servlet-name>ShowProductServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.ShowProductServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ShowProductServlet</servlet-name>
-    <url-pattern>/showProduct</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ProductFenyeServlet</display-name>
-    <servlet-name>ProductFenyeServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.ProductFenyeServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ProductFenyeServlet</servlet-name>
-    <url-pattern>/productFenye</url-pattern>
-  </servlet-mapping>
-  <filter>
-    <filter-name>setChar</filter-name>
-    <filter-class>com.liupeng.util.SetCharUtil</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>setChar</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
-  <servlet>
-    <description></description>
-    <display-name>QueryMessageServlet</display-name>
-    <servlet-name>QueryMessageServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.QueryMessageServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>QueryMessageServlet</servlet-name>
-    <url-pattern>/queryMessage</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>QueryRevertServlet</display-name>
-    <servlet-name>QueryRevertServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.QueryRevertServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>QueryRevertServlet</servlet-name>
-    <url-pattern>/queryRevert</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>MessageByIdServlet</display-name>
-    <servlet-name>MessageByIdServlet</servlet-name>
-    <servlet-class>com.liupeng.controller.MessageByIdServlet</servlet-class>
-  </servlet>
-  <filter-mapping>
-    <filter-name>setChar</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
-  <servlet>
-    <description>MessageServlet</description>
-    <display-name>MessageServlet</display-name>
     <servlet-name>MessageServlet</servlet-name>
     <servlet-class>m04.d12.Qbaba.servlet.MessageServlet</servlet-class>
   </servlet>
@@ -115,7 +27,6 @@
     <url-pattern>/message</url-pattern>
   </servlet-mapping>
   <servlet>
-    <description>ReadyServlet</description>
     <display-name>ReadyServlet</display-name>
     <servlet-name>ReadyServlet</servlet-name>
     <servlet-class>m04.d12.Qbaba.servlet.ReadyServlet</servlet-class>
@@ -126,7 +37,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>SubmitServlet</display-name>
     <servlet-name>SubmitServlet</servlet-name>
     <servlet-class>m04.d12.Qbaba.servlet.SubmitServlet</servlet-class>
   </servlet>
@@ -136,7 +46,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Logins2</display-name>
     <servlet-name>Logins2</servlet-name>
     <servlet-class>m04.d12.Qbaba.servlet.Login2Servlet</servlet-class>
   </servlet>
@@ -144,8 +53,14 @@
     <servlet-name>Logins2</servlet-name>
     <url-pattern>/login2</url-pattern>
   </servlet-mapping>
-
-
+  <servlet>
+    <description></description>
+    <display-name>S_InitServlet</display-name>
+    <servlet-name>S_InitServlet</servlet-name>
+    <servlet-class>m04.d19.Qbaba.controller.S_InitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>S_InitServlet</servlet-name>
+    <url-pattern>/S_Init</url-pattern>
+  </servlet-mapping>
 </web-app>
-
-

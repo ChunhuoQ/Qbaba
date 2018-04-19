@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.ShangPingMapper">
+  <resultMap id="BaseResultMap" type="entity.ShangPing">
+    <id column="spid" jdbcType="INTEGER" property="spid" />
+    <result column="spname" jdbcType="VARCHAR" property="spname" />
+    <result column="spprice" jdbcType="REAL" property="spprice" />
+    <result column="spdesc" jdbcType="VARCHAR" property="spdesc" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    spid, spname, spprice, spdesc
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="entity.ShangPing">
+    insert into shangping (spid, spname, spprice, 
+      spdesc)
+    values (#{spid,jdbcType=INTEGER}, #{spname,jdbcType=VARCHAR}, #{spprice,jdbcType=REAL}, 
+      #{spdesc,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="entity.ShangPing">
+    insert into shangping
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="spname != null">
+        spname,
+      </if>
+      <if test="spprice != null">
+        spprice,
+      </if>
+      <if test="spdesc != null">
+        spdesc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=INTEGER},
+      </if>
+      <if test="spname != null">
+        #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.ShangPing">
+    update shangping
+    <set>
+      <if test="spname != null">
+        spname = #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        spprice = #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        spdesc = #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.ShangPing">
+    update shangping
+    set spname = #{spname,jdbcType=VARCHAR},
+      spprice = #{spprice,jdbcType=REAL},
+      spdesc = #{spdesc,jdbcType=VARCHAR}
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="entity.ShangPing">
+    <id column="spid" jdbcType="INTEGER" property="spid" />
+    <result column="spname" jdbcType="VARCHAR" property="spname" />
+    <result column="spprice" jdbcType="REAL" property="spprice" />
+    <result column="spdesc" jdbcType="VARCHAR" property="spdesc" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    spid, spname, spprice, spdesc
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="entity.ShangPing">
+    insert into shangping (spid, spname, spprice, 
+      spdesc)
+    values (#{spid,jdbcType=INTEGER}, #{spname,jdbcType=VARCHAR}, #{spprice,jdbcType=REAL}, 
+      #{spdesc,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="entity.ShangPing">
+    insert into shangping
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="spname != null">
+        spname,
+      </if>
+      <if test="spprice != null">
+        spprice,
+      </if>
+      <if test="spdesc != null">
+        spdesc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=INTEGER},
+      </if>
+      <if test="spname != null">
+        #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.ShangPing">
+    update shangping
+    <set>
+      <if test="spname != null">
+        spname = #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        spprice = #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        spdesc = #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.ShangPing">
+    update shangping
+    set spname = #{spname,jdbcType=VARCHAR},
+      spprice = #{spprice,jdbcType=REAL},
+      spdesc = #{spdesc,jdbcType=VARCHAR}
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="entity.ShangPing">
+    <id column="spid" jdbcType="INTEGER" property="spid" />
+    <result column="spname" jdbcType="VARCHAR" property="spname" />
+    <result column="spprice" jdbcType="REAL" property="spprice" />
+    <result column="spdesc" jdbcType="VARCHAR" property="spdesc" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    spid, spname, spprice, spdesc
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="entity.ShangPing">
+    insert into shangping (spid, spname, spprice, 
+      spdesc)
+    values (#{spid,jdbcType=INTEGER}, #{spname,jdbcType=VARCHAR}, #{spprice,jdbcType=REAL}, 
+      #{spdesc,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="entity.ShangPing">
+    insert into shangping
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="spname != null">
+        spname,
+      </if>
+      <if test="spprice != null">
+        spprice,
+      </if>
+      <if test="spdesc != null">
+        spdesc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=INTEGER},
+      </if>
+      <if test="spname != null">
+        #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.ShangPing">
+    update shangping
+    <set>
+      <if test="spname != null">
+        spname = #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        spprice = #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        spdesc = #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.ShangPing">
+    update shangping
+    set spname = #{spname,jdbcType=VARCHAR},
+      spprice = #{spprice,jdbcType=REAL},
+      spdesc = #{spdesc,jdbcType=VARCHAR}
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="entity.ShangPing">
+    <id column="spid" jdbcType="INTEGER" property="spid" />
+    <result column="spname" jdbcType="VARCHAR" property="spname" />
+    <result column="spprice" jdbcType="REAL" property="spprice" />
+    <result column="spdesc" jdbcType="VARCHAR" property="spdesc" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    spid, spname, spprice, spdesc
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="entity.ShangPing">
+    insert into shangping (spid, spname, spprice, 
+      spdesc)
+    values (#{spid,jdbcType=INTEGER}, #{spname,jdbcType=VARCHAR}, #{spprice,jdbcType=REAL}, 
+      #{spdesc,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="entity.ShangPing">
+    insert into shangping
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        spid,
+      </if>
+      <if test="spname != null">
+        spname,
+      </if>
+      <if test="spprice != null">
+        spprice,
+      </if>
+      <if test="spdesc != null">
+        spdesc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spid != null">
+        #{spid,jdbcType=INTEGER},
+      </if>
+      <if test="spname != null">
+        #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.ShangPing">
+    update shangping
+    <set>
+      <if test="spname != null">
+        spname = #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null">
+        spprice = #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null">
+        spdesc = #{spdesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.ShangPing">
+    update shangping
+    set spname = #{spname,jdbcType=VARCHAR},
+      spprice = #{spprice,jdbcType=REAL},
+      spdesc = #{spdesc,jdbcType=VARCHAR}
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+</mapper>
