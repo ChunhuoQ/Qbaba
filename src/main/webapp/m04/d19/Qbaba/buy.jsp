@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
     <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,38 +10,26 @@
 <title>Insert title here</title>
 <link href="css/bootstrap-combined.min.css" rel="stylesheet">
 <link href="css/layoutit.css" rel="stylesheet">
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-	<![endif]-->
-
-	<!-- Fav and touch icons -->
-	<link rel="shortcut icon" href="img/favicon.png">
-	
-	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<![endif]-->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="js/jquery.htmlClean.js"></script>
-<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="ckeditor/config.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 </head>
-<script type="text/javascript">
-$(function (){
-	$("#add").click(function (){
-		
-		var n=$("#add span").html();
-		n++;
-		$("#add span").html(n);
-	})
-	
-})
-</script>
+
+<style>
+.add_s{
+position:relative;
+top:-5px;
+}
+.delete_s{
+position:relative;
+top:-5px;
+}
+#td1{
+text-align:center;
+}
+.txt{
+width:40px;
+text-align:center;
+}
+</style>
 <body>
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -48,7 +38,7 @@ $(function (){
 				
 					<h1>Qbaba’s Shopping</h1>
 					<h3>用户：${userName }！</h3>
-					<h2>这是您的你专属的购物车</h2>
+					<h2>这是你的专属的购物车</h2>
 			</blockquote>
 			<table class="table table-bordered">
 				<thead>
@@ -88,19 +78,19 @@ $(function (){
 						<td>
 							${mp.value.spname }
 						</td>
-						<td>
-							<input type="button" value="+" id="add">
-							<input type="text" value="${mp.value.num }"/></span>
-							<input type="button" value="-" id="delete">
+						<td id="td1">
+							<input type="button" value="+" class="add_s">
+							<input type="text" readonly="true" class="txt"   value="${mp.value.num }"/>
+							<input type="button" value="-" class="delete_s">
 						</td>
 						<td>
-							￥：${mp.value.spprice }
+							￥：<span class="price">${mp.value.spprice }</span>
 						</td>
 						<td>
 							${mp.value.spdesc }
 						</td>
 						<td>
-						￥：${mp.value.num * mp.value.spprice}
+						￥：<span  class='lastprice'><%-- ${mp.value.num * mp.value.spprice} --%></span>
 						</td>
 						<td>
 						<a>购买</a>
@@ -114,5 +104,43 @@ $(function (){
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+function sumprice(){
+	$(".txt").each(function(index,domEle){
+		
+		var number=parseInt($(domEle).val());
+		
+		var price=parseFloat($(".price:eq("+index+")").text());
+		
+		var sum=number*price;
+		$(".lastprice:eq("+index+")").text(sum);
+		
+	});
+}
+$(function(){
+	sumprice()
+ $(".add_s").click(function (even){
+	 
+		 var n=parseInt($(even.target).next().val())+1;
+		 $(even.target).next().val(n);
+		 sumprice();
+		
+		
+	}) 
+	 $(".delete_s").click(function (even){
+		
+		 var n=parseInt($(even.target).prev().val());
+		 if(n>1){
+			 n--;
+		 }else{
+			 alert("这是最小值奥");
+		 }
+		 
+			 $(even.target).prev().val(n);
+			sumprice();
+	})  
+})
+</script>
+
 </body>
 </html>

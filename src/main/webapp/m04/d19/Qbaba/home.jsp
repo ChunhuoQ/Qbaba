@@ -37,6 +37,11 @@ margin-left:0px;
 .span4:nth-of-type(7){
 margin-left:0px;
 }
+h3{
+text-align:center;
+position:relative;
+top:20px;
+}
 </style>
 <body>
 <div class="container-fluid">
@@ -50,6 +55,7 @@ margin-left:0px;
 						</h1>
 					</div>
 				</div>
+				<c:if test="${userName==null }">
 				<div class="span6">
 					<form class="form-horizontal" action="../../../S_login">
 						<div class="control-group">
@@ -73,6 +79,12 @@ margin-left:0px;
 						</div>
 					</form>
 				</div>
+				</c:if>
+				<c:if test="${not empty userName}">
+				<div class="span6">
+				<h3>用户：${userName }</h3>
+				</div>
+				</c:if>
 			</div>
 			
 			<ul class="thumbnails">
