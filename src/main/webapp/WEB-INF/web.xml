@@ -83,4 +83,34 @@
     <servlet-name>BuyServlet</servlet-name>
     <url-pattern>/buy</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjaxServlet</display-name>
+    <servlet-name>AjaxServlet</servlet-name>
+    <servlet-class>m04.d19.Qbaba.controller.AjaxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxServlet</servlet-name>
+    <url-pattern>/Ajax</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CityServlet</display-name>
+    <servlet-name>CityServlet</servlet-name>
+    <servlet-class>m04.d23.Qbaba.controller.CityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityServlet</servlet-name>
+    <url-pattern>/City</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SP_InitServlet</display-name>
+    <servlet-name>SP_InitServlet</servlet-name>
+    <servlet-class>m04.d23.Qbaba.controller.SP_InitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SP_InitServlet</servlet-name>
+    <url-pattern>/SP_init</url-pattern>
+  </servlet-mapping>
 </web-app>

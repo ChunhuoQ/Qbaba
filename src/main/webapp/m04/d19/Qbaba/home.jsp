@@ -18,17 +18,10 @@
 	<!-- Fav and touch icons -->
 	<link rel="shortcut icon" href="img/favicon.png">
 	
-	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="js/jquery.htmlClean.js"></script>
-<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="ckeditor/config.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <style>
 .span4:nth-of-type(4){
@@ -43,6 +36,27 @@ position:relative;
 top:20px;
 }
 </style>
+<script type="text/javascript">
+ $(function(){
+	 $("#uname").blur(function(){
+		var uname=$(this).val();
+		$.ajax({
+			url:"../../../Ajax",
+			type:"GET",
+			data:"uname"+uname,
+			dataType:"json",
+			success:function(message){
+			$("#sp1").html(message);
+			},
+			error:function(){
+				alert("ajax error!");
+			}
+		 });
+	 });
+	 
+	 
+ })
+</script>
 <body>
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -62,13 +76,14 @@ top:20px;
 							
 							 <label class="control-label"  for="inputEmail">用户名</label>
 							<div class="controls">
-								<input name="userName" id="inputEmail" type="text" />
+								<input name="userName" id="uname" type="text" />
+								<span id="sp1"></span>
 							</div>
 						</div>
 						<div class="control-group">
 							 <label class="control-label" for="inputPassword">密码</label>
 							<div class="controls">
-								<input name="password"  id="inputPassword" type="password" />
+								<input name="password"  id="upassword" type="password" />
 							</div>
 						</div>
 						<div class="control-group">

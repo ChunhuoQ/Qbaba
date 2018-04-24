@@ -61,9 +61,7 @@ text-align:center;
 						<th>
 							小计
 						</th>
-						<th>
-							购买
-						</th>
+						
 					</tr>
 				</thead>
 				<tbody>
@@ -92,9 +90,7 @@ text-align:center;
 						<td>
 						￥：<span  class='lastprice'><%-- ${mp.value.num * mp.value.spprice} --%></span>
 						</td>
-						<td>
-						<a>购买</a>
-						</td>
+						
 						
 					</tr>
 					</c:forEach>
@@ -104,6 +100,7 @@ text-align:center;
 		</div>
 	</div>
 </div>
+<iframe src="../../d23/Qbaba/shoppingBuy.jsp" width="100%" marginheight="0" scrolling="no" frameborder="0" height="672px"></iframe>
 <script type="text/javascript">
 function sumprice(){
 	$(".txt").each(function(index,domEle){

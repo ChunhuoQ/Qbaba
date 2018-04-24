@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m04.d23.Qbaba.mapper.ShoppingMapper" >
+  <resultMap id="BaseResultMap" type="entity.Shopping" >
+    <id column="spid" property="spid" jdbcType="INTEGER" />
+    <result column="spname" property="spname" jdbcType="VARCHAR" />
+    <result column="spprice" property="spprice" jdbcType="REAL" />
+    <result column="spdesc" property="spdesc" jdbcType="VARCHAR" />
+    <result column="spimg" property="spimg" jdbcType="VARCHAR" />
+    <result column="spcss" property="spcss" jdbcType="VARCHAR" />
+    <result column="spnum" property="spnum" jdbcType="INTEGER" />
+    <result column="spxj" property="spxj" jdbcType="REAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    spid, spname, spprice, spdesc, spimg, spcss, spnum, spxj
+  </sql>
+  <select id="selectShopingAll" resultType="m04.d23.Qbaba.entity.Shopping">
+  SELECT * FROM shopping;
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shopping
+    where spid = #{spid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shopping
+    where spid = #{spid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="entity.Shopping" >
+    insert into shopping (spid, spname, spprice, 
+      spdesc, spimg, spcss, 
+      spnum, spxj)
+    values (#{spid,jdbcType=INTEGER}, #{spname,jdbcType=VARCHAR}, #{spprice,jdbcType=REAL}, 
+      #{spdesc,jdbcType=VARCHAR}, #{spimg,jdbcType=VARCHAR}, #{spcss,jdbcType=VARCHAR}, 
+      #{spnum,jdbcType=INTEGER}, #{spxj,jdbcType=REAL})
+  </insert>
+  <insert id="insertSelective" parameterType="entity.Shopping" >
+    insert into shopping
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="spid != null" >
+        spid,
+      </if>
+      <if test="spname != null" >
+        spname,
+      </if>
+      <if test="spprice != null" >
+        spprice,
+      </if>
+      <if test="spdesc != null" >
+        spdesc,
+      </if>
+      <if test="spimg != null" >
+        spimg,
+      </if>
+      <if test="spcss != null" >
+        spcss,
+      </if>
+      <if test="spnum != null" >
+        spnum,
+      </if>
+      <if test="spxj != null" >
+        spxj,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="spid != null" >
+        #{spid,jdbcType=INTEGER},
+      </if>
+      <if test="spname != null" >
+        #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null" >
+        #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null" >
+        #{spdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="spimg != null" >
+        #{spimg,jdbcType=VARCHAR},
+      </if>
+      <if test="spcss != null" >
+        #{spcss,jdbcType=VARCHAR},
+      </if>
+      <if test="spnum != null" >
+        #{spnum,jdbcType=INTEGER},
+      </if>
+      <if test="spxj != null" >
+        #{spxj,jdbcType=REAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.Shopping" >
+    update shopping
+    <set >
+      <if test="spname != null" >
+        spname = #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null" >
+        spprice = #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null" >
+        spdesc = #{spdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="spimg != null" >
+        spimg = #{spimg,jdbcType=VARCHAR},
+      </if>
+      <if test="spcss != null" >
+        spcss = #{spcss,jdbcType=VARCHAR},
+      </if>
+      <if test="spnum != null" >
+        spnum = #{spnum,jdbcType=INTEGER},
+      </if>
+      <if test="spxj != null" >
+        spxj = #{spxj,jdbcType=REAL},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.Shopping" >
+    update shopping
+    set spname = #{spname,jdbcType=VARCHAR},
+      spprice = #{spprice,jdbcType=REAL},
+      spdesc = #{spdesc,jdbcType=VARCHAR},
+      spimg = #{spimg,jdbcType=VARCHAR},
+      spcss = #{spcss,jdbcType=VARCHAR},
+      spnum = #{spnum,jdbcType=INTEGER},
+      spxj = #{spxj,jdbcType=REAL}
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+</mapper>

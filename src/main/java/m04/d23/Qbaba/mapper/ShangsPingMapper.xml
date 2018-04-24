@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m04.d23.Qbaba.mapper.ShangsPingMapper" >
+  <resultMap id="BaseResultMap" type="entity.ShangsPing" >
+    <id column="spid" property="spid" jdbcType="INTEGER" />
+    <result column="spname" property="spname" jdbcType="VARCHAR" />
+    <result column="spprice" property="spprice" jdbcType="REAL" />
+    <result column="spdesc" property="spdesc" jdbcType="VARCHAR" />
+    <result column="spimg" property="spimg" jdbcType="VARCHAR" />
+    <result column="spcss" property="spcss" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    spid, spname, spprice, spdesc, spimg, spcss
+  </sql>
+  <select id="selectSPAll" resultType="m04.d23.Qbaba.entity.ShangsPing">
+  select * from shopping;
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shangping
+    where spid = #{spid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="entity.ShangsPing" >
+    insert into shangping (spid, spname, spprice, 
+      spdesc, spimg, spcss
+      )
+    values (#{spid,jdbcType=INTEGER}, #{spname,jdbcType=VARCHAR}, #{spprice,jdbcType=REAL}, 
+      #{spdesc,jdbcType=VARCHAR}, #{spimg,jdbcType=VARCHAR}, #{spcss,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="entity.ShangsPing" >
+    insert into shangping
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="spid != null" >
+        spid,
+      </if>
+      <if test="spname != null" >
+        spname,
+      </if>
+      <if test="spprice != null" >
+        spprice,
+      </if>
+      <if test="spdesc != null" >
+        spdesc,
+      </if>
+      <if test="spimg != null" >
+        spimg,
+      </if>
+      <if test="spcss != null" >
+        spcss,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="spid != null" >
+        #{spid,jdbcType=INTEGER},
+      </if>
+      <if test="spname != null" >
+        #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null" >
+        #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null" >
+        #{spdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="spimg != null" >
+        #{spimg,jdbcType=VARCHAR},
+      </if>
+      <if test="spcss != null" >
+        #{spcss,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.ShangsPing" >
+    update shangping
+    <set >
+      <if test="spname != null" >
+        spname = #{spname,jdbcType=VARCHAR},
+      </if>
+      <if test="spprice != null" >
+        spprice = #{spprice,jdbcType=REAL},
+      </if>
+      <if test="spdesc != null" >
+        spdesc = #{spdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="spimg != null" >
+        spimg = #{spimg,jdbcType=VARCHAR},
+      </if>
+      <if test="spcss != null" >
+        spcss = #{spcss,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.ShangsPing" >
+    update shangping
+    set spname = #{spname,jdbcType=VARCHAR},
+      spprice = #{spprice,jdbcType=REAL},
+      spdesc = #{spdesc,jdbcType=VARCHAR},
+      spimg = #{spimg,jdbcType=VARCHAR},
+      spcss = #{spcss,jdbcType=VARCHAR}
+    where spid = #{spid,jdbcType=INTEGER}
+  </update>
+</mapper>
