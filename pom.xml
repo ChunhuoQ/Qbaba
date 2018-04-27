@@ -131,7 +131,6 @@
 			<version>5</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.karaf.assemblies.features</groupId>
 			<artifactId>standard</artifactId>
