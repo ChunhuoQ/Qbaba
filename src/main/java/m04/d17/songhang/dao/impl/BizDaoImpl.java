@@ -11,6 +11,15 @@ package m04.d17.songhang.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import m04.d17.songhang.dao.BaseDao;
+import m04.d17.songhang.dao.BizDao;
+import m04.d17.songhang.entity.Message;
+import m04.d17.songhang.entity.News;
+import m04.d17.songhang.entity.Page;
+import m04.d17.songhang.entity.Product;
+import m04.d17.songhang.entity.Revert;
+import m04.d17.songhang.entity.User;
+
 /**
  * Description: <br/>
  * Date: 2018年4月12日 下午7:37:47 <br/>
