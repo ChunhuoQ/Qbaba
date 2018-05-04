@@ -16,7 +16,7 @@
         </commentGenerator>
         <!-- jdbc连接配置 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://localhost:3306/pinhong" userId="root" 
+            connectionURL="jdbc:mysql://localhost:3306/dt59shopping" userId="root" 
             password="root">
         </jdbcConnection>
         <!-- 数字字段是否强制使用BigDecimal类 -->
@@ -26,19 +26,19 @@
       
         <javaModelGenerator
          targetPackage="entity"
-            targetProject="E:\git\Qbaba\src\main\java\m04\d12\Qbaba">
+            targetProject="E:\git\Qbaba\src\main\java\m04\d23\Qbaba">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         
         <sqlMapGenerator targetPackage="mapper"
-            targetProject="E:\git\Qbaba\src\main\java\m04\d12\Qbaba">
+            targetProject="E:\git\Qbaba\src\main\java\m04\d23\Qbaba">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
        
         <javaClientGenerator type="XMLMAPPER"
             targetPackage="mapper" 
-            targetProject="E:\git\Qbaba\src\main\java\m04\d12\Qbaba">
+            targetProject="E:\git\Qbaba\src\main\java\m04\d23\Qbaba">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- 
@@ -46,21 +46,22 @@
             tableName：表名
             domainObjectName：指定类名
         -->
-        <table tableName="message" domainObjectName="Message" enableCountByExample="false" enableUpdateByExample="false"  
-            enableDeleteByExample="false" enableSelectByExample="false"  
-            selectByExampleQueryId="false"></table>
-            <table tableName="news" domainObjectName="News" enableCountByExample="false" enableUpdateByExample="false"  
-            enableDeleteByExample="false" enableSelectByExample="false"  
-            selectByExampleQueryId="false"></table>
-            <table tableName="product" domainObjectName="Product" enableCountByExample="false" enableUpdateByExample="false"  
-            enableDeleteByExample="false" enableSelectByExample="false"  
-            selectByExampleQueryId="false"></table>
-            <table tableName="revert" domainObjectName="Revert" enableCountByExample="false" enableUpdateByExample="false"  
+        <table tableName="shopping" domainObjectName="Shopping" enableCountByExample="false" enableUpdateByExample="false"  
             enableDeleteByExample="false" enableSelectByExample="false"  
             selectByExampleQueryId="false"></table>
             <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"  
             enableDeleteByExample="false" enableSelectByExample="false"  
             selectByExampleQueryId="false"></table>
+             <table tableName="city_info" domainObjectName="City_info" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+            <table tableName="province_info" domainObjectName="Province_info" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+            <table tableName="shangping" domainObjectName="ShangsPing" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+           
     </context>
 </generatorConfiguration>
 

@@ -6,9 +6,10 @@
  * Copyright (c) 2018, bluemobi All Rights Reserved.
  */
 
-package cn.dt59.service;
+package m04.d17.songhang.service;
 
-import cn.dt59.dao.BizDao;
+import m04.d17.songhang.dao.BizDao;
+
 
 /**
  * Description: <br/>

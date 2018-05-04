@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m04.d19.Qbaba.impl.UserDaoImpl">
+		<select id="selectUserAll" resultType="m04.d12.Qbaba.entity.User">
+	SELECT * FROM user;
+	</select>
+	
+	 <select id="getviliteUser" parameterType="m04.d12.Qbaba.entity.User" resultType="java.lang.Integer"> 
+     select COUNT(1)  from user WHERE uname=#{uname} AND upwd=#{upwd};
+</select>  
+</mapper>

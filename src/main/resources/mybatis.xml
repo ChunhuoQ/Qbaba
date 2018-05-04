@@ -8,13 +8,17 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url" value="jdbc:mysql:///pinhong" />
+				<property name="url" value="jdbc:mysql:///dt59shopping" />
 				<property name="username" value="root" />
 				<property name="password" value="root" />
 			</dataSource>
 		</environment>
 	</environments>
 	<mappers>
+	<mapper resource="m04/d23/Qbaba/mapper/City_infoMapper.xml"/>
+	<mapper resource="m04/d23/Qbaba/mapper/Province_infoMapper.xml"/>
+	<mapper resource="m04/d19/Qbaba/mapper/ShangPingMapper.xml"/>
+	<mapper resource="m04/d19/Qbaba/mapper/UserMapper.xml"/>
 		<mapper resource="m04/d12/Qbaba/mapper/NewsMapper.xml" />
 		<mapper resource="m04/d12/Qbaba/mapper/ProductMapper.xml"/>
 		<mapper resource="m04/d12/Qbaba/mapper/UserMapper.xml"/>

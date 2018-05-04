@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m04.d23.Qbaba.impl.CityImpl" >
+  <select id="selectCityAll" resultType="m04.d23.Qbaba.entity.City_info">
+  select * from city_info;
+  </select>
+  <select id="selectCityById" parameterType="Integer" resultType="m04.d23.Qbaba.entity.City_info">
+  select namecn from city_info where provincecode=#{provincecode};
+  </select>
+</mapper>

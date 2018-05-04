@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m04.d19.Qbaba.impl.SpDaoImpl">
+	<!-- resultType 返回值类型 -->
+	<select id="selectPsAll" resultType="m04.d19.Qbaba.entity.ShangPing">
+	SELECT * FROM shangping;
+	</select>
+	<select id="selectPsById" parameterType="Integer" resultType="m04.d19.Qbaba.entity.ShangPing">
+	SELECT * FROM shangping WHERE spid=#{id};
+	</select>
+	<!-- <update id="updatePs" parameterType="Integer">
+	UPDATE shangping SET rcount=rcount+1 WHERE MID=#{id};
+	</update> -->
+</mapper>
