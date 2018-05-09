@@ -14,7 +14,6 @@
 			 lazy-init:true ：使用时才创建 节省内寸资源
 			 
 		 -->
-		 
 		<bean id="User" class="m04.d11.entity.User" scope="singleton"  lazy-init="false">
 		<property name="newsId" value="2">
 		</property>
