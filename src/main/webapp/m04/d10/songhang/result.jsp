@@ -2,7 +2,6 @@
 <%@page import="m04.d10.songhang.entity.Page"%>
 <%@page import="m04.d10.songhang.dao.impl.BizDaoImpl"%>
 <%@page import="m04.d10.songhang.entity.UserInfo"%>
-<%@page import="com.jspsmart.upload.SmartUpload"%>
 
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
@@ -61,12 +60,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		response.sendRedirect("index.jsp");
     	}
      %>
-     <%
-     SmartUpload su=new SmartUpload();
-     su.initialize(super.getServletConfig(), request, response);
-     String one="jpg,png";
-     String two="exe,rar,jsp";
      
-     %>
   </body>
 </html>
