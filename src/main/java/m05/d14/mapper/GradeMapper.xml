@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d14.mapper.GradeMapper" >
+
+  <resultMap id="BaseResultMap" type="gg" >
+    <result column="GID" property="gid" jdbcType="DECIMAL" />
+    <result column="GCLASS" property="gclass" jdbcType="VARCHAR" />
+    <!-- 定义集合标签 一对多 -->
+    <collection property="stus"  ofType="stu">
+    			<result property="sid" javaType="Short" column="sid"/>
+    			<result property="sname" javaType="String" column="sname"/>
+    			<result property="sage" javaType="Short" column="sage"/>
+    			<result property="scard" javaType="String" column="scard"/>
+    			<result property="sgid" javaType="Short" column="sgid"/>
+    </collection>
+  </resultMap>
+  
+  
+  <select id="selectAllClass" resultMap="BaseResultMap">
+  select g.gclass,s.sname,s.sage,s.scard from grade g left join stu s on g.gid=s.sgid order by g.gid desc
+  </select>
+  
+  <insert id="insert" parameterType="gg" >
+    insert into GRADE (GID, GCLASS)
+    values (#{gid,jdbcType=DECIMAL}, #{gclass,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="gg" >
+    insert into GRADE
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="gid != null" >
+        GID,
+      </if>
+      <if test="gclass != null" >
+        GCLASS,
+      </if>
+    </trim>
+    
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="gid != null" >
+        #{gid,jdbcType=DECIMAL},
+      </if>
+      <if test="gclass != null" >
+        #{gclass,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

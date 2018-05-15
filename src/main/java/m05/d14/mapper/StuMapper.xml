@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m05.d14.mapper.StuMapper">
+	<select id="selectDouble" resultType="stu">
+		select a.sid,a.sname,a.sage,b.gclass from stu a,grade b where a.sgid=b.gid
+	</select>
+	<select id="selectAllStu" resultType="stu">
+		select * from stu
+	</select>
+	<select id="selectStuByLike" parameterType="string" resultType="stu">
+		select a.sid, a.sname, a.sage, b.gclass
+		from stu a, grade b
+		where a.sgid = b.gid
+		and b.gclass like '%${value}%'
+	</select>
+	<!-- <insert id="insertStu" parameterType="m05.d14.opjo.Stu"> insert into 
+		stu(sid,sname,sage,scard,sgid) values(#{sid},#{sname},#{sage},#{scard},#{sgid}) 
+		</insert> -->
+
+	<insert id="insertStu" parameterType="stu">
+		insert into STU
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="sid != null">
+				SID,
+			</if>
+			<if test="sname != null">
+				SNAME,
+			</if>
+			<if test="sage != null">
+				SAGE,
+			</if>
+			<if test="scard != null">
+				SCARD,
+			</if>
+			<if test="sgid != null">
+				SGID,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="sid != null">
+				#{sid,jdbcType=DECIMAL},
+			</if>
+			<if test="sname != null">
+				#{sname,jdbcType=VARCHAR},
+			</if>
+			<if test="sage != null">
+				#{sage,jdbcType=DECIMAL},
+			</if>
+			<if test="scard != null">
+				#{scard,jdbcType=VARCHAR},
+			</if>
+			<if test="sgid != null">
+				#{sgid,jdbcType=DECIMAL},
+			</if>
+		</trim>
+	</insert>
+</mapper>
+
+
