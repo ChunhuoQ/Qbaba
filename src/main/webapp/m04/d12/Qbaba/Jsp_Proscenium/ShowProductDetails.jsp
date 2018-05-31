@@ -6,7 +6,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="../css/jPages.css">
+<link rel="stylesheet" href="css/jPages.css">
 <script src="../js/jquery-1.8.2.min.js"></script>
 <script src="../js/jPages.js"></script>
 <title>My JSP 'ShowProductDetails.jsp' starting page</title>

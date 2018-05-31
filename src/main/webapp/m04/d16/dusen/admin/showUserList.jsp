@@ -6,7 +6,7 @@
 		<meta http-equiv="Content-Language" content="zh-cn">
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 		<title>管理人员-管理</title>
-		<link rel="stylesheet" type="text/css" href="../css/style_admin.css">
+		<link rel="stylesheet" type="text/css" href="css/style_admin.css">
 </head>
 <body>
 		<table cellspacing="1" cellpadding="4" width="100%" class="tableborder" id="table3" align="center">

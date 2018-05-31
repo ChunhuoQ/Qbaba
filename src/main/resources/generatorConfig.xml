@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
     <!-- jdbc连接库jar包路径 -->
-    <classPathEntry location="E:\git\Qbaba\src\main\webapp\WEB-INF\lib\ojdbc14.jar" />
+    <classPathEntry location="E:\maven\repository\com\github\noraui\ojdbc7\12.1.0.2\ojdbc7-12.1.0.2.jar" />
     <!-- 
         eclipse tool配置
         Location = E:\Java\apache-maven-3.2.3\bin\mvn.bat
@@ -24,20 +24,20 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
       
-        <javaModelGenerator
-         targetPackage="m05.d04.opjo"
+         <javaModelGenerator
+         targetPackage="m05.d28.com.dt59.ojpo"
             targetProject="E:\git\Qbaba\src\main\java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
-        </javaModelGenerator>
+        </javaModelGenerator> 
         
-         <sqlMapGenerator targetPackage="m05.d04.mapper"
+         <sqlMapGenerator targetPackage="m05.d28.com.dt59.mapper"
             targetProject="E:\git\Qbaba\src\main\java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
        
         <javaClientGenerator type="XMLMAPPER"
-            targetPackage="m05.d04.mapper" 
+            targetPackage="m05.d28.com.dt59.mapper" 
             targetProject="E:\git\Qbaba\src\main\java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator> 
@@ -46,11 +46,18 @@
             tableName：表名
             domainObjectName：指定类名
         -->
-        <table tableName="stu" domainObjectName="Stu" enableCountByExample="false" enableUpdateByExample="false"  
+        <table tableName="auction" domainObjectName="Auction" enableCountByExample="false" enableUpdateByExample="false"  
             enableDeleteByExample="false" enableSelectByExample="false"  
             selectByExampleQueryId="false"></table>
-           
-           
+        <table tableName="AuctionUser" domainObjectName="AuctionUser" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table>
+        <table tableName="AuctionRecord" domainObjectName="AuctionRecord" enableCountByExample="false" enableUpdateByExample="false"  
+            enableDeleteByExample="false" enableSelectByExample="false"  
+            selectByExampleQueryId="false"></table> 
+       
+                
+            
     </context>
 </generatorConfiguration>
 

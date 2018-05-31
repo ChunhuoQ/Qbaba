@@ -15,6 +15,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where a.sgid = b.gid
 		and b.gclass like '%${value}%'
 	</select>
+	
+	<select id="selectAllStu2" resultType="map">
+		select a.sid,a.sname,a.sage,b.gclass from stu a,grade b where a.sgid=b.gid
+	</select>
+	
 	<!-- <insert id="insertStu" parameterType="m05.d14.opjo.Stu"> insert into 
 		stu(sid,sname,sage,scard,sgid) values(#{sid},#{sname},#{sage},#{scard},#{sgid}) 
 		</insert> -->
@@ -56,6 +61,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			</if>
 		</trim>
 	</insert>
+	
 </mapper>
 
 

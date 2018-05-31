@@ -7,6 +7,9 @@
  */
 
 package m04.d11.test;
+
+
+import m04.d11.dao.impl.AuthorService;
 import m04.d11.entity.User;
 
 import org.junit.Test;
@@ -21,15 +24,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @see
  */
 public class SpringTest {
-    /*@Test
+  @Test
     public void test1(){
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-        User ur=(User)context.getBean("User");
+        User ur=(User)context.getBean("user");
         System.out.println(ur);
         //    结果m04.d11.entity.User@556bded0
-        User ur1=(User)context.getBean("User");
-        System.out.println(ur1);
+        User ur1=(User)context.getBean("user");
+        ur.setNewsTitle("王二麻子");
+        System.out.print(ur1);
+     
         //懒式测试 结果m04.d11.entity.User@556bded0
-    }*/
+    }
+ @Test
+ public void test2(){
+     ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+     AuthorService asl=(AuthorService)context.getBean("authorService");
+     asl.addAu();
+ }
+  
 }
 

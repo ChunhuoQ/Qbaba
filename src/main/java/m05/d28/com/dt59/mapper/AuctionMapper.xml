@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d28.com.dt59.mapper.AuctionMapper" >
+  <resultMap id="BaseResultMap" type="m05.d28.com.dt59.ojpo.Auction" >
+    <id column="AUCTIONID" property="auctionid" jdbcType="DECIMAL" />
+    <result column="AUCTIONNAME" property="auctionname" jdbcType="NVARCHAR" />
+    <result column="AUCTIONSTARTPRICE" property="auctionstartprice" jdbcType="DOUBLE" />
+    <result column="AUCTIONUPSET" property="auctionupset" jdbcType="DOUBLE" />
+    <result column="AUCTIONSTARTTIME" property="auctionstarttime" jdbcType="DATE"/>
+    <result column="AUCTIONENDTIME" property="auctionendtime"  jdbcType="DATE"/>
+    <result column="AUCTIONPICTYPE" property="auctionpictype" jdbcType="NVARCHAR" />
+    <result column="AUCTIONDESC" property="auctiondesc" jdbcType="NVARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="m05.d28.com.dt59.ojpo.Auction" extends="BaseResultMap" >
+    <id property="auctionid" column="auctionid" />
+    <result column="AUCTIONPIC" property="auctionpic" jdbcType="BLOB" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    AUCTIONID, AUCTIONNAME, AUCTIONSTARTPRICE, AUCTIONUPSET, AUCTIONSTARTTIME, AUCTIONENDTIME, 
+    AUCTIONPICTYPE, AUCTIONDESC
+  </sql>
+  <sql id="Blob_Column_List" >
+    AUCTIONPIC
+  </sql>
+  
+  <select  id="selectByDynamic" resultType="m05.d28.com.dt59.ojpo.Auction" parameterType="m05.d28.com.dt59.ojpo.Auction">
+  	select * from auction
+  	<trim prefix = "WHERE" prefixOverrides="AND|OR">
+  		<if test="auctionname != null">
+  			auctionname like #{auctionname}
+  		</if>
+  		<if test="auctiondesc != null">
+  			AND auctiondesc like #{auctiondesc}
+  		</if>
+  		<if test="auctionstarttime != ''">
+  			AND auctionstarttime &gt;= to_date(#{auctionstarttime},'yyyy-mm-dd hh24:mi:ss')
+  		</if>
+  		<if test="auctionendtime != ''">
+  			AND auctionendtime &lt;= to_date(#{auctionendtime},'yyyy-mm-dd hh24:mi:ss')
+  		</if>
+  		<if test="auctionstartprice != null">
+  			AND auctionstartprice &lt;=  #{auctionstartprice,jdbcType=DECIMAL}
+  		</if>
+  	</trim>
+  </select>
+  <select id="selectAuctionAll" resultType="m05.d28.com.dt59.ojpo.Auction">
+  	select * from auction
+  </select>
+  
+  <select id="selectAuctionById" resultType="m05.d28.com.dt59.ojpo.Auction" parameterType="Integer">
+  	select * from auction where AUCTIONID=#{auction}
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from AUCTION
+    where AUCTIONID = #{auctionid,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from AUCTION
+    where AUCTIONID = #{auctionid,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="m05.d28.com.dt59.ojpo.Auction" >
+    insert into AUCTION (AUCTIONID, AUCTIONNAME, AUCTIONSTARTPRICE, 
+      AUCTIONUPSET, AUCTIONSTARTTIME, AUCTIONENDTIME, 
+      AUCTIONPICTYPE, AUCTIONDESC, AUCTIONPIC
+      )
+    values (#{auctionid,jdbcType=DECIMAL}, #{auctionname,jdbcType=NVARCHAR}, #{auctionstartprice,jdbcType=DECIMAL}, 
+      #{auctionupset,jdbcType=DECIMAL}, #{auctionstarttime,jdbcType=TIMESTAMP}, #{auctionendtime,jdbcType=TIMESTAMP}, 
+      #{auctionpictype,jdbcType=NVARCHAR}, #{auctiondesc,jdbcType=NVARCHAR}, #{auctionpic,jdbcType=BLOB}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="m05.d28.com.dt59.ojpo.Auction" >
+    insert into AUCTION
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="auctionid != null" >
+        AUCTIONID,
+      </if>
+      <if test="auctionname != null" >
+        AUCTIONNAME,
+      </if>
+      <if test="auctionstartprice != null" >
+        AUCTIONSTARTPRICE,
+      </if>
+      <if test="auctionupset != null" >
+        AUCTIONUPSET,
+      </if>
+      <if test="auctionstarttime != null" >
+        AUCTIONSTARTTIME,
+      </if>
+      <if test="auctionendtime != null" >
+        AUCTIONENDTIME,
+      </if>
+      <if test="auctionpictype != null" >
+        AUCTIONPICTYPE,
+      </if>
+      <if test="auctiondesc != null" >
+        AUCTIONDESC,
+      </if>
+      <if test="auctionpic != null" >
+        AUCTIONPIC,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="auctionid != null" >
+        #{auctionid,jdbcType=DECIMAL},
+      </if>
+      <if test="auctionname != null" >
+        #{auctionname,jdbcType=NVARCHAR},
+      </if>
+      <if test="auctionstartprice != null" >
+        #{auctionstartprice,jdbcType=DECIMAL},
+      </if>
+      <if test="auctionupset != null" >
+        #{auctionupset,jdbcType=DECIMAL},
+      </if>
+      <if test="auctionstarttime != null" >
+        #{auctionstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auctionendtime != null" >
+        #{auctionendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auctionpictype != null" >
+        #{auctionpictype,jdbcType=NVARCHAR},
+      </if>
+      <if test="auctiondesc != null" >
+        #{auctiondesc,jdbcType=NVARCHAR},
+      </if>
+      <if test="auctionpic != null" >
+        #{auctionpic,jdbcType=BLOB},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m05.d28.com.dt59.ojpo.Auction" >
+    update AUCTION
+    <set >
+      <if test="auctionname!=null" >
+        AUCTIONNAME = #{auctionname,jdbcType=NVARCHAR},
+      </if>
+      <if test="auctionstartprice!=null" >
+        AUCTIONSTARTPRICE = #{auctionstartprice,jdbcType=DECIMAL},
+      </if>
+      <if test="auctionupset!=null" >
+        AUCTIONUPSET = #{auctionupset,jdbcType=DECIMAL},
+      </if>
+      <if test="auctionstarttime!=null" >
+        AUCTIONSTARTTIME = #{auctionstarttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auctionendtime!=null" >
+        AUCTIONENDTIME = #{auctionendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auctionpictype!=null" >
+        AUCTIONPICTYPE = #{auctionpictype,jdbcType=NVARCHAR},
+      </if>
+      <if test="auctiondesc != null" >
+        AUCTIONDESC = #{auctiondesc,jdbcType=NVARCHAR},
+      </if>
+      <if test="auctionpic != null" >
+        AUCTIONPIC = #{auctionpic,jdbcType=BLOB},
+      </if>
+    </set>
+    where AUCTIONID = #{auctionid,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="m05.d28.com.dt59.ojpo.Auction" >
+    update AUCTION
+    set AUCTIONNAME = #{auctionname,jdbcType=NVARCHAR},
+      AUCTIONSTARTPRICE = #{auctionstartprice,jdbcType=DECIMAL},
+      AUCTIONUPSET = #{auctionupset,jdbcType=DECIMAL},
+      AUCTIONSTARTTIME = #{auctionstarttime,jdbcType=TIMESTAMP},
+      AUCTIONENDTIME = #{auctionendtime,jdbcType=TIMESTAMP},
+      AUCTIONPICTYPE = #{auctionpictype,jdbcType=NVARCHAR},
+      AUCTIONDESC = #{auctiondesc,jdbcType=NVARCHAR},
+      AUCTIONPIC = #{auctionpic,jdbcType=BLOB}
+    where AUCTIONID = #{auctionid,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m05.d28.com.dt59.ojpo.Auction" >
+    update AUCTION
+    set AUCTIONNAME = #{auctionname,jdbcType=NVARCHAR},
+      AUCTIONSTARTPRICE = #{auctionstartprice,jdbcType=DECIMAL},
+      AUCTIONUPSET = #{auctionupset,jdbcType=DECIMAL},
+      AUCTIONSTARTTIME = #{auctionstarttime,jdbcType=TIMESTAMP},
+      AUCTIONENDTIME = #{auctionendtime,jdbcType=TIMESTAMP},
+      AUCTIONPICTYPE = #{auctionpictype,jdbcType=NVARCHAR},
+      AUCTIONDESC = #{auctiondesc,jdbcType=NVARCHAR}
+    where AUCTIONID = #{auctionid,jdbcType=DECIMAL}
+  </update>
+</mapper>

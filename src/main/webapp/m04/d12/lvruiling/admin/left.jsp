@@ -39,7 +39,7 @@ return true;
 window.onerror = killErrors;
 </script>
 
-		<link rel="stylesheet" type="text/css" href="../css/style_admin.css">
+		<link rel="stylesheet" type="text/css" href="css/style_admin.css">
 		<base target="main">
 	</head>
 

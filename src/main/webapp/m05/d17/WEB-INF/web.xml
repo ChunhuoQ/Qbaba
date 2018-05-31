@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Demo_dt59_mybatisCh03_shopping_01</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.dt59.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BillServlet</display-name>
+    <servlet-name>BillServlet</servlet-name>
+    <servlet-class>com.dt59.controller.BillServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BillServlet</servlet-name>
+    <url-pattern>/bill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>elBill</display-name>
+    <servlet-name>elBill</servlet-name>
+    <servlet-class>com.dt59.controller.elBill</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>elBill</servlet-name>
+    <url-pattern>/elBill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DelBillServlet</display-name>
+    <servlet-name>DelBillServlet</servlet-name>
+    <servlet-class>com.dt59.controller.DelBillServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelBillServlet</servlet-name>
+    <url-pattern>/delBill</url-pattern>
+  </servlet-mapping>
+</web-app>

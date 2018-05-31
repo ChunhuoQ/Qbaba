@@ -9,6 +9,7 @@
 package m05.d14.test;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -51,7 +52,11 @@ public class Test_Junit extends MyBatisOpen{
 public  void show1(){
     StuMapper stu = session.getMapper(StuMapper.class);
     GradeMapper gd= session.getMapper(GradeMapper.class);
+    
+    List<HashMap<String,Object>> ls= stu.selectAllStu2();
+    System.out.println(ls);
     List<Grade> list= gd.selectAllClass();
+       
     System.out.println("班级\t学生姓名\t年龄\t学号");
     for (Grade grade : list) {
         /*System.out.println(grade.getStus());*/

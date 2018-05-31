@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d28.com.dt59.mapper.AuctionUserMapper" >
+  <resultMap id="BaseResultMap" type="m05.d28.com.dt59.ojpo.AuctionUser" >
+    <id column="USERID" property="userid" jdbcType="DECIMAL" />
+    <result column="USERNAME" property="username" jdbcType="NVARCHAR" />
+    <result column="USERPASSWORD" property="userpassword" jdbcType="NVARCHAR" />
+    <result column="USERCARDNO" property="usercardno" jdbcType="NVARCHAR" />
+    <result column="USERTEL" property="usertel" jdbcType="NVARCHAR" />
+    <result column="USERADDRESS" property="useraddress" jdbcType="NVARCHAR" />
+    <result column="USERPOSTNUMBER" property="userpostnumber" jdbcType="NVARCHAR" />
+    <result column="USERISADMIN" property="userisadmin" jdbcType="DECIMAL" />
+    <result column="USERQUESTION" property="userquestion" jdbcType="NVARCHAR" />
+    <result column="USERANSWER" property="useranswer" jdbcType="NVARCHAR" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    USERID, USERNAME, USERPASSWORD, USERCARDNO, USERTEL, USERADDRESS, USERPOSTNUMBER, 
+    USERISADMIN, USERQUESTION, USERANSWER
+  </sql>
+  
+  <select id="selectByUserAndPwd" resultType="Integer" parameterType="m05.d28.com.dt59.ojpo.AuctionUser">
+  	select count(1) from AUCTIONUSER where username=#{username} and userpassword=#{userpassword}
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from AUCTIONUSER
+    where USERID = #{userid,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from AUCTIONUSER
+    where USERID = #{userid,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="m05.d28.com.dt59.ojpo.AuctionUser" >
+    insert into AUCTIONUSER (USERID, USERNAME, USERPASSWORD, 
+      USERCARDNO, USERTEL, USERADDRESS, 
+      USERPOSTNUMBER, USERISADMIN, USERQUESTION, 
+      USERANSWER)
+    values (#{userid,jdbcType=DECIMAL}, #{username,jdbcType=NVARCHAR}, #{userpassword,jdbcType=NVARCHAR}, 
+      #{usercardno,jdbcType=NVARCHAR}, #{usertel,jdbcType=NVARCHAR}, #{useraddress,jdbcType=NVARCHAR}, 
+      #{userpostnumber,jdbcType=NVARCHAR}, #{userisadmin,jdbcType=DECIMAL}, #{userquestion,jdbcType=NVARCHAR}, 
+      #{useranswer,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="m05.d28.com.dt59.ojpo.AuctionUser" >
+    insert into AUCTIONUSER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        USERID,
+      </if>
+      <if test="username != null" >
+        USERNAME,
+      </if>
+      <if test="userpassword != null" >
+        USERPASSWORD,
+      </if>
+      <if test="usercardno != null" >
+        USERCARDNO,
+      </if>
+      <if test="usertel != null" >
+        USERTEL,
+      </if>
+      <if test="useraddress != null" >
+        USERADDRESS,
+      </if>
+      <if test="userpostnumber != null" >
+        USERPOSTNUMBER,
+      </if>
+      <if test="userisadmin != null" >
+        USERISADMIN,
+      </if>
+      <if test="userquestion != null" >
+        USERQUESTION,
+      </if>
+      <if test="useranswer != null" >
+        USERANSWER,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=DECIMAL},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=NVARCHAR},
+      </if>
+      <if test="userpassword != null" >
+        #{userpassword,jdbcType=NVARCHAR},
+      </if>
+      <if test="usercardno != null" >
+        #{usercardno,jdbcType=NVARCHAR},
+      </if>
+      <if test="usertel != null" >
+        #{usertel,jdbcType=NVARCHAR},
+      </if>
+      <if test="useraddress != null" >
+        #{useraddress,jdbcType=NVARCHAR},
+      </if>
+      <if test="userpostnumber != null" >
+        #{userpostnumber,jdbcType=NVARCHAR},
+      </if>
+      <if test="userisadmin != null" >
+        #{userisadmin,jdbcType=DECIMAL},
+      </if>
+      <if test="userquestion != null" >
+        #{userquestion,jdbcType=NVARCHAR},
+      </if>
+      <if test="useranswer != null" >
+        #{useranswer,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m05.d28.com.dt59.ojpo.AuctionUser" >
+    update AUCTIONUSER
+    <set >
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=NVARCHAR},
+      </if>
+      <if test="userpassword != null" >
+        USERPASSWORD = #{userpassword,jdbcType=NVARCHAR},
+      </if>
+      <if test="usercardno != null" >
+        USERCARDNO = #{usercardno,jdbcType=NVARCHAR},
+      </if>
+      <if test="usertel != null" >
+        USERTEL = #{usertel,jdbcType=NVARCHAR},
+      </if>
+      <if test="useraddress != null" >
+        USERADDRESS = #{useraddress,jdbcType=NVARCHAR},
+      </if>
+      <if test="userpostnumber != null" >
+        USERPOSTNUMBER = #{userpostnumber,jdbcType=NVARCHAR},
+      </if>
+      <if test="userisadmin != null" >
+        USERISADMIN = #{userisadmin,jdbcType=DECIMAL},
+      </if>
+      <if test="userquestion != null" >
+        USERQUESTION = #{userquestion,jdbcType=NVARCHAR},
+      </if>
+      <if test="useranswer != null" >
+        USERANSWER = #{useranswer,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where USERID = #{userid,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m05.d28.com.dt59.ojpo.AuctionUser" >
+    update AUCTIONUSER
+    set USERNAME = #{username,jdbcType=NVARCHAR},
+      USERPASSWORD = #{userpassword,jdbcType=NVARCHAR},
+      USERCARDNO = #{usercardno,jdbcType=NVARCHAR},
+      USERTEL = #{usertel,jdbcType=NVARCHAR},
+      USERADDRESS = #{useraddress,jdbcType=NVARCHAR},
+      USERPOSTNUMBER = #{userpostnumber,jdbcType=NVARCHAR},
+      USERISADMIN = #{userisadmin,jdbcType=DECIMAL},
+      USERQUESTION = #{userquestion,jdbcType=NVARCHAR},
+      USERANSWER = #{useranswer,jdbcType=NVARCHAR}
+    where USERID = #{userid,jdbcType=DECIMAL}
+  </update>
+  
+</mapper>

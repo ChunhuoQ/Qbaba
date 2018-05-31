@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d17.mapper.SmbmsBillMapper" >
+  <resultMap id="BaseResultMap" type="m05.d17.opjo.SmbmsBill" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="BILLCODE" property="billcode" jdbcType="VARCHAR" />
+    <result column="PRODUCTNAME" property="productname" jdbcType="VARCHAR" />
+    <result column="PRODUCTDESC" property="productdesc" jdbcType="VARCHAR" />
+    <result column="PRODUCTUNIT" property="productunit" jdbcType="VARCHAR" />
+    <result column="PRODUCTCOUNT" property="productcount" jdbcType="DECIMAL" />
+    <result column="TOTALPRICE" property="totalprice" jdbcType="DECIMAL" />
+    <result column="ISPAYMENT" property="ispayment" jdbcType="DECIMAL" />
+    <result column="CREATEDBY" property="createdby" jdbcType="DECIMAL" />
+    <result column="CREATIONDATE" property="creationdate" jdbcType="DATE" />
+    <result column="MODIFYBY" property="modifyby" jdbcType="DECIMAL" />
+    <result column="MODIFYDATE" property="modifydate" jdbcType="DATE" />
+    <result column="PROVIDERID" property="providerid" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, BILLCODE, PRODUCTNAME, PRODUCTDESC, PRODUCTUNIT, PRODUCTCOUNT, TOTALPRICE, ISPAYMENT, 
+    CREATEDBY, CREATIONDATE, MODIFYBY, MODIFYDATE, PROVIDERID
+  </sql>
+  <select id="selectByPrimaryAll" resultType="m05.d17.opjo.SmbmsBill" >
+  SELECT 
+	      a.billCode,
+	      a.productName,
+	      b.proName,
+	      a.totalPrice,
+	      a.isPayment,
+	      a.creationDate 
+    	FROM
+      		smbms_bill a 
+      		INNER JOIN smbms_provider b ON a.providerId = b.id
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from SMBMS_BILL
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from SMBMS_BILL
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="m05.d17.opjo.SmbmsBill" >
+    insert into SMBMS_BILL (ID, BILLCODE, PRODUCTNAME, 
+      PRODUCTDESC, PRODUCTUNIT, PRODUCTCOUNT, 
+      TOTALPRICE, ISPAYMENT, CREATEDBY, 
+      CREATIONDATE, MODIFYBY, MODIFYDATE, 
+      PROVIDERID)
+    values (#{id,jdbcType=DECIMAL}, #{billcode,jdbcType=VARCHAR}, #{productname,jdbcType=VARCHAR}, 
+      #{productdesc,jdbcType=VARCHAR}, #{productunit,jdbcType=VARCHAR}, #{productcount,jdbcType=DECIMAL}, 
+      #{totalprice,jdbcType=DECIMAL}, #{ispayment,jdbcType=DECIMAL}, #{createdby,jdbcType=DECIMAL}, 
+      #{creationdate,jdbcType=DATE}, #{modifyby,jdbcType=DECIMAL}, #{modifydate,jdbcType=DATE}, 
+      #{providerid,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="m05.d17.opjo.SmbmsBill" >
+    insert into SMBMS_BILL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="billcode != null" >
+        BILLCODE,
+      </if>
+      <if test="productname != null" >
+        PRODUCTNAME,
+      </if>
+      <if test="productdesc != null" >
+        PRODUCTDESC,
+      </if>
+      <if test="productunit != null" >
+        PRODUCTUNIT,
+      </if>
+      <if test="productcount != null" >
+        PRODUCTCOUNT,
+      </if>
+      <if test="totalprice != null" >
+        TOTALPRICE,
+      </if>
+      <if test="ispayment != null" >
+        ISPAYMENT,
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY,
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE,
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY,
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE,
+      </if>
+      <if test="providerid != null" >
+        PROVIDERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="billcode != null" >
+        #{billcode,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null" >
+        #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="productdesc != null" >
+        #{productdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="productunit != null" >
+        #{productunit,jdbcType=VARCHAR},
+      </if>
+      <if test="productcount != null" >
+        #{productcount,jdbcType=DECIMAL},
+      </if>
+      <if test="totalprice != null" >
+        #{totalprice,jdbcType=DECIMAL},
+      </if>
+      <if test="ispayment != null" >
+        #{ispayment,jdbcType=DECIMAL},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        #{modifyby,jdbcType=DECIMAL},
+      </if>
+      <if test="modifydate != null" >
+        #{modifydate,jdbcType=DATE},
+      </if>
+      <if test="providerid != null" >
+        #{providerid,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m05.d17.opjo.SmbmsBill" >
+    update SMBMS_BILL
+    <set >
+      <if test="billcode != null" >
+        BILLCODE = #{billcode,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null" >
+        PRODUCTNAME = #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="productdesc != null" >
+        PRODUCTDESC = #{productdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="productunit != null" >
+        PRODUCTUNIT = #{productunit,jdbcType=VARCHAR},
+      </if>
+      <if test="productcount != null" >
+        PRODUCTCOUNT = #{productcount,jdbcType=DECIMAL},
+      </if>
+      <if test="totalprice != null" >
+        TOTALPRICE = #{totalprice,jdbcType=DECIMAL},
+      </if>
+      <if test="ispayment != null" >
+        ISPAYMENT = #{ispayment,jdbcType=DECIMAL},
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE = #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY = #{modifyby,jdbcType=DECIMAL},
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE = #{modifydate,jdbcType=DATE},
+      </if>
+      <if test="providerid != null" >
+        PROVIDERID = #{providerid,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m05.d17.opjo.SmbmsBill" >
+    update SMBMS_BILL
+    set BILLCODE = #{billcode,jdbcType=VARCHAR},
+      PRODUCTNAME = #{productname,jdbcType=VARCHAR},
+      PRODUCTDESC = #{productdesc,jdbcType=VARCHAR},
+      PRODUCTUNIT = #{productunit,jdbcType=VARCHAR},
+      PRODUCTCOUNT = #{productcount,jdbcType=DECIMAL},
+      TOTALPRICE = #{totalprice,jdbcType=DECIMAL},
+      ISPAYMENT = #{ispayment,jdbcType=DECIMAL},
+      CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      CREATIONDATE = #{creationdate,jdbcType=DATE},
+      MODIFYBY = #{modifyby,jdbcType=DECIMAL},
+      MODIFYDATE = #{modifydate,jdbcType=DATE},
+      PROVIDERID = #{providerid,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

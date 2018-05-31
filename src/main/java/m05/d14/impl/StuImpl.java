@@ -9,6 +9,7 @@
 package m05.d14.impl;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import m05.d14.mapper.StuMapper;
@@ -57,6 +58,14 @@ public class StuImpl extends MyBatisOpen implements StuMapper{
       int flag = session.insert("m05.d14.impl.StuImpl.insertStu", stu);
       session.commit();
         return flag;
+    }
+
+
+    @Override
+    public List<HashMap<String, Object>> selectAllStu2() {
+        
+        //  Auto-generated method stub
+        return null;
     }
 
 }

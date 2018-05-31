@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>添加主题--管理后台</title>
-<link href="../CSS/admin.css" rel="stylesheet" type="text/css" />
+<link href="css/admin.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 	function abc(){
 		var ntitle=document.getElementById("ntitle").value;

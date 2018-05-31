@@ -3,7 +3,7 @@
 	<head>
 		<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
 		<title>管理首页</title>
-		<link rel="stylesheet" type="text/css" href="../css/style_admin.css">
+		<link rel="stylesheet" type="text/css" href="css/style_admin.css">
 	</head>
 
 	<script>

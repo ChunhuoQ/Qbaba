@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <title>管理员-添加</title>
-<link rel="stylesheet" type="text/css" href="../css/style_admin.css">
+<link rel="stylesheet" type="text/css" href="css/style_admin.css">
 
 </head>
 

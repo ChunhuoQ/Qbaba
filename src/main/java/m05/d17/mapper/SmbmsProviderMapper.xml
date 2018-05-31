@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d17.mapper.SmbmsProviderMapper" >
+  <resultMap id="BaseResultMap" type="m05.d17.opjo.SmbmsProvider" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROCODE" property="procode" jdbcType="VARCHAR" />
+    <result column="PRONAME" property="proname" jdbcType="VARCHAR" />
+    <result column="PRODESC" property="prodesc" jdbcType="VARCHAR" />
+    <result column="PROCONTACT" property="procontact" jdbcType="VARCHAR" />
+    <result column="PROPHONE" property="prophone" jdbcType="VARCHAR" />
+    <result column="PROADDRESS" property="proaddress" jdbcType="VARCHAR" />
+    <result column="PROFAX" property="profax" jdbcType="VARCHAR" />
+    <result column="CREATEDBY" property="createdby" jdbcType="DECIMAL" />
+    <result column="CREATIONDATE" property="creationdate" jdbcType="DATE" />
+    <result column="MODIFYDATE" property="modifydate" jdbcType="DATE" />
+    <result column="MODIFYBY" property="modifyby" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, PROCODE, PRONAME, PRODESC, PROCONTACT, PROPHONE, PROADDRESS, PROFAX, CREATEDBY, 
+    CREATIONDATE, MODIFYDATE, MODIFYBY
+  </sql>
+  
+  <select id="selectByPrimaryProName" resultType="String">
+  select proname from smbms_provider
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from SMBMS_PROVIDER
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from SMBMS_PROVIDER
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="m05.d17.opjo.SmbmsProvider" >
+    insert into SMBMS_PROVIDER (ID, PROCODE, PRONAME, 
+      PRODESC, PROCONTACT, PROPHONE, 
+      PROADDRESS, PROFAX, CREATEDBY, 
+      CREATIONDATE, MODIFYDATE, MODIFYBY
+      )
+    values (#{id,jdbcType=DECIMAL}, #{procode,jdbcType=VARCHAR}, #{proname,jdbcType=VARCHAR}, 
+      #{prodesc,jdbcType=VARCHAR}, #{procontact,jdbcType=VARCHAR}, #{prophone,jdbcType=VARCHAR}, 
+      #{proaddress,jdbcType=VARCHAR}, #{profax,jdbcType=VARCHAR}, #{createdby,jdbcType=DECIMAL}, 
+      #{creationdate,jdbcType=DATE}, #{modifydate,jdbcType=DATE}, #{modifyby,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="m05.d17.opjo.SmbmsProvider" >
+    insert into SMBMS_PROVIDER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="procode != null" >
+        PROCODE,
+      </if>
+      <if test="proname != null" >
+        PRONAME,
+      </if>
+      <if test="prodesc != null" >
+        PRODESC,
+      </if>
+      <if test="procontact != null" >
+        PROCONTACT,
+      </if>
+      <if test="prophone != null" >
+        PROPHONE,
+      </if>
+      <if test="proaddress != null" >
+        PROADDRESS,
+      </if>
+      <if test="profax != null" >
+        PROFAX,
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY,
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE,
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE,
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="procode != null" >
+        #{procode,jdbcType=VARCHAR},
+      </if>
+      <if test="proname != null" >
+        #{proname,jdbcType=VARCHAR},
+      </if>
+      <if test="prodesc != null" >
+        #{prodesc,jdbcType=VARCHAR},
+      </if>
+      <if test="procontact != null" >
+        #{procontact,jdbcType=VARCHAR},
+      </if>
+      <if test="prophone != null" >
+        #{prophone,jdbcType=VARCHAR},
+      </if>
+      <if test="proaddress != null" >
+        #{proaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="profax != null" >
+        #{profax,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifydate != null" >
+        #{modifydate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        #{modifyby,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m05.d17.opjo.SmbmsProvider" >
+    update SMBMS_PROVIDER
+    <set >
+      <if test="procode != null" >
+        PROCODE = #{procode,jdbcType=VARCHAR},
+      </if>
+      <if test="proname != null" >
+        PRONAME = #{proname,jdbcType=VARCHAR},
+      </if>
+      <if test="prodesc != null" >
+        PRODESC = #{prodesc,jdbcType=VARCHAR},
+      </if>
+      <if test="procontact != null" >
+        PROCONTACT = #{procontact,jdbcType=VARCHAR},
+      </if>
+      <if test="prophone != null" >
+        PROPHONE = #{prophone,jdbcType=VARCHAR},
+      </if>
+      <if test="proaddress != null" >
+        PROADDRESS = #{proaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="profax != null" >
+        PROFAX = #{profax,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE = #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE = #{modifydate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY = #{modifyby,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m05.d17.opjo.SmbmsProvider" >
+    update SMBMS_PROVIDER
+    set PROCODE = #{procode,jdbcType=VARCHAR},
+      PRONAME = #{proname,jdbcType=VARCHAR},
+      PRODESC = #{prodesc,jdbcType=VARCHAR},
+      PROCONTACT = #{procontact,jdbcType=VARCHAR},
+      PROPHONE = #{prophone,jdbcType=VARCHAR},
+      PROADDRESS = #{proaddress,jdbcType=VARCHAR},
+      PROFAX = #{profax,jdbcType=VARCHAR},
+      CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      CREATIONDATE = #{creationdate,jdbcType=DATE},
+      MODIFYDATE = #{modifydate,jdbcType=DATE},
+      MODIFYBY = #{modifyby,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

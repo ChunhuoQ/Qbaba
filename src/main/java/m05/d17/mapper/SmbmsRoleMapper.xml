@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d17.mapper.SmbmsRoleMapper" >
+  <resultMap id="BaseResultMap" type="m05.d17.opjo.SmbmsRole" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="ROLECODE" property="rolecode" jdbcType="VARCHAR" />
+    <result column="ROLENAME" property="rolename" jdbcType="VARCHAR" />
+    <result column="CREATEDBY" property="createdby" jdbcType="DECIMAL" />
+    <result column="CREATIONDATE" property="creationdate" jdbcType="DATE" />
+    <result column="MODIFYBY" property="modifyby" jdbcType="DECIMAL" />
+    <result column="MODIFYDATE" property="modifydate" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, ROLECODE, ROLENAME, CREATEDBY, CREATIONDATE, MODIFYBY, MODIFYDATE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from SMBMS_ROLE
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from SMBMS_ROLE
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="m05.d17.opjo.SmbmsRole" >
+    insert into SMBMS_ROLE (ID, ROLECODE, ROLENAME, 
+      CREATEDBY, CREATIONDATE, MODIFYBY, 
+      MODIFYDATE)
+    values (#{id,jdbcType=DECIMAL}, #{rolecode,jdbcType=VARCHAR}, #{rolename,jdbcType=VARCHAR}, 
+      #{createdby,jdbcType=DECIMAL}, #{creationdate,jdbcType=DATE}, #{modifyby,jdbcType=DECIMAL}, 
+      #{modifydate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="m05.d17.opjo.SmbmsRole" >
+    insert into SMBMS_ROLE
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="rolecode != null" >
+        ROLECODE,
+      </if>
+      <if test="rolename != null" >
+        ROLENAME,
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY,
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE,
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY,
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="rolecode != null" >
+        #{rolecode,jdbcType=VARCHAR},
+      </if>
+      <if test="rolename != null" >
+        #{rolename,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        #{modifyby,jdbcType=DECIMAL},
+      </if>
+      <if test="modifydate != null" >
+        #{modifydate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m05.d17.opjo.SmbmsRole" >
+    update SMBMS_ROLE
+    <set >
+      <if test="rolecode != null" >
+        ROLECODE = #{rolecode,jdbcType=VARCHAR},
+      </if>
+      <if test="rolename != null" >
+        ROLENAME = #{rolename,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE = #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY = #{modifyby,jdbcType=DECIMAL},
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE = #{modifydate,jdbcType=DATE},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m05.d17.opjo.SmbmsRole" >
+    update SMBMS_ROLE
+    set ROLECODE = #{rolecode,jdbcType=VARCHAR},
+      ROLENAME = #{rolename,jdbcType=VARCHAR},
+      CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      CREATIONDATE = #{creationdate,jdbcType=DATE},
+      MODIFYBY = #{modifyby,jdbcType=DECIMAL},
+      MODIFYDATE = #{modifydate,jdbcType=DATE}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

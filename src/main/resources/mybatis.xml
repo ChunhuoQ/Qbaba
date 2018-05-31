@@ -13,29 +13,22 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias alias="stu" type="m05.d14.opjo.Stu"/>
 		<typeAlias alias="gg" type="m05.d14.opjo.Grade"/>
 		</typeAliases>
-	<environments default="Oracle">
+	<!-- <environments default="Oracle">
 		<environment id="Oracle">
 			<transactionManager type="JDBC" />
-			<dataSource type="POOLED">
+			    <dataSource type="POOLED">
 				<property name="driver" value="${driver}" />
 				<property name="url" value="${url}" />
 				<property name="username" value="${username}" />
-				<property name="password" value="${password}" />
+				<property name="password" value="${password}" />  
 			</dataSource>
 		</environment>
-	</environments>
+	</environments> -->
 	<mappers>
-	<mapper resource="m05/d14/mapper/StuMapper.xml"/>
-	<mapper resource="m05/d14/mapper/GradeMapper.xml"/>
-	<!-- <mapper resource="m04/d23/Qbaba/mapper/City_infoMapper.xml"/>
-	<mapper resource="m04/d23/Qbaba/mapper/Province_infoMapper.xml"/>
-	<mapper resource="m04/d19/Qbaba/mapper/ShangPingMapper.xml"/>
-	<mapper resource="m04/d19/Qbaba/mapper/UserMapper.xml"/>
 	
-		<mapper resource="m04/d12/Qbaba/mapper/NewsMapper.xml" />
-		<mapper resource="m04/d12/Qbaba/mapper/ProductMapper.xml"/>
-		<mapper resource="m04/d12/Qbaba/mapper/UserMapper.xml"/>
-		<mapper resource="m04/d12/Qbaba/mapper/MessageMapper.xml"/>
-		<mapper resource="m04/d12/Qbaba/mapper/RevertMapper.xml"/> -->
+	<mapper resource="m05/d28/com/dt59/mapper/AuctionUserMapper.xml"/>
+	<mapper resource="m05/d28/com/dt59/mapper/AuctionMapper.xml"/>
+	<mapper resource="m05/d28/com/dt59/mapper/AuctionRecordMapper.xml"/>
+	<mapper resource="m05/d24/Qbaba/springAndMbatis/mapper/SmbmsUserMapper.xml"/>
 	</mappers>
 </configuration>

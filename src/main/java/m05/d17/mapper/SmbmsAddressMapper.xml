@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d17.mapper.SmbmsAddressMapper" >
+  <resultMap id="BaseResultMap" type="m05.d17.opjo.SmbmsAddress" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="CONTACT" property="contact" jdbcType="VARCHAR" />
+    <result column="ADDRESSDESC" property="addressdesc" jdbcType="VARCHAR" />
+    <result column="POSTCODE" property="postcode" jdbcType="VARCHAR" />
+    <result column="TEL" property="tel" jdbcType="VARCHAR" />
+    <result column="CREATEDBY" property="createdby" jdbcType="DECIMAL" />
+    <result column="CREATIONDATE" property="creationdate" jdbcType="DATE" />
+    <result column="MODIFYBY" property="modifyby" jdbcType="DECIMAL" />
+    <result column="MODIFYDATE" property="modifydate" jdbcType="DATE" />
+    <result column="USERID" property="userid" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, CONTACT, ADDRESSDESC, POSTCODE, TEL, CREATEDBY, CREATIONDATE, MODIFYBY, MODIFYDATE, 
+    USERID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from SMBMS_ADDRESS
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from SMBMS_ADDRESS
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="m05.d17.opjo.SmbmsAddress" >
+    insert into SMBMS_ADDRESS (ID, CONTACT, ADDRESSDESC, 
+      POSTCODE, TEL, CREATEDBY, 
+      CREATIONDATE, MODIFYBY, MODIFYDATE, 
+      USERID)
+    values (#{id,jdbcType=DECIMAL}, #{contact,jdbcType=VARCHAR}, #{addressdesc,jdbcType=VARCHAR}, 
+      #{postcode,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, #{createdby,jdbcType=DECIMAL}, 
+      #{creationdate,jdbcType=DATE}, #{modifyby,jdbcType=DECIMAL}, #{modifydate,jdbcType=DATE}, 
+      #{userid,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="m05.d17.opjo.SmbmsAddress" >
+    insert into SMBMS_ADDRESS
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="contact != null" >
+        CONTACT,
+      </if>
+      <if test="addressdesc != null" >
+        ADDRESSDESC,
+      </if>
+      <if test="postcode != null" >
+        POSTCODE,
+      </if>
+      <if test="tel != null" >
+        TEL,
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY,
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE,
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY,
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE,
+      </if>
+      <if test="userid != null" >
+        USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="contact != null" >
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="addressdesc != null" >
+        #{addressdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null" >
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        #{modifyby,jdbcType=DECIMAL},
+      </if>
+      <if test="modifydate != null" >
+        #{modifydate,jdbcType=DATE},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m05.d17.opjo.SmbmsAddress" >
+    update SMBMS_ADDRESS
+    <set >
+      <if test="contact != null" >
+        CONTACT = #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="addressdesc != null" >
+        ADDRESSDESC = #{addressdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        POSTCODE = #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null" >
+        TEL = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="createdby != null" >
+        CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      </if>
+      <if test="creationdate != null" >
+        CREATIONDATE = #{creationdate,jdbcType=DATE},
+      </if>
+      <if test="modifyby != null" >
+        MODIFYBY = #{modifyby,jdbcType=DECIMAL},
+      </if>
+      <if test="modifydate != null" >
+        MODIFYDATE = #{modifydate,jdbcType=DATE},
+      </if>
+      <if test="userid != null" >
+        USERID = #{userid,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m05.d17.opjo.SmbmsAddress" >
+    update SMBMS_ADDRESS
+    set CONTACT = #{contact,jdbcType=VARCHAR},
+      ADDRESSDESC = #{addressdesc,jdbcType=VARCHAR},
+      POSTCODE = #{postcode,jdbcType=VARCHAR},
+      TEL = #{tel,jdbcType=VARCHAR},
+      CREATEDBY = #{createdby,jdbcType=DECIMAL},
+      CREATIONDATE = #{creationdate,jdbcType=DATE},
+      MODIFYBY = #{modifyby,jdbcType=DECIMAL},
+      MODIFYDATE = #{modifydate,jdbcType=DATE},
+      USERID = #{userid,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="m05.d28.com.dt59.mapper.AuctionRecordMapper" >
+  <resultMap id="BaseResultMap" type="m05.d28.com.dt59.ojpo.AuctionRecord" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="USERID" property="userid" jdbcType="DECIMAL" />
+    <result column="AUCTIONID" property="auctionid" jdbcType="DECIMAL" />
+    <result column="AUCTIONTIME" property="auctiontime" jdbcType="TIMESTAMP" />
+    <result column="AUCTIONPRICE" property="auctionprice" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, USERID, AUCTIONID, AUCTIONTIME, AUCTIONPRICE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from AUCTIONRECORD
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from AUCTIONRECORD
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="m05.d28.com.dt59.ojpo.AuctionRecord" >
+    insert into AUCTIONRECORD (ID, USERID, AUCTIONID, 
+      AUCTIONTIME, AUCTIONPRICE)
+    values (#{id,jdbcType=DECIMAL}, #{userid,jdbcType=DECIMAL}, #{auctionid,jdbcType=DECIMAL}, 
+      #{auctiontime,jdbcType=TIMESTAMP}, #{auctionprice,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="m05.d28.com.dt59.ojpo.AuctionRecord" >
+    insert into AUCTIONRECORD
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="userid != null" >
+        USERID,
+      </if>
+      <if test="auctionid != null" >
+        AUCTIONID,
+      </if>
+      <if test="auctiontime != null" >
+        AUCTIONTIME,
+      </if>
+      <if test="auctionprice != null" >
+        AUCTIONPRICE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=DECIMAL},
+      </if>
+      <if test="auctionid != null" >
+        #{auctionid,jdbcType=DECIMAL},
+      </if>
+      <if test="auctiontime != null" >
+        #{auctiontime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auctionprice != null" >
+        #{auctionprice,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="m05.d28.com.dt59.ojpo.AuctionRecord" >
+    update AUCTIONRECORD
+    <set >
+      <if test="userid != null" >
+        USERID = #{userid,jdbcType=DECIMAL},
+      </if>
+      <if test="auctionid != null" >
+        AUCTIONID = #{auctionid,jdbcType=DECIMAL},
+      </if>
+      <if test="auctiontime != null" >
+        AUCTIONTIME = #{auctiontime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auctionprice != null" >
+        AUCTIONPRICE = #{auctionprice,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="m05.d28.com.dt59.ojpo.AuctionRecord" >
+    update AUCTIONRECORD
+    set USERID = #{userid,jdbcType=DECIMAL},
+      AUCTIONID = #{auctionid,jdbcType=DECIMAL},
+      AUCTIONTIME = #{auctiontime,jdbcType=TIMESTAMP},
+      AUCTIONPRICE = #{auctionprice,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>
